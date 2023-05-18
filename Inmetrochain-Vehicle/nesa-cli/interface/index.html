@@ -1,0 +1,18 @@
+<html>
+    <head>
+      <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+      <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+      <py-env>
+        - paths:
+          - ./insert_log.py
+      </py-env>
+    </head>
+  <body>
+    <h1>Let's print random numbers</h1>
+    <b> <label id="lucky"></label></b>
+    <py-script>
+      from insert_log import generate_random_password
+      pyscript.write('lucky', generate_random_password())
+    </py-script>
+  </body>
+</html>

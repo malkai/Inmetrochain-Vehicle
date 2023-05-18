@@ -1,0 +1,17 @@
+global: 
+  scrape_interval: 15s 
+  evaluation_interval: 15s 
+scrape_configs: 
+- job_name: 'prometheus' 
+  scrape_interval: 10s 
+  static_configs: 
+  - targets: ['localhost:9090'] 
+- job_name: 'orderers' 
+  static_configs: 
+  - targets: ['orderer.nmi:9445', 'orderer.nmi:9446','orderer.nmi:9447','orderer.nmi:9448','orderer.nmi:9449']
+- job_name: 'Org1 - NESA' 
+  static_configs: 
+  - targets: [ 'peer0.nesa.br:9441']
+- job_name: 'Org 2 - INMETRO' 
+  static_configs: 
+  - targets: ['peer0.inmetro.br:9443']    
