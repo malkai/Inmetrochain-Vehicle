@@ -8,7 +8,7 @@ volumes:
 networks:
   explorer-inmetro:
     external:
-      name: onehost_nmiblocknet_default
+      name: Inmetrochain-Vehicle_nmiblocknet_default
 
 services:
   explorerdb:
