@@ -1,9 +1,0 @@
-{
-	"network-configs": {
-		"onehost_nmiblocknet_default": {
-			"name": "Inmetrochain-Vehicle_nmiblocknet_default",
-			"profile": "./connection-profile/inmetro.br.json"
-		}
-	},
-	"license": "Apache-2.0"
-}
