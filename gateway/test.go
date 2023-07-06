@@ -39,12 +39,14 @@ func main() {
 	}
 	defer gw.Close()
 
-	//chaincodeName := "vehicle"
-	//channelName := "mychannel"
+	chaincodeName := "vehicle"
+	channelName := "mychannel"
 
-	//contract := network.GetContract(chaincodeName)
-	//initLedger(contract)
-	//getAllAssets(contract)
+	network := gw.GetNetwork(channelName)
+	contract := network.GetContract(chaincodeName)
+
+	initLedger(contract)
+	getAllAssets(contract)
 
 }
 

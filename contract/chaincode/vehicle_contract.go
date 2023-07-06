@@ -39,6 +39,7 @@ func (s *SmartContract) InitLedger(ctx contractapi.TransactionContextInterface) 
 		}
 
 		err = ctx.GetStub().PutState(asset.ID, assetJSON)
+
 		if err != nil {
 			return fmt.Errorf("failed to put to world state. %v", err)
 		}

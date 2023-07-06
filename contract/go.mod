@@ -4,6 +4,7 @@ go 1.18
 
 replace remote-repo.com/username/repository/chaincode => /chaincode
 
+
 require github.com/hyperledger/fabric-contract-api-go v1.2.1
 
 require (
