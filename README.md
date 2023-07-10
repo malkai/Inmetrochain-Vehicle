@@ -65,7 +65,7 @@ Para mais detalhes a documentação será um otimo guia com tutoriais de como a 
 
 Para iniciar a rede é necessario adentrar na pasta do projeto que contém o projeto já configurado. 
 ```
-cd blokchain
+cd blockchain
 ```
 
 Este script traz uma rede Hyperledger Fabric para testar contratos inteligentes  e aplicativos. A rede de teste consiste em duas organizações com uma peer cada, e um serviço de pedido Raft de nó único. Os usuários também podem usar este script para criar um canal implanta um chaincode no canal. 
