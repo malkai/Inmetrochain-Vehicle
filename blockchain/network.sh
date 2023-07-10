@@ -305,6 +305,14 @@ function deployCC() {
   fi
 }
 
+function upgrade() {
+  scripts/upgrade.sh 
+
+  if [ $? -ne 0 ]; then
+    fatalln "Upgrade chaincode failed"
+  fi
+}
+
 ## Call the script to deploy a chaincode to the channel
 function deployCCAAS() {
   scripts/deployCCAAS.sh $CHANNEL_NAME $CC_NAME $CC_SRC_PATH $CCAAS_DOCKER_RUN $CC_VERSION $CC_SEQUENCE $CC_INIT_FCN $CC_END_POLICY $CC_COLL_CONFIG $CLI_DELAY $MAX_RETRY $VERBOSE $CCAAS_DOCKER_RUN
@@ -530,6 +538,9 @@ elif [ "$MODE" == "deployCC" ]; then
 elif [ "$MODE" == "deployCCAAS" ]; then
   infoln "deploying chaincode-as-a-service on channel '${CHANNEL_NAME}'"
   deployCCAAS
+elif [ "$MODE" == "upgrade" ]; then
+  infoln "upgrade chaincode on channel '${CHANNEL_NAME}'"
+  upgrade  
 else
   printHelp
   exit 1

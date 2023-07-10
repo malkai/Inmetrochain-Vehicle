@@ -37,7 +37,7 @@ You can use the test network script to deploy the ERC-20 token contract to the c
 ./network.sh deployCC -ccn token_erc20 -ccp ../token-erc-20/chaincode-go/ -ccl go
 ./network.sh deployCC -ccn cli-gateway -ccp ../cli-gateway/chaincode-go/ -ccl go
 ```
-./network.sh deployCC -ccn vehicle -ccp ../vehicle/ -ccl go
+./network.sh deployCC -ccn vehicle -ccp ../contract/ -ccl go
 
 
 
@@ -91,6 +91,8 @@ You can register a new minter client identity using the `fabric-ca-client` tool:
 ```
 fabric-ca-client register --caname ca-org1 --id.name minter --id.secret minterpw --id.type client --tls.certfiles "${PWD}/organizations/fabric-ca/org1/tls-cert.pem"
 ```
+
+fabric-ca-client identity list --tls.certfiles "${PWD}/organizations/fabric-ca/org1/tls-cert.pem"
 
 You can now generate the identity certificates and MSP folder by providing the minter's enroll name and secret to the enroll command:
 ```

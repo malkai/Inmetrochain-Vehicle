@@ -82,8 +82,10 @@ As APIs do cliente Fabric Gateway combinam as ações Endorse/Submit/CommitStatu
 
 
 ```
-cd.. 
+cd .. 
 cd gateway
 go run test.go 
 ```
+
+./network.sh down
 
