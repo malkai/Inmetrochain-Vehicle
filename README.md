@@ -87,5 +87,9 @@ cd gateway
 go run test.go 
 ```
 
+Para fazer a rede parar utilize os comandos abaixo:
+
+cd .. 
+cd blockchain
 ./network.sh down
 
