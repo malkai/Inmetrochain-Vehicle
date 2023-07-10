@@ -59,7 +59,7 @@ Este script traz uma rede Hyperledger Fabric para testar contratos inteligentes 
 caso deseja criar um canal com nome personalidade utilize o comando. 
 
 ```
-./network.sh up createChannel -ca
+network.sh createChannel -c meucanal
 ```
 
 Antes de criar uma rede, cada organização precisa gerar a criptografia material que vai definir aquela organização na rede. Porque Hyperledger Fabric é um blockchain autorizado, cada nó e usuário na rede precisa use certificados e chaves para assinar e verificar suas ações. Além disso, cada usuário precisa pertencer a uma organização reconhecida como membro da rede. Você pode usar a ferramenta Cryptogen ou Fabric CAs para gerar a criptografia da organizaçãomateriais.
