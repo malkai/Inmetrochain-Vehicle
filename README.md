@@ -28,6 +28,8 @@ sudo systemctl enable docker
 Go : Instale a versão mais recente do Go (necessário apenas se você estiver escrevendo aplicativos Go chaincode ou SDK).
 
 ```
+sudo add-apt-repository ppa:longsleep/golang-backports
+sudo apt update
 sudo apt install golang-go
 ```
 
