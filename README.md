@@ -1,5 +1,14 @@
 O Hyperledger Fabric é uma plataforma para soluções de contabilidade distribuída sustentadas por uma arquitetura modular que oferece altos graus de confidencialidade, resiliência, flexibilidade e escalabilidade. Ele foi projetado para oferecer suporte a implementações conectáveis ​​de diferentes componentes e acomodar a complexidade e os meandros existentes em todo o ecossistema econômico.
 
+Utilizamos o comando git clone para clonar o repositorio que contém o projeto. O projeto deve ser clonado em areas que não tenham problemas de permissão root.
+```
+git clone https://github.com/malkai/Inmetrochain-Vehicle
+cd Inmetrochain-Vehicle
+
+```
+
+
+
 Caso a plataforma não esteja instalada na maquina, existem alguns requisitos minimos necessarios para utilizar está rede
 ```
 sudo apt-get install git curl docker-compose -y
