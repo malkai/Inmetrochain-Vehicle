@@ -13,7 +13,7 @@ sudo systemctl start docker
 sudo groupadd docker
 sudo usermod -aG docker $USER
 newgrp docker
-sudo shutdown -r
+sudo shutdown -r now
 
 
 # Check version numbers  
