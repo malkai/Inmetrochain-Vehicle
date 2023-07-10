@@ -7,8 +7,13 @@ sudo apt-get install git curl docker-compose -y
 # Make sure the Docker daemon is running.
 sudo systemctl start docker
 
+
+
 # Add your user to the Docker group.
-sudo usermod -a -G docker <username>
+sudo groupadd docker
+sudo usermod -aG docker $USER
+newgrp docker
+
 
 # Check version numbers  
 docker --version
