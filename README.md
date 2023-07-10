@@ -19,9 +19,20 @@ sudo systemctl enable docker
 
 
 ```
-Go Optional: Instale a versão mais recente do Go (necessário apenas se você estiver escrevendo aplicativos Go chaincode ou SDK).
+Go : Instale a versão mais recente do Go (necessário apenas se você estiver escrevendo aplicativos Go chaincode ou SDK).
 
-JQ Optional: Instale a versão mais recente do jq (necessário apenas para os tutoriais relacionados às transações de configuração do canal).
+```
+sudo add-apt-repository ppa:longsleep/golang-backports
+sudo apt update
+sudo apt install golang-go
+```
+
+JQ : Instale a versão mais recente do jq (necessário apenas para os tutoriais relacionados às transações de configuração do canal).
+```
+sudo apt update
+sudo apt install -y jq
+jq --version
+```
 
 Download Fabric samples, Docker images, and binaries
 
