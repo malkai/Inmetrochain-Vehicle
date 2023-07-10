@@ -41,9 +41,7 @@ jq --version
 
 Utilizamos o comando git clone para clonar o repositorio que contém o projeto. O projeto deve ser clonado em areas que não tenham problemas de permissão root. Exemplo Area de trabalho, documentos ou qualquer local que não seja a raiz do seu user. 
 ```
-apt install git
-git clone https://github.com/malkai/Inmetrochain-Vehicle
-cd Inmetrochain-Vehicle
+git clone https://github.com/malkai/Inmetrochain-Vehicle & cd Inmetrochain-Vehicle
 
 ```
 
