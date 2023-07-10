@@ -8,7 +8,6 @@ sudo apt-get install git curl docker-compose -y
 sudo systemctl start docker
 
 
-
 # Add your user to the Docker group.
 sudo groupadd docker
 sudo usermod -aG docker $USER
@@ -40,7 +39,7 @@ sudo apt install -y jq
 jq --version
 ```
 
-Download Fabric samples, Docker images, and binaries
+Dentro do seu projeto faço o download dos Docker images, and binaries. 
 
 ```
 curl -sSLO https://raw.githubusercontent.com/hyperledger/fabric/main/scripts/install-fabric.sh && chmod +x install-fabric.sh

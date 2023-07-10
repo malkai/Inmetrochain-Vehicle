@@ -8,6 +8,7 @@
 .project
 # omit Go vendor directories
 vendor/
+.bin
 .vscode
 .gradle
 .idea
@@ -22,6 +23,7 @@ package-lock.json
 .settings
 
 # installed Fabric binaries etc.
+bin/
 builders/
 config/
 external-chaincode/
