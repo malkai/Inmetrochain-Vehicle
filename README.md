@@ -86,7 +86,7 @@ Você também pode usar Fabric CAs para gerar o material criptográfico. CAs ass
 
 Após montar nossa rede fazemos o deploy do nosso contrato inteligente. Do ponto de vista de um desenvolvedor de aplicativos, um contrato inteligente, juntamente com o livro-razão, formam o coração de um sistema blockchain Hyperledger Fabric. Enquanto um livro-razão contém fatos sobre o estado atual e histórico de um conjunto de objetos de negócios, um contrato inteligente define a lógica executável que gera novos fatos que são adicionados ao livro-razão. Um chaincode é normalmente usado por administradores para agrupar contratos inteligentes relacionados para implantação, mas também pode ser usado para programação de sistema de baixo nível do Fabric. 
 ```
-./network.sh deployCC -ccn vehicle -ccp ../contracto/VehicleContract -ccl go
+./network.sh deployCC -ccn vehicle -ccp /contracto/VehicleContract -ccl go
 ```
 
 Após realizar o deploy sem erros iremos na pasta que está o nosso gateway. O Fabric Gateway é um serviço, introduzido nos pares Hyperledger Fabric v2.4, que fornece uma API simplificada e mínima para enviar transações para uma rede Fabric. Os requisitos anteriormente colocados nos SDKs do cliente, como reunir endossos de transações de pares de várias organizações, são delegados ao serviço Fabric Gateway executado em um ponto para permitir o desenvolvimento simplificado de aplicativos e o envio de transações na v2.4.
@@ -109,7 +109,6 @@ As APIs do cliente Fabric Gateway combinam as ações Endorse/Submit/CommitStatu
 
 
 ```
-cd .. 
 cd gateway
 go run test.go 
 ```

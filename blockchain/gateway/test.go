@@ -42,7 +42,7 @@ func main() {
 	}
 	defer gw.Close()
 
-	chaincodeName := "vehicle3"
+	chaincodeName := "vehicle"
 	channelName := "mychannel"
 
 	network := gw.GetNetwork(channelName)
@@ -75,7 +75,7 @@ func main() {
 
 func startChaincodeEventListening(ctx context.Context, network *client.Network) {
 	fmt.Println("\n*** Start chaincode event listening")
-	chaincodeName := "vehicle3"
+	chaincodeName := "vehicle"
 
 	events, err := network.ChaincodeEvents(ctx, chaincodeName)
 	if err != nil {
@@ -92,7 +92,7 @@ func startChaincodeEventListening(ctx context.Context, network *client.Network) 
 
 func replayChaincodeEvents(ctx context.Context, network *client.Network, startBlock uint64) {
 	fmt.Println("\n*** Start chaincode event replay")
-	chaincodeName := "vehicle3"
+	chaincodeName := "vehicle"
 
 	events, err := network.ChaincodeEvents(ctx, chaincodeName, client.WithStartBlock(startBlock))
 	if err != nil {
