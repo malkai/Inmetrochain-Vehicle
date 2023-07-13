@@ -2,11 +2,14 @@ package main
 
 import (
 	"bytes"
+	"context"
 	"crypto/x509"
 	"encoding/json"
+	"errors"
 	"fmt"
 	"os"
 	"path"
+	"strconv"
 	"time"
 
 	"github.com/hyperledger/fabric-gateway/pkg/client"
@@ -43,9 +46,103 @@ func main() {
 	channelName := "mychannel"
 
 	network := gw.GetNetwork(channelName)
+
 	contract := network.GetContract(chaincodeName)
 
+	//initLedger(contract)
+
+	// Context used for event listening
+	//ctx, cancel := context.WithCancel(context.Background())
+	//defer cancel()
+
+	// Listen for events emitted by subsequent transactions
+	//startChaincodeEventListening(ctx, network)
+	/*
+		Datai := time.Now()
+		Dataiataf := time.Now()
+		Fsupi := 50.00
+		Fsupf := 20.00
+		Dff := 10
+		Vstatus := false
+		Iduser1 := "1"
+		Iduser2 := "2"
+	*/
+	//Createevent(contract, "1", Datai, Dataiataf, Fsupi, Fsupf, Dff, Vstatus, Iduser1, Iduser2)
+	//initLedger(contract)
 	getAllAssets(contract)
+
+	//replayChaincodeEvents(ctx, network, firstBlockNumber)
+
+}
+
+func startChaincodeEventListening(ctx context.Context, network *client.Network) {
+	fmt.Println("\n*** Start chaincode event listening")
+	chaincodeName := "vehicle"
+
+	events, err := network.ChaincodeEvents(ctx, chaincodeName)
+
+	if err != nil {
+		panic(fmt.Errorf("failed to start chaincode event listening: %w", err))
+	}
+
+	go func() {
+		for event := range events {
+			asset := formatJSON(event.Payload)
+			fmt.Printf("\n<-- Chaincode event received: %s - %s\n", event.EventName, asset)
+		}
+	}()
+}
+
+func replayChaincodeEvents(ctx context.Context, network *client.Network, startBlock uint64) {
+	fmt.Println("\n*** Start chaincode event replay")
+	chaincodeName := "vehicle"
+
+	events, err := network.ChaincodeEvents(ctx, chaincodeName, client.WithStartBlock(startBlock))
+	if err != nil {
+		panic(fmt.Errorf("failed to start chaincode event listening: %w", err))
+	}
+
+	for {
+		select {
+		case <-time.After(50 * time.Second):
+			panic(errors.New("timeout waiting for event replay"))
+
+		case event := <-events:
+			asset := formatJSON(event.Payload)
+			fmt.Printf("\n<-- Chaincode event replayed: %s - %s\n", event.EventName, asset)
+
+			if event.EventName == "DeleteAsset" {
+				// Reached the last submitted transaction so return to stop listening for events
+				return
+			}
+		}
+	}
+}
+
+func Createevent(contract *client.Contract, Id string, Datai time.Time, Dataiataf time.Time, Fsupi float64, Fsupf float64, Dff int, Vstatus bool, Iduser1 string, Iduser2 string) uint64 {
+	s1 := strconv.FormatFloat(Fsupi, 'f', 2, 64)
+	s2 := strconv.FormatFloat(Fsupf, 'f', 2, 64)
+	s3 := strconv.Itoa(Dff)
+	s4 := strconv.FormatBool(Vstatus)
+
+	_, commit, err := contract.SubmitAsync("Createevent", client.WithArguments(Id, Datai.String(), Dataiataf.String(), s1, s2, s3, s4, Iduser1, Iduser2))
+	if err != nil {
+		panic(fmt.Errorf("failed to submit transaction: %w", err))
+	}
+
+	status, err := commit.Status()
+
+	if err != nil {
+		panic(fmt.Errorf("failed to get transaction commit status: %w", err))
+	}
+
+	if !status.Successful {
+		panic(fmt.Errorf("failed to commit transaction with status code %v", status.Code))
+	}
+
+	fmt.Println("\n*** CreateAsset committed successfully")
+
+	return status.BlockNumber
 
 }
 
@@ -54,6 +151,19 @@ func getAllAssets(contract *client.Contract) {
 	fmt.Println("\n--> Evaluate Transaction: GetAllAssets, function returns all the current assets on the ledger")
 
 	evaluateResult, err := contract.EvaluateTransaction("GetAllAssets")
+	if err != nil {
+		panic(fmt.Errorf("failed to evaluate transaction: %w", err))
+	}
+	result := formatJSON(evaluateResult)
+
+	fmt.Printf("*** Result:%s\n", result)
+}
+
+// Evaluate a transaction to query ledger state.
+func eventexist(contract *client.Contract, id string) {
+	fmt.Println("\n--> Evaluate Transaction: GetAllAssets, function returns all the current assets on the ledger")
+
+	evaluateResult, teste, err := contract.EvaluateTransaction("eventexist", id)
 	if err != nil {
 		panic(fmt.Errorf("failed to evaluate transaction: %w", err))
 	}

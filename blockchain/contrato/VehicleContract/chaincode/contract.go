@@ -180,13 +180,13 @@ func (s *SmartContract) AssetExists(ctx contractapi.TransactionContextInterface,
 	return assetJSON != nil, nil
 }
 
-func (s *SmartContract) eventexist(ctx contractapi.TransactionContextInterface, id string) (bool, error) {
+func (s *SmartContract) eventexist(ctx contractapi.TransactionContextInterface, id string) (*Event, bool, error) {
 	resultsIterator, err := ctx.GetStub().GetStateByRange(id, "")
 	if err != nil {
 		return false, fmt.Errorf("\n Erro em conseguir os eventos %v", err)
 	}
-
 	defer resultsIterator.Close()
+	var asset Event
 
 	for resultsIterator.HasNext() {
 
@@ -199,6 +199,11 @@ func (s *SmartContract) eventexist(ctx contractapi.TransactionContextInterface, 
 		if resultsIterator.HasNext() == false {
 
 			fmt.Println(queryResponse.Value)
+
+			err = json.Unmarshal(queryResponse.Value, &asset)
+			if err != nil {
+				return nil, err
+			}
 			/*
 				event := Event{
 					Id:        Id,
@@ -227,7 +232,7 @@ func (s *SmartContract) eventexist(ctx contractapi.TransactionContextInterface, 
 
 	}
 
-	return true, nil
+	return asset, true, nil
 
 }
 
