@@ -120,7 +120,7 @@ Upgrade do contrato inteligente
 
 ```
 ./network.sh deployCC -ccn nomedocontrato -ccp path -ccl go  -ccv versão -ccs sequencia
-./network.sh deployCC -ccn vehicle -ccp contracto/BasicCRUD -ccl go -ccv 1.1 -ccs 2
+./network.sh deployCC -ccn vehicle -ccp contrato/BasicCRUD -ccl go -ccv 1.1 -ccs 2
 
 ```
 
