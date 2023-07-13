@@ -2,6 +2,7 @@ O Hyperledger Fabric é uma plataforma para soluções de contabilidade distribu
 
 
 Caso a plataforma não esteja instalada na maquina, existem alguns requisitos minimos necessarios para utilizar está rede
+
 ```
 sudo apt-get install git curl docker-compose -y
 
@@ -34,6 +35,7 @@ sudo apt install golang-go
 ```
 
 JQ : Instale a versão mais recente do jq (necessário apenas para os tutoriais relacionados às transações de configuração do canal).
+
 ```
 sudo apt update
 sudo apt install -y jq
@@ -42,12 +44,11 @@ jq --version
 
 
 Utilizamos o comando git clone para clonar o repositorio que contém o projeto. O projeto deve ser clonado em areas que não tenham problemas de permissão root. Exemplo Area de trabalho, documentos ou qualquer local que não seja a raiz do seu user. 
+
 ```
 git clone https://github.com/malkai/Inmetrochain-Vehicle 
 cd Inmetrochain-Vehicle
-
 ```
-
 
 
 Dentro do seu projeto faço o download dos Docker images, and binaries. 
@@ -68,6 +69,7 @@ cd blockchain
 ```
 
 Este script traz uma rede Hyperledger Fabric para testar contratos inteligentes  e aplicativos. A rede de teste consiste em duas organizações com uma peer cada, e um serviço de pedido Raft de nó único. Os usuários também podem usar este script para criar um canal implanta um chaincode no canal. 
+
 ```
 ./network.sh up createChannel -ca
 ```
@@ -75,7 +77,7 @@ Este script traz uma rede Hyperledger Fabric para testar contratos inteligentes 
 caso deseja criar um canal com nome personalidade utilize o comando. 
 
 ```
-./network.sh createChannel -c meucanal
+./network.sh up createChannel -c meucanal
 ```
 
 Antes de criar uma rede, cada organização precisa gerar a criptografia material que vai definir aquela organização na rede. Porque Hyperledger Fabric é um blockchain autorizado, cada nó e usuário na rede precisa use certificados e chaves para assinar e verificar suas ações. Além disso, cada usuário precisa pertencer a uma organização reconhecida como membro da rede. Você pode usar a ferramenta Cryptogen ou Fabric CAs para gerar a criptografia da organizaçãomateriais.
@@ -85,8 +87,9 @@ Por padrão, a rede de amostra usa cryptogen. Cryptogen é uma ferramenta que é
 Você também pode usar Fabric CAs para gerar o material criptográfico. CAs assinam os certificados e as chaves que eles geram para criar uma raiz de confiança válida para cada organização.O script usa o Docker Compose para trazer três CAs, uma para cada organização de mesmo nível e a organização do pedido. O arquivo de configuração para criar o Fabric CA servidores estão no diretório "organizations/fabric-ca". No mesmo diretório, o script "registerEnroll.sh" usa o cliente Fabric CA para criar as identidades, certificados e pastas MSP necessários para criar a rede de teste no Diretório "organizations/ordererOrganizations".
 
 Após montar nossa rede fazemos o deploy do nosso contrato inteligente. Do ponto de vista de um desenvolvedor de aplicativos, um contrato inteligente, juntamente com o livro-razão, formam o coração de um sistema blockchain Hyperledger Fabric. Enquanto um livro-razão contém fatos sobre o estado atual e histórico de um conjunto de objetos de negócios, um contrato inteligente define a lógica executável que gera novos fatos que são adicionados ao livro-razão. Um chaincode é normalmente usado por administradores para agrupar contratos inteligentes relacionados para implantação, mas também pode ser usado para programação de sistema de baixo nível do Fabric. 
+
 ```
-./network.sh deployCC -ccn vehicle -ccp /contracto/VehicleContract -ccl go
+./network.sh deployCC -ccn vehicle -ccp contracto/BasicCRUD -ccl go
 ```
 
 Após realizar o deploy sem erros iremos na pasta que está o nosso gateway. O Fabric Gateway é um serviço, introduzido nos pares Hyperledger Fabric v2.4, que fornece uma API simplificada e mínima para enviar transações para uma rede Fabric. Os requisitos anteriormente colocados nos SDKs do cliente, como reunir endossos de transações de pares de várias organizações, são delegados ao serviço Fabric Gateway executado em um ponto para permitir o desenvolvimento simplificado de aplicativos e o envio de transações na v2.4.
@@ -113,6 +116,14 @@ cd gateway
 go run test.go 
 ```
 
+Upgrade do contrato inteligente
+
+```
+./network.sh deployCC -ccn nomedocontrato -ccp path -ccl go  -ccv versão -ccs sequencia
+./network.sh deployCC -ccn vehicle -ccp contracto/BasicCRUD -ccl go -ccv 1.1 -ccs 2
+
+```
+
 Para fazer a rede parar utilize os comandos abaixo:
 
 ```
@@ -120,3 +131,4 @@ cd ..
 cd blockchain
 ./network.sh down
 ```
+

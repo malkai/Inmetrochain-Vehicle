@@ -46,6 +46,7 @@ func main() {
 	channelName := "mychannel"
 
 	network := gw.GetNetwork(channelName)
+
 	contract := network.GetContract(chaincodeName)
 
 	//initLedger(contract)
@@ -56,17 +57,18 @@ func main() {
 
 	// Listen for events emitted by subsequent transactions
 	//startChaincodeEventListening(ctx, network)
-
-	Datai := time.Now()
-	Dataiataf := time.Now()
-	Fsupi := 50.00
-	Fsupf := 20.00
-	Dff := 10
-	Vstatus := false
-	Iduser1 := "1"
-	Iduser2 := "2"
-
-	Createevent(contract, "1", Datai, Dataiataf, Fsupi, Fsupf, Dff, Vstatus, Iduser1, Iduser2)
+	/*
+		Datai := time.Now()
+		Dataiataf := time.Now()
+		Fsupi := 50.00
+		Fsupf := 20.00
+		Dff := 10
+		Vstatus := false
+		Iduser1 := "1"
+		Iduser2 := "2"
+	*/
+	//Createevent(contract, "1", Datai, Dataiataf, Fsupi, Fsupf, Dff, Vstatus, Iduser1, Iduser2)
+	//initLedger(contract)
 	getAllAssets(contract)
 
 	//replayChaincodeEvents(ctx, network, firstBlockNumber)
@@ -78,6 +80,7 @@ func startChaincodeEventListening(ctx context.Context, network *client.Network) 
 	chaincodeName := "vehicle"
 
 	events, err := network.ChaincodeEvents(ctx, chaincodeName)
+
 	if err != nil {
 		panic(fmt.Errorf("failed to start chaincode event listening: %w", err))
 	}
@@ -121,12 +124,14 @@ func Createevent(contract *client.Contract, Id string, Datai time.Time, Dataiata
 	s2 := strconv.FormatFloat(Fsupf, 'E', -1, 64)
 	s3 := strconv.Itoa(Dff)
 	s4 := strconv.FormatBool(Vstatus)
+
 	_, commit, err := contract.SubmitAsync("Createevent", client.WithArguments(Id, Datai.String(), Dataiataf.String(), s1, s2, s3, s4, Iduser1, Iduser2))
 	if err != nil {
 		panic(fmt.Errorf("failed to submit transaction: %w", err))
 	}
 
 	status, err := commit.Status()
+
 	if err != nil {
 		panic(fmt.Errorf("failed to get transaction commit status: %w", err))
 	}
@@ -145,7 +150,7 @@ func Createevent(contract *client.Contract, Id string, Datai time.Time, Dataiata
 func getAllAssets(contract *client.Contract) {
 	fmt.Println("\n--> Evaluate Transaction: GetAllAssets, function returns all the current assets on the ledger")
 
-	evaluateResult, err := contract.EvaluateTransaction("GetAllevents")
+	evaluateResult, err := contract.EvaluateTransaction("GetAllAssets")
 	if err != nil {
 		panic(fmt.Errorf("failed to evaluate transaction: %w", err))
 	}
@@ -166,7 +171,7 @@ func initLedger(contract *client.Contract) {
 }
 
 func newGrpcConnection() *grpc.ClientConn {
-	certificate, err := loadCertificate("../blockchain/organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt")
+	certificate, err := loadCertificate("../organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt")
 	if err != nil {
 		panic(err)
 	}
@@ -193,7 +198,7 @@ func loadCertificate(filename string) (*x509.Certificate, error) {
 
 // NewIdentity creates a client identity for this Gateway connection using an X.509 certificate.
 func NewIdentity() *identity.X509Identity {
-	certificatePEM, err := os.ReadFile("../blockchain/organizations/peerOrganizations/org1.example.com/users/User1@org1.example.com/msp/signcerts/cert.pem")
+	certificatePEM, err := os.ReadFile("../organizations/peerOrganizations/org1.example.com/users/User1@org1.example.com/msp/signcerts/cert.pem")
 
 	//cryptoPath   = "../../test-network/organizations/peerOrganizations/org1.example.com"
 	//keyPath      = cryptoPath + "/users/User1@org1.example.com/msp/keystore/"
@@ -212,12 +217,12 @@ func NewIdentity() *identity.X509Identity {
 
 // NewSign creates a function that generates a digital signature from a message digest using a private key.
 func NewSign() identity.Sign {
-	files, err := os.ReadDir("../blockchain/organizations/peerOrganizations/org1.example.com/users/User1@org1.example.com/msp/keystore/")
+	files, err := os.ReadDir("../organizations/peerOrganizations/org1.example.com/users/User1@org1.example.com/msp/keystore/")
 	if err != nil {
 		panic(fmt.Errorf("failed to read private key directory: %w", err))
 	}
 
-	privateKeyPEM, err := os.ReadFile(path.Join("../blockchain/organizations/peerOrganizations/org1.example.com/users/User1@org1.example.com/msp/keystore/", files[0].Name()))
+	privateKeyPEM, err := os.ReadFile(path.Join("../organizations/peerOrganizations/org1.example.com/users/User1@org1.example.com/msp/keystore/", files[0].Name()))
 	panicOnError(err)
 
 	privateKey, err := identity.PrivateKeyFromPEM(privateKeyPEM)

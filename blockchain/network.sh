@@ -306,7 +306,7 @@ function deployCC() {
 }
 
 function upgrade() {
-  scripts/upgrade.sh 
+  scripts/upgrade.sh  $CHANNEL_NAME $CC_NAME $CC_VERSION $CC_SEQUENCE  $CC_SRC_PATH
 
   if [ $? -ne 0 ]; then
     fatalln "Upgrade chaincode failed"
@@ -435,7 +435,7 @@ if [[ $# -ge 1 ]] ; then
 fi
 
 # parse flags
-
+##  -c $CHANNEL_NAME -ccn  $CC_NAME -ccv $CC_VERSION -ccs $CC_SEQUENCE  -ccp contracto/VehicleContract
 while [[ $# -ge 1 ]] ; do
   key="$1"
   case $key in
