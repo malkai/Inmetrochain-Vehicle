@@ -2,10 +2,8 @@ package main
 
 import (
 	"bytes"
-	"context"
 	"crypto/x509"
 	"encoding/json"
-	"errors"
 	"fmt"
 	"os"
 	"path"
@@ -67,65 +65,30 @@ func main() {
 		Iduser1 := "1"
 		Iduser2 := "2"
 	*/
-	//Createevent(contract, "1", Datai, Dataiataf, Fsupi, Fsupf, Dff, Vstatus, Iduser1, Iduser2)
+	Createevent(contract, time.Now(), 50.00, 10.0, "1", "2")
+	GetAllevents(contract, "event1")
+
+	//updatevent("event1", 1.0)
+	//updatevent("event1", 1.0)
+	//updatevent("event1", 1.0)
+	//updatevent("event1", 1.0)
+	//updatevent("event1", 1.0)
+	//updatevent("event1", 1.0)
+	//updatevent("event1", 1.0)
+	//updatevent("event1", 1.0)
+
 	//initLedger(contract)
-	getAllAssets(contract)
+	//getAllAssets(contract)
 
 	//replayChaincodeEvents(ctx, network, firstBlockNumber)
 
 }
 
-func startChaincodeEventListening(ctx context.Context, network *client.Network) {
-	fmt.Println("\n*** Start chaincode event listening")
-	chaincodeName := "vehicle"
-
-	events, err := network.ChaincodeEvents(ctx, chaincodeName)
-
-	if err != nil {
-		panic(fmt.Errorf("failed to start chaincode event listening: %w", err))
-	}
-
-	go func() {
-		for event := range events {
-			asset := formatJSON(event.Payload)
-			fmt.Printf("\n<-- Chaincode event received: %s - %s\n", event.EventName, asset)
-		}
-	}()
-}
-
-func replayChaincodeEvents(ctx context.Context, network *client.Network, startBlock uint64) {
-	fmt.Println("\n*** Start chaincode event replay")
-	chaincodeName := "vehicle"
-
-	events, err := network.ChaincodeEvents(ctx, chaincodeName, client.WithStartBlock(startBlock))
-	if err != nil {
-		panic(fmt.Errorf("failed to start chaincode event listening: %w", err))
-	}
-
-	for {
-		select {
-		case <-time.After(50 * time.Second):
-			panic(errors.New("timeout waiting for event replay"))
-
-		case event := <-events:
-			asset := formatJSON(event.Payload)
-			fmt.Printf("\n<-- Chaincode event replayed: %s - %s\n", event.EventName, asset)
-
-			if event.EventName == "DeleteAsset" {
-				// Reached the last submitted transaction so return to stop listening for events
-				return
-			}
-		}
-	}
-}
-
-func Createevent(contract *client.Contract, Id string, Datai time.Time, Dataiataf time.Time, Fsupi float64, Fsupf float64, Dff int, Vstatus bool, Iduser1 string, Iduser2 string) uint64 {
+func Createevent(contract *client.Contract, Datai time.Time, Fsupi float64, Dff float64, Iduser1 string, Iduser2 string) uint64 {
 	s1 := strconv.FormatFloat(Fsupi, 'f', 2, 64)
-	s2 := strconv.FormatFloat(Fsupf, 'f', 2, 64)
-	s3 := strconv.Itoa(Dff)
-	s4 := strconv.FormatBool(Vstatus)
+	s3 := strconv.FormatFloat(Dff, 'f', 2, 64)
 
-	_, commit, err := contract.SubmitAsync("Createevent", client.WithArguments(Id, Datai.String(), Dataiataf.String(), s1, s2, s3, s4, Iduser1, Iduser2))
+	_, commit, err := contract.SubmitAsync("Createevent", client.WithArguments(Datai.String(), s1, s3, Iduser1, Iduser2))
 	if err != nil {
 		panic(fmt.Errorf("failed to submit transaction: %w", err))
 	}
@@ -147,10 +110,10 @@ func Createevent(contract *client.Contract, Id string, Datai time.Time, Dataiata
 }
 
 // Evaluate a transaction to query ledger state.
-func getAllAssets(contract *client.Contract) {
+func GetAllevents(contract *client.Contract, id string) {
 	fmt.Println("\n--> Evaluate Transaction: GetAllAssets, function returns all the current assets on the ledger")
 
-	evaluateResult, err := contract.EvaluateTransaction("GetAllAssets")
+	evaluateResult, err := contract.EvaluateTransaction("GetAllevents", id)
 	if err != nil {
 		panic(fmt.Errorf("failed to evaluate transaction: %w", err))
 	}
@@ -160,10 +123,10 @@ func getAllAssets(contract *client.Contract) {
 }
 
 // Evaluate a transaction to query ledger state.
-func eventexist(contract *client.Contract, id string) {
+func updatevent(contract *client.Contract, id string, minus float64) {
 	fmt.Println("\n--> Evaluate Transaction: GetAllAssets, function returns all the current assets on the ledger")
-
-	evaluateResult, teste, err := contract.EvaluateTransaction("eventexist", id)
+	s1 := strconv.FormatFloat(minus, 'f', 2, 64)
+	evaluateResult, err := contract.EvaluateTransaction("updatevent", id, s1)
 	if err != nil {
 		panic(fmt.Errorf("failed to evaluate transaction: %w", err))
 	}
@@ -172,10 +135,10 @@ func eventexist(contract *client.Contract, id string) {
 	fmt.Printf("*** Result:%s\n", result)
 }
 
-func initLedger(contract *client.Contract) {
+func Closeevent(contract *client.Contract) {
 	fmt.Printf("\n--> Submit Transaction: InitLedger, function creates the initial set of assets on the ledger \n")
 
-	_, err := contract.SubmitTransaction("InitLedger")
+	_, err := contract.SubmitTransaction("Closeevent")
 	if err != nil {
 		panic(fmt.Errorf("failed to submit transaction: %w", err))
 	}

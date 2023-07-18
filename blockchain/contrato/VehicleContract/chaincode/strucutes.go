@@ -21,7 +21,7 @@ type Event struct {
 	Dataiataf string  `json:"dataf"`
 	Fsupi     float64 `json:"fsupi"`
 	Fsupf     float64 `json:"fsupf"`
-	Dff       int     `json:"dff"`
+	Dff       float64 `json:"dff"`
 	Vstatus   bool    `json:"vstatus"`
 	Iduser1   string  `json:"iduser1"`
 	Iduser2   string  `json:"iduser2"`
