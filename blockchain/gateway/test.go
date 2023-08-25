@@ -15,7 +15,7 @@ import (
 	"google.golang.org/grpc/credentials"
 )
 
-func main() {
+func main3() {
 	// Create gRPC client connection, which should be shared by all gateway connections to this endpoint.
 	clientConnection := newGrpcConnection()
 	defer clientConnection.Close()

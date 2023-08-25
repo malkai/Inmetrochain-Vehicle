@@ -7,8 +7,24 @@ import (
 	"github.com/hyperledger/fabric-contract-api-go/contractapi"
 )
 
+/*
+
+type Event struct {
+	Id        string  `json:"id"`     //Iduser1+Iduser2+ttimestamp
+	Datai     string  `json:"datai"`  //data inicial
+	Dataiataf string  `json:"dataf"`  //data final do acordo
+	Fsupi     float64 `json:"fsupi"`  //combustivel inicial
+	Fsupf     float64 `json:"fsupf"`  //combustivel final
+	Fsupfd    float64 `json:"fsupfd"` //i+constant k times
+	Dff       float64 `json:"dff"`
+	Vstatus   bool    `json:"vstatus"` //sentinela de controle
+	Iduser1   string  `json:"iduser1"` //identificação do usuario 1
+	Iduser2   string  `json:"iduser2"` //identificação do usuario 2
+}
+*/
+
 // Cria um evento no blockchain
-func (s *SmartContract) Createevent(ctx contractapi.TransactionContextInterface, Datai string, Fsupi float64, Dff float64, Iduser1 string, Iduser2 string) error {
+func (s *SmartContract) Createevent(ctx contractapi.TransactionContextInterface, Fsupi float64, Dff float64, Iduser1 string, Iduser2 string) error {
 
 	exist, err := s.Eventexist(ctx, "event"+Iduser1)
 	if err != nil {
@@ -17,10 +33,11 @@ func (s *SmartContract) Createevent(ctx contractapi.TransactionContextInterface,
 	if exist {
 		s.Closeevent(ctx, "event"+Iduser1)
 	}
+	aux, err := ctx.GetStub().GetTxTimestamp()
 
 	event := Event{
 		Id:        "event" + Iduser1,
-		Datai:     Datai,
+		Datai:     aux.AsTime().UTC().GoString(),
 		Dataiataf: "",
 		Fsupi:     Fsupi,
 		Fsupf:     0,
@@ -61,7 +78,7 @@ func (s *SmartContract) Closeevent(ctx contractapi.TransactionContextInterface, 
 	}
 
 	aux, err := ctx.GetStub().GetTxTimestamp()
-	asset.Dataiataf = aux.AsTime().GoString()
+	asset.Dataiataf = aux.AsTime().UTC().GoString()
 	asset.Vstatus = true
 
 	assetJSON, err := json.Marshal(asset)
@@ -119,20 +136,20 @@ func (s *SmartContract) GetAllevents(ctx contractapi.TransactionContextInterface
 	}
 	defer resultsIterator.Close()
 
-	var assets []*Event
+	var events []*Event
 	for resultsIterator.HasNext() {
 		queryResponse, err := resultsIterator.Next()
 		if err != nil {
 			return nil, err
 		}
 
-		var asset Event
-		err = json.Unmarshal(queryResponse.Value, &asset)
+		var event Event
+		err = json.Unmarshal(queryResponse.Value, &event)
 		if err != nil {
 			return nil, err
 		}
-		assets = append(assets, &asset)
+		events = append(events, &event)
 	}
 
-	return assets, nil
+	return events, nil
 }

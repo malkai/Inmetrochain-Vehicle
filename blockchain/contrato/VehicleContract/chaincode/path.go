@@ -7,36 +7,61 @@ import (
 	"github.com/hyperledger/fabric-contract-api-go/contractapi"
 )
 
-// Cria um evento no blockchain
-func (s *SmartContract) CreatPath(ctx contractapi.TransactionContextInterface, Datai string, Fsupi float64, Dff float64, Iduser1 string, Iduser2 string) error {
+func (s *SmartContract) Creatteste(ctx contractapi.TransactionContextInterface) error {
+	fmt.Printf("oi")
+	return nil
 
-	exist, err := s.Eventexist(ctx, "event"+Iduser1)
-	if err != nil {
-		return fmt.Errorf("\n Erro ao criar evento. %v", err)
-	}
-	if exist {
-		s.Closeevent(ctx, "event"+Iduser1)
-	}
-
-	event := Event{
-		Id:        "event" + Iduser1,
-		Datai:     Datai,
-		Dataiataf: "",
-		Fsupi:     Fsupi,
-		Fsupf:     0,
-		Dff:       Dff,
-		Vstatus:   false,
-		Iduser1:   Iduser1,
-		Iduser2:   Iduser2,
-	}
-	assetJSON, err := json.Marshal(event)
-	if err != nil {
-		return err
-	}
-	return ctx.GetStub().PutState("event"+Iduser1, assetJSON)
 }
 
-func (s *SmartContract) existPath(ctx contractapi.TransactionContextInterface, id string) (bool, error) {
+// Cria um evento no blockchain
+func (s *SmartContract) CreatPath(ctx contractapi.TransactionContextInterface, tuples [][]float64, id string) error {
+
+	exist, err := s.Eventexist(ctx, "Event"+id)
+	if err != nil {
+		return fmt.Errorf("\n Erro checar evento. %v", err)
+	}
+	if exist {
+		dist := 0.0
+		fuel := 0.0
+		time := 0.0
+       	//tt, err := ctx.GetStub().GetTxTimestamp()
+
+			for i, aux := range tuples {
+				if(len(tuples)>i){
+				dist = +Distanceeucle(aux[2], aux[i], aux[i+1], aux[i+1])
+				time = +totaltime(aux[i], a[i+1].T)
+				}
+				s.updatevent(ctx, "Event"+id, aux.Comb)
+				fmt.Println(i, aux)
+			}
+
+			/*
+
+				path := Path{
+					DataVehicle: a,
+					EventID:     "Path" + id + tt.AsTime().UTC().GoString(),
+					Distance:    dist,
+					Fuel:        fuel,
+					Totaltime:   time,
+				}
+
+				s.updatevent(ctx, "Event"+id, path.Fuel)
+				assetJSON, err := json.Marshal(path)
+				if err != nil {
+					return err
+				}
+				return ctx.GetStub().PutState("Path"+id, assetJSON)
+			*/
+
+		}
+
+	}
+
+	return fmt.Errorf("\n Caminho não esta conectado a nenhum evento %v", err)
+
+}
+
+func (s *SmartContract) ExistPath(ctx contractapi.TransactionContextInterface, id string) (bool, error) {
 
 	event, err := ctx.GetStub().GetState(id)
 	if err != nil {
@@ -47,60 +72,34 @@ func (s *SmartContract) existPath(ctx contractapi.TransactionContextInterface, i
 
 }
 
-func (s *SmartContract) updatPath(ctx contractapi.TransactionContextInterface, id string, minus float64) error {
-
-	event, err := ctx.GetStub().GetState(id)
-
-	if err != nil {
-		return fmt.Errorf("failed to read from world state: %v", err)
-	}
-
-	var asset Event
-	err = json.Unmarshal(event, &asset)
-	if err != nil {
-		return err
-	}
-
-	asset.Fsupf = +minus
-
-	if asset.Fsupf >= asset.Dff {
-		assetJSON, err := json.Marshal(asset)
-		if err != nil {
-			return err
+func containsDuplicate(nums []int) bool {
+	allKeys := make(map[int]bool)
+	for _, number := range nums {
+		if _, value := allKeys[number]; !value {
+			return false
 		}
-		ctx.GetStub().PutState(id, assetJSON)
-		s.Closeevent(ctx, id)
 	}
-	if asset.Fsupf < asset.Dff {
-
-		assetJSON, err := json.Marshal(asset)
-		if err != nil {
-			return err
-		}
-		ctx.GetStub().PutState(id, assetJSON)
-	}
-	return nil
+	return true
 
 }
 
 // GetAllAssets returns all assets found in world state
-func (s *SmartContract) GetallPath(ctx contractapi.TransactionContextInterface, id string) ([]*Event, error) {
-	// range query with empty string for startKey and endKey does an
-	// open-ended query of all assets in the chaincode namespace.
+func (s *SmartContract) GetallPath(ctx contractapi.TransactionContextInterface, id string) ([]*Path, error) {
+
 	resultsIterator, err := ctx.GetStub().GetStateByRange(id, "")
 	if err != nil {
 		return nil, err
 	}
 	defer resultsIterator.Close()
 
-	var assets []*Event
+	var assets []*Path
 	for resultsIterator.HasNext() {
 		queryResponse, err := resultsIterator.Next()
 		if err != nil {
 			return nil, err
 		}
 
-		var asset Event
+		var asset Path
 		err = json.Unmarshal(queryResponse.Value, &asset)
 		if err != nil {
 			return nil, err

@@ -16,7 +16,7 @@ import (
 	"google.golang.org/grpc/credentials"
 )
 
-func main() {
+func main2() {
 	// Create gRPC client connection, which should be shared by all gateway connections to this endpoint.
 	clientConnection := newGrpcConnection()
 	defer clientConnection.Close()
@@ -40,12 +40,12 @@ func main() {
 	}
 	defer gw.Close()
 
-	chaincodeName := "vehicle"
-	channelName := "mychannel"
+	//chaincodeName := "vehicle"
+	//channelName := "mychannel"
 
-	network := gw.GetNetwork(channelName)
+	//network := gw.GetNetwork(channelName)
 
-	contract := network.GetContract(chaincodeName)
+	//contract := network.GetContract(chaincodeName)
 
 	//initLedger(contract)
 
@@ -65,8 +65,8 @@ func main() {
 		Iduser1 := "1"
 		Iduser2 := "2"
 	*/
-	Createevent(contract, time.Now(), 50.00, 10.0, "1", "2")
-	GetAllevents(contract, "event1")
+	//Createevent(contract, time.Now(), 50.00, 10.0, "1", "2")
+	//GetAllevents(contract, "event1")
 
 	//updatevent("event1", 1.0)
 	//updatevent("event1", 1.0)
