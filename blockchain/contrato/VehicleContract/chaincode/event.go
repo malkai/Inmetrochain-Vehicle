@@ -3,25 +3,10 @@ package chaincode
 import (
 	"encoding/json"
 	"fmt"
+	"time"
 
 	"github.com/hyperledger/fabric-contract-api-go/contractapi"
 )
-
-/*
-
-type Event struct {
-	Id        string  `json:"id"`     //Iduser1+Iduser2+ttimestamp
-	Datai     string  `json:"datai"`  //data inicial
-	Dataiataf string  `json:"dataf"`  //data final do acordo
-	Fsupi     float64 `json:"fsupi"`  //combustivel inicial
-	Fsupf     float64 `json:"fsupf"`  //combustivel final
-	Fsupfd    float64 `json:"fsupfd"` //i+constant k times
-	Dff       float64 `json:"dff"`
-	Vstatus   bool    `json:"vstatus"` //sentinela de controle
-	Iduser1   string  `json:"iduser1"` //identificação do usuario 1
-	Iduser2   string  `json:"iduser2"` //identificação do usuario 2
-}
-*/
 
 // Cria um evento no blockchain
 func (s *SmartContract) Createevent(ctx contractapi.TransactionContextInterface, Fsupi float64, Dff float64, Iduser1 string, Iduser2 string) error {
@@ -76,10 +61,26 @@ func (s *SmartContract) Closeevent(ctx contractapi.TransactionContextInterface, 
 	if err != nil {
 		return err
 	}
-
+	var valuevalids []Path
 	aux, err := ctx.GetStub().GetTxTimestamp()
 	asset.Dataiataf = aux.AsTime().UTC().GoString()
 	asset.Vstatus = true
+	temp, err := s.GetallPath(ctx, "Path"+id)
+	for _, xx := range temp {
+		layout := "2006-01-02 15:04:05.000000"
+		datet1, _ := time.Parse(layout, xx.DataR)
+
+		datet2, _ := time.Parse(layout, asset.Datai)
+
+		datet3, _ := time.Parse(layout, asset.Dataiataf)
+
+		if datet1.After(datet2) && datet1.Before(datet3) {
+			est := &xx
+			valuevalids = append(valuevalids, est.)
+
+		}
+
+	}
 
 	assetJSON, err := json.Marshal(asset)
 	if err != nil {

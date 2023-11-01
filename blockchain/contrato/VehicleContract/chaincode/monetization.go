@@ -1,18 +1,14 @@
 package chaincode
 
-func CompletenessTimelinessCredibility(data []Tuple) (string, string, string) {
+func Credibility(data []Tuple) (string, string, string) {
 
 	return "", "", ""
 }
 
-func completness(data []Tuple) (string){
+func completness(data []Tuple) string {
 	return ""
 }
 
-func Timeliness(data []Tuple) (string){
-	return ""
-}
-
-func Credibility(data []Tuple) (string){
+func Timeliness(data []Tuple) string {
 	return ""
 }

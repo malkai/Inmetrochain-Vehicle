@@ -3,6 +3,7 @@ package chaincode
 import (
 	"math"
 	"strconv"
+	"strings"
 	"time"
 )
 
@@ -19,7 +20,14 @@ func CoordenadasCartesianas(latitude, longitude float64) (x, y, z float64) {
 	return x, y, z
 }
 
-func Distanceeucle(latitudeA, longitudeA, latitudeB, longitudeB float64) float64 {
+func Distanceeucle(latlongA, latlongB string) float64 {
+
+	res1 := strings.Split(latlongA, "/")
+	latitudeA, _ := strconv.ParseFloat(res1[0], 64)
+	longitudeA, _ := strconv.ParseFloat(res1[1], 64)
+	res1 = strings.Split(latlongB, "/")
+	latitudeB, _ := strconv.ParseFloat(res1[0], 64)
+	longitudeB, _ := strconv.ParseFloat(res1[1], 64)
 
 	x1, y1, z1 := CoordenadasCartesianas(latitudeA, longitudeA)
 	x2, y2, z2 := CoordenadasCartesianas(latitudeB, longitudeB)
@@ -27,7 +35,7 @@ func Distanceeucle(latitudeA, longitudeA, latitudeB, longitudeB float64) float64
 	return distancia
 }
 
-func KalmanFilter(capacidade float64, medições []float64) (float64, []float64) {
+func KalmanFilter(capacidade float64, medições []float64) float64 {
 
 	var media = mediavector(medições)
 
@@ -51,7 +59,7 @@ func KalmanFilter(capacidade float64, medições []float64) (float64, []float64)
 
 	resultadotanque := (medições[1] - estima) * capacidade
 
-	return resultadotanque, leiturasPercentuaispos
+	return resultadotanque
 
 }
 

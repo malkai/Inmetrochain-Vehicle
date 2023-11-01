@@ -36,11 +36,12 @@ type Tuple struct {
 }
 
 type Path struct {
-	DataVehicle []Tuple `json:"DataVehicle"`
-	EventID     string  `json:"EventID"`
-	Distance    float64 `json:"dist"`
-	Fuel        float64 `json:"fuel"`
-	Totaltime   float64 `json:"time"`
+	DataVehicle [][]Tuple `json:"DataVehicle"`
+	EventID     string    `json:"EventID"`
+	Distance    float64   `json:"dist"`
+	Fuel        float64   `json:"fuel"`
+	Totaltime   float64   `json:"time"`
+	DataR       string    `json:"dataR"`
 }
 
 // Asset describes basic details of what makes up a simple asset

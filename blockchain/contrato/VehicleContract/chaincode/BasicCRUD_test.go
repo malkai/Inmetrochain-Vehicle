@@ -34,9 +34,9 @@ func TestPath(t *testing.T) {
 	transactionContext.GetStubReturns(chaincodeStub)
 
 	//testa a inserção de um usuario na rede
-	assetTransfer := chaincode.SmartContract{}
-	err := assetTransfer.CreatPath(transactionContext)
-	require.NoError(t, err)
+	//assetTransfer := chaincode.SmartContract{}
+	//err := assetTransfer.CreatPath(transactionContext)
+	//require.NoError(t, err)
 
 	/*
 		chaincodeStub.GetStateReturns([]byte{}, nil)

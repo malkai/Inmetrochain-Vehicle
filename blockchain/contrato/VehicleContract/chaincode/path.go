@@ -7,14 +7,8 @@ import (
 	"github.com/hyperledger/fabric-contract-api-go/contractapi"
 )
 
-func (s *SmartContract) Creatteste(ctx contractapi.TransactionContextInterface) error {
-	fmt.Printf("oi")
-	return nil
-
-}
-
 // Cria um evento no blockchain
-func (s *SmartContract) CreatPath(ctx contractapi.TransactionContextInterface, tuples [][]float64, id string) error {
+func (s *SmartContract) CreatPath(ctx contractapi.TransactionContextInterface, tuples [][]Tuple, id string) error {
 
 	exist, err := s.Eventexist(ctx, "Event"+id)
 	if err != nil {
@@ -23,42 +17,41 @@ func (s *SmartContract) CreatPath(ctx contractapi.TransactionContextInterface, t
 	if exist {
 		dist := 0.0
 		fuel := 0.0
+		var fuel_vector []float64
 		time := 0.0
-       	//tt, err := ctx.GetStub().GetTxTimestamp()
+		//tt, err := ctx.GetStub().GetTxTimestamp()
 
-			for i, aux := range tuples {
-				if(len(tuples)>i){
-				dist = +Distanceeucle(aux[2], aux[i], aux[i+1], aux[i+1])
-				time = +totaltime(aux[i], a[i+1].T)
-				}
-				s.updatevent(ctx, "Event"+id, aux.Comb)
-				fmt.Println(i, aux)
+		for i, aux := range tuples {
+			if len(tuples) > i {
+
+				dist = +Distanceeucle(aux[i].Pos, aux[i+1].Pos)
+				time = +totaltime(aux[i].T, aux[i+1].T)
+				fuel_vector = append(fuel_vector, aux[i].Comb)
+
 			}
 
-			/*
-
-				path := Path{
-					DataVehicle: a,
-					EventID:     "Path" + id + tt.AsTime().UTC().GoString(),
-					Distance:    dist,
-					Fuel:        fuel,
-					Totaltime:   time,
-				}
-
-				s.updatevent(ctx, "Event"+id, path.Fuel)
-				assetJSON, err := json.Marshal(path)
-				if err != nil {
-					return err
-				}
-				return ctx.GetStub().PutState("Path"+id, assetJSON)
-			*/
-
+			fmt.Println(i, aux)
+		}
+		aux, err := ctx.GetStub().GetTxTimestamp()
+		fuel = KalmanFilter(80.0, fuel_vector)
+		path := Path{
+			DataVehicle: tuples,
+			EventID:     "Path" + id + aux.AsTime().UTC().GoString(),
+			Distance:    dist,
+			Fuel:        fuel,
+			Totaltime:   time,
+			DataR:       aux.AsTime().UTC().GoString(),
 		}
 
+		s.updatevent(ctx, "Event"+id, path.Fuel)
+		assetJSON, err := json.Marshal(path)
+		if err != nil {
+			return err
+		}
+		return ctx.GetStub().PutState("Path"+id, assetJSON)
+
 	}
-
 	return fmt.Errorf("\n Caminho não esta conectado a nenhum evento %v", err)
-
 }
 
 func (s *SmartContract) ExistPath(ctx contractapi.TransactionContextInterface, id string) (bool, error) {
