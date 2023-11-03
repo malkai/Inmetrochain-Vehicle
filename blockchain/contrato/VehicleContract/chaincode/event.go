@@ -61,7 +61,8 @@ func (s *SmartContract) Closeevent(ctx contractapi.TransactionContextInterface, 
 	if err != nil {
 		return err
 	}
-	var valuevalids []Path
+	var valuevalids [][]Tuple
+	var fuelsum float64 = 0.0
 	aux, err := ctx.GetStub().GetTxTimestamp()
 	asset.Dataiataf = aux.AsTime().UTC().GoString()
 	asset.Vstatus = true
@@ -75,8 +76,11 @@ func (s *SmartContract) Closeevent(ctx contractapi.TransactionContextInterface, 
 		datet3, _ := time.Parse(layout, asset.Dataiataf)
 
 		if datet1.After(datet2) && datet1.Before(datet3) {
-			est := &xx
-			valuevalids = append(valuevalids, est.)
+
+			fuelsum = fuelsum + xx.Fuel
+			for _, yy := range xx.DataVehicle {
+				valuevalids = append(valuevalids, yy)
+			}
 
 		}
 
