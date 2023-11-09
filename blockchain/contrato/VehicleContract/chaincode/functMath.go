@@ -105,3 +105,37 @@ func totaltime(s1, s2 string) float64 {
 	convert, _ := strconv.ParseFloat(result.String(), 64)
 	return convert
 }
+
+func Timeliness(valuevalids []string) float64 {
+	var k = 5.0
+	var vectortime = 0.0
+	var vectortotal = 0.0
+	for i, test := range valuevalids {
+		if i != len(valuevalids) {
+			layout := "2006-01-02 15:04:05.000000"
+			datet1, _ := time.Parse(layout, test)
+			datet2, _ := time.Parse(layout, valuevalids[i+1])
+			result := datet2.Sub(datet1)
+			convert, _ := strconv.ParseFloat(result.String(), 64)
+			if vectortime < k {
+				vectortime = vectortime + convert
+			}
+			vectortotal = vectortotal + convert
+
+		}
+
+	}
+	var prop = vectortime / vectortotal
+	var f_k = (prop / k) / math.Log((prop / k))
+	res_2 := math.Exp(1)
+	var timeless = math.Pow(res_2, f_k) + 1
+
+	return timeless
+}
+
+func Credibility(scoren1 float64, timelesstotal float64, fuelcheck float64, fuelsum float64, valuevalids []string) float64 {
+	helpc := fuelcheck / fuelsum //completness
+	m := 0.9
+	var conf = scoren1*m + (timelesstotal+helpc)/2*(1-m)
+	return conf
+}

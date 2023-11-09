@@ -3,13 +3,14 @@ package chaincode
 import (
 	"encoding/json"
 	"fmt"
+	"strconv"
 	"time"
 
 	"github.com/hyperledger/fabric-contract-api-go/contractapi"
 )
 
 // Cria um evento no blockchain
-func (s *SmartContract) Createevent(ctx contractapi.TransactionContextInterface, Fsupi float64, Dff float64, Iduser1 string, Iduser2 string) error {
+func (s *SmartContract) Createevent(ctx contractapi.TransactionContextInterface, Fsupi string, Dff string, Iduser1 string, Iduser2 string) error {
 
 	exist, err := s.Eventexist(ctx, "event"+Iduser1)
 	if err != nil {
@@ -20,13 +21,16 @@ func (s *SmartContract) Createevent(ctx contractapi.TransactionContextInterface,
 	}
 	aux, err := ctx.GetStub().GetTxTimestamp()
 
+	var fsump, _ = strconv.ParseFloat(Fsupi, 64)
+	var dffr, _ = strconv.ParseFloat(Dff, 64)
+
 	event := Event{
 		Id:        "event" + Iduser1,
 		Datai:     aux.AsTime().UTC().GoString(),
 		Dataiataf: "",
-		Fsupi:     Fsupi,
+		Fsupi:     fsump,
 		Fsupf:     0,
-		Dff:       Dff,
+		Dff:       dffr,
 		Vstatus:   false,
 		Iduser1:   Iduser1,
 		Iduser2:   Iduser2,
@@ -53,7 +57,7 @@ func (s *SmartContract) Closeevent(ctx contractapi.TransactionContextInterface, 
 
 	event, err := ctx.GetStub().GetState(id)
 	if err != nil {
-		return fmt.Errorf("failed to read from world state: %v", err)
+		return fmt.Errorf("Erro ao recuperar evento: %v", err)
 	}
 
 	var asset Event
@@ -61,12 +65,15 @@ func (s *SmartContract) Closeevent(ctx contractapi.TransactionContextInterface, 
 	if err != nil {
 		return err
 	}
-	var valuevalids [][]Tuple
+	var valuevalids []string
 	var fuelsum float64 = 0.0
 	aux, err := ctx.GetStub().GetTxTimestamp()
 	asset.Dataiataf = aux.AsTime().UTC().GoString()
 	asset.Vstatus = true
 	temp, err := s.GetallPath(ctx, "Path"+id)
+	var ntotal float64 = 0.0
+	var ntimeless float64 = 0.0
+
 	for _, xx := range temp {
 		layout := "2006-01-02 15:04:05.000000"
 		datet1, _ := time.Parse(layout, xx.DataR)
@@ -76,22 +83,23 @@ func (s *SmartContract) Closeevent(ctx contractapi.TransactionContextInterface, 
 		datet3, _ := time.Parse(layout, asset.Dataiataf)
 
 		if datet1.After(datet2) && datet1.Before(datet3) {
-
+			ntotal = ntotal + 1
 			fuelsum = fuelsum + xx.Fuel
-			for _, yy := range xx.DataVehicle {
-				valuevalids = append(valuevalids, yy)
-			}
+			ntimeless = ntimeless + xx.Timeless
 
 		}
 
 	}
-
+	var users, _ = s.Userget(ctx, "user"+id)
+	score := Credibility(users.Score, ntimeless/ntotal, asset.Dff, fuelsum, valuevalids)
+	s.Updatuser(ctx, "user"+id, 1*score, score)
+	asset.Fsupf = asset.Fsupi - fuelsum
 	assetJSON, err := json.Marshal(asset)
 	if err != nil {
 		return err
 	}
-	ctx.GetStub().PutState(id+asset.Dataiataf, assetJSON)
-	return nil
+
+	return ctx.GetStub().PutState("event"+id+asset.Dataiataf, assetJSON)
 
 }
 
@@ -100,7 +108,7 @@ func (s *SmartContract) updatevent(ctx contractapi.TransactionContextInterface, 
 	event, err := ctx.GetStub().GetState(id)
 
 	if err != nil {
-		return fmt.Errorf("failed to read from world state: %v", err)
+		return fmt.Errorf("erro ao atualizar evento: %v", err)
 	}
 
 	var asset Event
@@ -117,7 +125,7 @@ func (s *SmartContract) updatevent(ctx contractapi.TransactionContextInterface, 
 			return err
 		}
 		ctx.GetStub().PutState(id, assetJSON)
-		s.Closeevent(ctx, id)
+		return s.Closeevent(ctx, id)
 	}
 	if asset.Fsupf < asset.Dff {
 
@@ -125,7 +133,7 @@ func (s *SmartContract) updatevent(ctx contractapi.TransactionContextInterface, 
 		if err != nil {
 			return err
 		}
-		ctx.GetStub().PutState(id, assetJSON)
+		return ctx.GetStub().PutState(id, assetJSON)
 	}
 	return nil
 
@@ -145,15 +153,18 @@ func (s *SmartContract) GetAllevents(ctx contractapi.TransactionContextInterface
 	for resultsIterator.HasNext() {
 		queryResponse, err := resultsIterator.Next()
 		if err != nil {
-			return nil, err
+			return nil, fmt.Errorf("event erro1: %v", err)
 		}
 
 		var event Event
 		err = json.Unmarshal(queryResponse.Value, &event)
 		if err != nil {
-			return nil, err
+			return nil, fmt.Errorf("event erro2: %v", err)
 		}
-		events = append(events, &event)
+		if event.Id != "" {
+			events = append(events, &event)
+		}
+
 	}
 
 	return events, nil

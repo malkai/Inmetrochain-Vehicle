@@ -90,6 +90,8 @@ Após montar nossa rede fazemos o deploy do nosso contrato inteligente. Do ponto
 
 ```
 ./network.sh deployCC -ccn vehicle -ccp contrato/BasicCRUD -ccl go
+ou 
+./network.sh deployCC -ccn vehicle -ccp contrato/VehicleContract -ccl go
 ```
 
 Após realizar o deploy sem erros iremos na pasta que está o nosso gateway. O Fabric Gateway é um serviço, introduzido nos pares Hyperledger Fabric v2.4, que fornece uma API simplificada e mínima para enviar transações para uma rede Fabric. Os requisitos anteriormente colocados nos SDKs do cliente, como reunir endossos de transações de pares de várias organizações, são delegados ao serviço Fabric Gateway executado em um ponto para permitir o desenvolvimento simplificado de aplicativos e o envio de transações na v2.4.
@@ -120,7 +122,7 @@ Upgrade do contrato inteligente
 
 ```
 ./network.sh deployCC -ccn nomedocontrato -ccp path -ccl go  -ccv versão -ccs sequencia
-./network.sh deployCC -ccn vehicle -ccp contrato/BasicCRUD -ccl go -ccv 1.1 -ccs 2
+./network.sh deployCC -ccn vehicle -ccp contrato/VehicleContract -ccl go -ccv 1.1 -ccs 2
 
 ```
 

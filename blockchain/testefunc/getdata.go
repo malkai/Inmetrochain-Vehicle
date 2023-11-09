@@ -59,24 +59,7 @@ func isAnagram(s string, t string) bool {
 
 }
 
-func CompletenessTimelinessCredibility(data []string) (string, string, string) {
-
-	return "", "", ""
-}
-
-func completness(data []string) string {
-	return ""
-}
-
-func Timeliness(data []string) string {
-	return ""
-}
-
-func Credibility(data []string) string {
-	return ""
-}
-
-func main() {
+func main2() {
 
 	var a bool
 	a = isAnagram("rat", "car")

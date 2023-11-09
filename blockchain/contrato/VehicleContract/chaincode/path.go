@@ -7,51 +7,81 @@ import (
 	"github.com/hyperledger/fabric-contract-api-go/contractapi"
 )
 
-// Cria um evento no blockchain
-func (s *SmartContract) CreatPath(ctx contractapi.TransactionContextInterface, tuples [][]Tuple, id string) error {
+/*
+export CORE_PEER_TLS_ENABLED=true
+export CORE_PEER_LOCALMSPID="Org1MSP"
+export CORE_PEER_MSPCONFIGPATH=${PWD}/organizations/peerOrganizations/org1.example.com/users/User1@org1.example.com/msp
+export CORE_PEER_TLS_ROOTCERT_FILE=${PWD}/organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt
+export CORE_PEER_ADDRESS=localhost:7051
+export TARGET_TLS_OPTIONS=(-o localhost:7050 --ordererTLSHostnameOverride orderer.example.com --tls --cafile "${PWD}/organizations/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem" --peerAddresses localhost:7051 --tlsRootCertFiles "${PWD}/organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt" --peerAddresses localhost:9051 --tlsRootCertFiles "${PWD}/organizations/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/ca.crt")
+*/
 
-	exist, err := s.Eventexist(ctx, "Event"+id)
+// peer chaincode invoke "${TARGET_TLS_OPTIONS[@]}" -C mychannel -n vehicle -c '{"function":"CreatePath","Args":[[91 123 34 84 34 58 34 49 48 34 44 34 80 111 115 34 58 34 49 47 50 34 44 34 67 111 109 98 34 58 57 51 125 44 123 34 84 34 58 34 49 49 34 44 34 80 111 115 34 58 34 49 47 50 34 44 34 67 111 109 98 34 58 57 50 125 44 123 34 84 34 58 34 49 50 34 44 34 80 111 115 34 58 34 49 47 50 34 44 34 67 111 109 98 34 58 57 49 125 93][34 49 34]]}'
+// Cria um evento no blockchain
+func (s *SmartContract) CreatPath(ctx contractapi.TransactionContextInterface, data string, id string) error {
+
+	var tuples []Tuple
+
+	stringByte := []byte(data)
+
+	err := json.Unmarshal(stringByte, &tuples)
+	if err != nil {
+		return fmt.Errorf("\n Erro nas tuplas. %v", err)
+	}
+
+	h, err := s.Eventexist(ctx, "event"+id)
 	if err != nil {
 		return fmt.Errorf("\n Erro checar evento. %v", err)
 	}
-	if exist {
-		dist := 0.0
-		fuel := 0.0
-		var fuel_vector []float64
-		time := 0.0
-		//tt, err := ctx.GetStub().GetTxTimestamp()
+	if !h {
+		return fmt.Errorf("\n Caminho não esta conectado a nenhum evento %v", err)
+	}
 
-		for i, aux := range tuples {
+	dist := 0.0
+	fuel := 0.0
+	//var fuel_vector []float64
+	time := 0.0
+	//var time2 []string
+	/*
+		for i := range tuples {
 			if len(tuples) > i {
 
-				dist = +Distanceeucle(aux[i].Pos, aux[i+1].Pos)
-				time = +totaltime(aux[i].T, aux[i+1].T)
-				fuel_vector = append(fuel_vector, aux[i].Comb)
+				dist = +Distanceeucle(tuples[i].Pos, tuples[i+1].Pos)
+				time = +totaltime(tuples[i].T, tuples[i+1].T)
+				time2 = append(time2, tuples[i].T)
+				fuel_vector = append(fuel_vector, tuples[i].Comb)
 
 			}
 
-			fmt.Println(i, aux)
 		}
-		aux, err := ctx.GetStub().GetTxTimestamp()
+		var timeles = Timeliness(time2)
 		fuel = KalmanFilter(80.0, fuel_vector)
-		path := Path{
-			DataVehicle: tuples,
-			EventID:     "Path" + id + aux.AsTime().UTC().GoString(),
-			Distance:    dist,
-			Fuel:        fuel,
-			Totaltime:   time,
-			DataR:       aux.AsTime().UTC().GoString(),
-		}
+	*/
 
-		s.updatevent(ctx, "Event"+id, path.Fuel)
-		assetJSON, err := json.Marshal(path)
-		if err != nil {
-			return err
-		}
-		return ctx.GetStub().PutState("Path"+id, assetJSON)
-
+	aux, err := ctx.GetStub().GetTxTimestamp()
+	if err != nil {
+		return fmt.Errorf("\n Erro checar data. %v", err)
 	}
-	return fmt.Errorf("\n Caminho não esta conectado a nenhum evento %v", err)
+
+	path := Path{
+		EventID:     "event" + id + aux.AsTime().UTC().GoString(),
+		DataVehicle: tuples,
+		Distance:    dist,
+		Fuel:        fuel,
+		Totaltime:   time,
+		Timeless:    10,
+		DataR:       aux.AsTime().UTC().GoString(),
+	}
+
+	s.updatevent(ctx, "event"+id, 1)
+
+	assetJSON, err := json.Marshal(path)
+	if err != nil {
+		return err
+	}
+
+	return ctx.GetStub().PutState("path"+id+aux.AsTime().UTC().GoString(), assetJSON)
+
 }
 
 func (s *SmartContract) ExistPath(ctx contractapi.TransactionContextInterface, id string) (bool, error) {
@@ -65,17 +95,6 @@ func (s *SmartContract) ExistPath(ctx contractapi.TransactionContextInterface, i
 
 }
 
-func containsDuplicate(nums []int) bool {
-	allKeys := make(map[int]bool)
-	for _, number := range nums {
-		if _, value := allKeys[number]; !value {
-			return false
-		}
-	}
-	return true
-
-}
-
 // GetAllAssets returns all assets found in world state
 func (s *SmartContract) GetallPath(ctx contractapi.TransactionContextInterface, id string) ([]*Path, error) {
 
@@ -85,20 +104,67 @@ func (s *SmartContract) GetallPath(ctx contractapi.TransactionContextInterface, 
 	}
 	defer resultsIterator.Close()
 
-	var assets []*Path
+	var paths []*Path
 	for resultsIterator.HasNext() {
 		queryResponse, err := resultsIterator.Next()
 		if err != nil {
-			return nil, err
+			return nil, fmt.Errorf("Path erro1: %v", err)
 		}
 
-		var asset Path
-		err = json.Unmarshal(queryResponse.Value, &asset)
+		var path Path
+		err = json.Unmarshal(queryResponse.Value, &path)
 		if err != nil {
-			return nil, err
+			return nil, fmt.Errorf("Path erro2: %v", err)
 		}
-		assets = append(assets, &asset)
-	}
 
-	return assets, nil
+		if path.EventID != " " {
+			paths = append(paths, &path)
+		}
+
+	}
+	return paths, nil
 }
+
+/*
+	if exist {
+		dist := 0.0
+		fuel := 0.0
+		var fuel_vector []float64
+		time := 0.0
+		var time2 []string
+		//tt, err := ctx.GetStub().GetTxTimestamp()
+
+		for i := range tuples {
+			if len(tuples) > i {
+
+				dist = +Distanceeucle(tuples[i].Pos, tuples[i+1].Pos)
+				time = +totaltime(tuples[i].T, tuples[i+1].T)
+				time2 = append(time2, tuples[i].T)
+				fuel_vector = append(fuel_vector, tuples[i].Comb)
+
+			}
+
+		}
+		var timeles = Timeliness(time2)
+		aux, err := ctx.GetStub().GetTxTimestamp()
+		fuel = KalmanFilter(80.0, fuel_vector)
+		path := Path{
+			DataVehicle: tuples,
+			EventID:     "Path" + id + aux.AsTime().UTC().GoString(),
+			Distance:    dist,
+			Fuel:        fuel,
+			Totaltime:   time,
+			Timeless:    timeles,
+			DataR:       aux.AsTime().UTC().GoString(),
+		}
+
+		s.updatevent(ctx, "Event"+id, path.Fuel)
+		assetJSON, err := json.Marshal(path)
+		if err != nil {
+			return err
+		}
+		return ctx.GetStub().PutState("Path"+id, assetJSON)
+
+	}
+	return fmt.Errorf("\n Caminho não esta conectado a nenhum evento %v", err)
+*/

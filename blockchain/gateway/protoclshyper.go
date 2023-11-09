@@ -7,71 +7,11 @@ import (
 	"fmt"
 	"os"
 	"path"
-	"time"
 
-	"github.com/hyperledger/fabric-gateway/pkg/client"
 	"github.com/hyperledger/fabric-gateway/pkg/identity"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials"
 )
-
-func main3() {
-	// Create gRPC client connection, which should be shared by all gateway connections to this endpoint.
-	clientConnection := newGrpcConnection()
-	defer clientConnection.Close()
-
-	// Create client identity and signing implementation based on X.509 certificate and private key.
-	id := NewIdentity()
-	sign := NewSign()
-
-	gw, err := client.Connect(
-		id,
-		client.WithSign(sign),
-		client.WithClientConnection(clientConnection),
-
-		client.WithEvaluateTimeout(5*time.Second),
-		client.WithEndorseTimeout(15*time.Second),
-		client.WithSubmitTimeout(5*time.Second),
-		client.WithCommitStatusTimeout(1*time.Minute),
-	)
-	if err != nil {
-		panic(err)
-	}
-	defer gw.Close()
-
-	chaincodeName := "vehicle"
-	channelName := "mychannel"
-
-	network := gw.GetNetwork(channelName)
-	contract := network.GetContract(chaincodeName)
-
-	getAllAssets(contract)
-
-}
-
-// Evaluate a transaction to query ledger state.
-func getAllAssets(contract *client.Contract) {
-	fmt.Println("\n--> Evaluate Transaction: GetAllAssets, function returns all the current assets on the ledger")
-
-	evaluateResult, err := contract.EvaluateTransaction("GetAllAssets")
-	if err != nil {
-		panic(fmt.Errorf("failed to evaluate transaction: %w", err))
-	}
-	result := formatJSON(evaluateResult)
-
-	fmt.Printf("*** Result:%s\n", result)
-}
-
-func initLedger(contract *client.Contract) {
-	fmt.Printf("\n--> Submit Transaction: InitLedger, function creates the initial set of assets on the ledger \n")
-
-	_, err := contract.SubmitTransaction("InitLedger")
-	if err != nil {
-		panic(fmt.Errorf("failed to submit transaction: %w", err))
-	}
-
-	fmt.Printf("*** Transaction committed successfully\n")
-}
 
 func newGrpcConnection() *grpc.ClientConn {
 	certificate, err := loadCertificate("../organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt")
