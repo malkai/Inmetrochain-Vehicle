@@ -38,24 +38,36 @@ func main() {
 	contract := network.GetContract(chaincodeName)
 	//GetAllevents(contract, "event")
 
-	//Createuser(contract, "1", "Malkai")
+	//Createevent(contract, 93.00, 5.0, "1", "3")
+	//GetAllevents(contract, "event")
+	//GetAllevents(contract, "event1")
 
-	//Createevent(contract, time.Now(), 50.00, 10.0, "1", "3")
+	//Createuser(contract, "1", "Malkai", "80")
+	//GetAlluser(contract, "user")
 
 	var t []Tuple
-	var t1 = Tuple{T: "10", Pos: "1/2", Comb: 93.00}
+	layout := "2006-01-02 15:04:05"
+	time2 := time.Now()
+
+	var t1 = Tuple{T: time2.Format(layout), Pos: "1/2", Comb: 93.00}
 	t = append(t, t1)
-	t1 = Tuple{T: "11", Pos: "1/2", Comb: 92.00}
+	time2 = time2.Add(10 * time.Second)
+	//fmt.Println(time2.Format(layout))
+	t1 = Tuple{T: time2.Format(layout), Pos: "2/3", Comb: 92.00}
 	t = append(t, t1)
-	t1 = Tuple{T: "12", Pos: "1/2", Comb: 91.00}
+	time2 = time2.Add(10 * time.Second)
+	//fmt.Println(time2.Format(layout))
+	t1 = Tuple{T: time2.Format(layout), Pos: "4/5", Comb: 91.00}
 	t = append(t, t1)
-	t1 = Tuple{T: "13", Pos: "1/2", Comb: 90.00}
+	time2 = time2.Add(10 * time.Second)
+	//fmt.Println(time2.Format(layout))
+	t1 = Tuple{T: time2.Format(layout), Pos: "5/6", Comb: 90.00}
 	t = append(t, t1)
 
 	CreatePath(contract, t, "1")
 
-	GetAllPath(contract, "Path")
-
+	//GetAllPath(contract, "Path")
+	//GetAlluser(contract, "user")
 	GetAllevents(contract, "event")
 
 	//initLedger(contract)

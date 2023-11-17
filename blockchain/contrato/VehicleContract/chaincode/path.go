@@ -18,7 +18,8 @@ export TARGET_TLS_OPTIONS=(-o localhost:7050 --ordererTLSHostnameOverride ordere
 
 // peer chaincode invoke "${TARGET_TLS_OPTIONS[@]}" -C mychannel -n vehicle -c '{"function":"CreatePath","Args":[[91 123 34 84 34 58 34 49 48 34 44 34 80 111 115 34 58 34 49 47 50 34 44 34 67 111 109 98 34 58 57 51 125 44 123 34 84 34 58 34 49 49 34 44 34 80 111 115 34 58 34 49 47 50 34 44 34 67 111 109 98 34 58 57 50 125 44 123 34 84 34 58 34 49 50 34 44 34 80 111 115 34 58 34 49 47 50 34 44 34 67 111 109 98 34 58 57 49 125 93][34 49 34]]}'
 // Cria um evento no blockchain
-func (s *SmartContract) CreatPath(ctx contractapi.TransactionContextInterface, data string, id string) error {
+
+func (s *SmartContract) CreatPath(ctx contractapi.TransactionContextInterface, data string, id string, id2 string) error {
 
 	var tuples []Tuple
 
@@ -29,7 +30,7 @@ func (s *SmartContract) CreatPath(ctx contractapi.TransactionContextInterface, d
 		return fmt.Errorf("\n Erro nas tuplas. %v", err)
 	}
 
-	h, err := s.Eventexist(ctx, "event"+id)
+	h, err := s.Eventexist(ctx, id, id2)
 	if err != nil {
 		return fmt.Errorf("\n Erro checar evento. %v", err)
 	}
@@ -39,48 +40,71 @@ func (s *SmartContract) CreatPath(ctx contractapi.TransactionContextInterface, d
 
 	dist := 0.0
 	fuel := 0.0
-	//var fuel_vector []float64
+	var fuel_vector []float64
 	time := 0.0
-	//var time2 []string
-	/*
-		for i := range tuples {
-			if len(tuples) > i {
+	var time2 []string
+	i := 0
+	for i = range tuples {
+		if i < len(tuples)-1 {
 
-				dist = +Distanceeucle(tuples[i].Pos, tuples[i+1].Pos)
-				time = +totaltime(tuples[i].T, tuples[i+1].T)
-				time2 = append(time2, tuples[i].T)
-				fuel_vector = append(fuel_vector, tuples[i].Comb)
-
+			dist1, err := Distanceeucle(tuples[i].Pos, tuples[i+1].Pos)
+			if err != nil {
+				return fmt.Errorf("\n Erro checar Distancia. %v", err)
 			}
 
+			dist = +dist1
+
+			time1, err := totaltime(tuples[i].T, tuples[i+1].T)
+			if err != nil {
+				return fmt.Errorf("\n Error checa Tempo. %v", err)
+			}
+			time = time + time1
+
+			time2 = append(time2, tuples[i].T)
+
+			fuel_vector = append(fuel_vector, tuples[i].Comb)
 		}
-		var timeles = Timeliness(time2)
-		fuel = KalmanFilter(80.0, fuel_vector)
-	*/
+
+	}
+
+	timeles, err := Timeliness(time2)
+	if err != nil {
+		return fmt.Errorf("\n Error na metrica timeless. %v", err)
+	}
+
+	user, err := s.Userget(ctx, "user"+id)
+	if err != nil {
+		return fmt.Errorf("\n Error na metrica timeless. %v", err)
+	}
+
+	fuel = KalmanFilter(user.Tanque, fuel_vector)
 
 	aux, err := ctx.GetStub().GetTxTimestamp()
 	if err != nil {
 		return fmt.Errorf("\n Erro checar data. %v", err)
 	}
 
+	layout := "2006-01-02 15:04:05"
+
 	path := Path{
-		EventID:     "event" + id + aux.AsTime().UTC().GoString(),
+		EventID:     id + aux.AsTime().Format(layout),
 		DataVehicle: tuples,
 		Distance:    dist,
 		Fuel:        fuel,
 		Totaltime:   time,
-		Timeless:    10,
-		DataR:       aux.AsTime().UTC().GoString(),
+		Timeless:    timeles,
+		DataR:       aux.AsTime().Format(layout),
 	}
 
-	s.updatevent(ctx, "event"+id, 1)
+	//return fmt.Errorf("\n Sucesso  %v %f", err, fuel)
 
-	assetJSON, err := json.Marshal(path)
+	patJSON, err := json.Marshal(path)
 	if err != nil {
 		return err
 	}
+	s.updatevent(ctx, id, id2, fuel)
 
-	return ctx.GetStub().PutState("path"+id+aux.AsTime().UTC().GoString(), assetJSON)
+	return ctx.GetStub().PutState("path", patJSON)
 
 }
 
@@ -167,4 +191,55 @@ func (s *SmartContract) GetallPath(ctx contractapi.TransactionContextInterface, 
 
 	}
 	return fmt.Errorf("\n Caminho não esta conectado a nenhum evento %v", err)
+*/
+
+/*
+
+
+ */
+//return fmt.Errorf("\n Sucesso %v %d %f %f", err, len(tuples)-1, dist, time)
+/*
+	if len(tuples) > i {
+
+		dist1, err := s.Distanceeucle(ctx, tuples[i].Pos, tuples[i+1].Pos)
+		if err != nil {
+			return fmt.Errorf("\n Erro checar Distancia. %v", err)
+		}
+		dist = +dist1
+
+		//time = +totaltime(tuples[i].T, tuples[i+1].T)
+		//time2 = append(time2, tuples[i].T)
+		//fuel_vector = append(fuel_vector, tuples[i].Comb)
+
+	}
+*/
+
+//}
+//return fmt.Errorf("\n Sucesso %v %f", err, dist)
+//var timeles = Timeliness(time2)
+//fuel = KalmanFilter(80.0, fuel_vector)
+/*
+	aux, err := ctx.GetStub().GetTxTimestamp()
+	if err != nil {
+		return fmt.Errorf("\n Erro checar data. %v", err)
+	}
+
+	path := Path{
+		EventID:     "event" + id + aux.AsTime().UTC().GoString(),
+		DataVehicle: tuples,
+		Distance:    dist,
+		Fuel:        fuel,
+		Totaltime:   time,
+		Timeless:    10,
+		DataR:       aux.AsTime().UTC().GoString(),
+	}
+
+	s.updatevent(ctx, "event"+id, 1)
+
+	assetJSON, err := json.Marshal(path)
+	if err != nil {
+		return err
+	}
+
+	return ctx.GetStub().PutState("path"+id+aux.AsTime().UTC().GoString(), assetJSON)
 */

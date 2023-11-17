@@ -3,12 +3,13 @@ package chaincode
 import (
 	"encoding/json"
 	"fmt"
+	"strconv"
 
 	"github.com/hyperledger/fabric-contract-api-go/contractapi"
 )
 
 // Insere um usuario na blockchain
-func (s *SmartContract) Createuser(ctx contractapi.TransactionContextInterface, id string, name string) error {
+func (s *SmartContract) Createuser(ctx contractapi.TransactionContextInterface, id string, name string, tanq string) error {
 	exists, err := s.Userexist(ctx, "user"+id)
 	if err != nil {
 		return err
@@ -17,18 +18,24 @@ func (s *SmartContract) Createuser(ctx contractapi.TransactionContextInterface, 
 		return fmt.Errorf("O usuario %s já existe", id)
 	}
 
+	tanque, err := strconv.ParseFloat(tanq, 64)
+	if err != nil {
+		return fmt.Errorf("\n Erro ao converter. %v", err)
+	}
+
 	user := User{
 		Id:         "user" + id,
 		Name:       name,
 		Criptmoeda: 0.0,
 		Score:      0.5,
+		Tanque:     tanque,
 	}
-	assetJSON, err := json.Marshal(user)
+	userJSON, err := json.Marshal(user)
 	if err != nil {
 		return err
 	}
 
-	return ctx.GetStub().PutState("user"+id, assetJSON)
+	return ctx.GetStub().PutState("user", userJSON)
 }
 
 func (s *SmartContract) Userget(ctx contractapi.TransactionContextInterface, id string) (User, error) {
@@ -37,7 +44,10 @@ func (s *SmartContract) Userget(ctx contractapi.TransactionContextInterface, id 
 	if err != nil {
 		return users, fmt.Errorf("failed to read from world state: %v", err)
 	}
-	_ = json.Unmarshal(user, &users)
+	err = json.Unmarshal(user, &users)
+	if err != nil {
+		return users, fmt.Errorf("failed to read from world state: %v", err)
+	}
 
 	return users, nil
 
@@ -54,10 +64,11 @@ func (s *SmartContract) Userexist(ctx contractapi.TransactionContextInterface, i
 
 }
 
-func (s *SmartContract) Updatuser(ctx contractapi.TransactionContextInterface, id string, coin float64, score float64) error {
+//s.Updatuser(ctx, "user"+id, 1*score, ntimeless/ntotal, eventjson.Dff, fuelsum, valuevalids )
+
+func (s *SmartContract) Updatuser(ctx contractapi.TransactionContextInterface, id string, timeless, eventdff, fuelsum float64, vaulevalids []string) error {
 
 	user, err := ctx.GetStub().GetState(id)
-
 	if err != nil {
 		return fmt.Errorf("failed to read from world state: %v", err)
 	}
@@ -68,16 +79,17 @@ func (s *SmartContract) Updatuser(ctx contractapi.TransactionContextInterface, i
 		return err
 	}
 
-	users.Criptmoeda = +coin
-	users.Score = +score
+	score := Credibility(users.Score, timeless, eventdff, fuelsum, vaulevalids)
 
-	assetJSON, err := json.Marshal(users)
+	users.Criptmoeda = users.Criptmoeda + 1*score
+	users.Score = users.Score + score
+
+	userJSON, err := json.Marshal(users)
 	if err != nil {
 		return err
 	}
-	ctx.GetStub().PutState(id, assetJSON)
 
-	return nil
+	return ctx.GetStub().PutState(id, userJSON)
 
 }
 

@@ -6,9 +6,9 @@ import (
 	"github.com/hyperledger/fabric-gateway/pkg/client"
 )
 
-func Createuser(contract *client.Contract, Iduser1 string, name string) uint64 {
+func Createuser(contract *client.Contract, Iduser1 string, name string, tanque string) uint64 {
 
-	_, commit, err := contract.SubmitAsync("Createuser", client.WithArguments(Iduser1, name))
+	_, commit, err := contract.SubmitAsync("Createuser", client.WithArguments(Iduser1, name, tanque))
 	if err != nil {
 		panic(fmt.Errorf("failed to submit transaction: %w", err))
 	}

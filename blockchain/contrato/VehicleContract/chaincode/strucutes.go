@@ -13,6 +13,7 @@ type User struct {
 	Id         string  `json:"id"` //vin + cpf or CNPJ
 	Name       string  `json:"name"`
 	Criptmoeda float64 `json:"criptmoeda"`
+	Tanque     float64 `json:"Tanque"` //porcentagem
 	Score      float64 `json:"score"`
 }
 

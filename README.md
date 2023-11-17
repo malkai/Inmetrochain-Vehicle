@@ -80,7 +80,8 @@ caso deseja criar um canal com nome personalidade utilize o comando.
 ./network.sh up createChannel -c meucanal
 ```
 
-Antes de criar uma rede, cada organização precisa gerar a criptografia material que vai definir aquela organização na rede. Porque Hyperledger Fabric é um blockchain autorizado, cada nó e usuário na rede precisa use certificados e chaves para assinar e verificar suas ações. Além disso, cada usuário precisa pertencer a uma organização reconhecida como membro da rede. Você pode usar a ferramenta Cryptogen ou Fabric CAs para gerar a criptografia da organizaçãomateriais.
+Antes de criar uma rede, cada organ
+ização precisa gerar a criptografia material que vai definir aquela organização na rede. Porque Hyperledger Fabric é um blockchain autorizado, cada nó e usuário na rede precisa use certificados e chaves para assinar e verificar suas ações. Além disso, cada usuário precisa pertencer a uma organização reconhecida como membro da rede. Você pode usar a ferramenta Cryptogen ou Fabric CAs para gerar a criptografia da organizaçãomateriais.
  
 Por padrão, a rede de amostra usa cryptogen. Cryptogen é uma ferramenta que é destinado ao desenvolvimento e teste que pode criar rapidamente os certificados e chaves que pode ser consumido por uma rede Fabric. A ferramenta cryptogen consome uma série de arquivos de configuração para cada organização no "organizations/cryptogen" diretório. Cryptogen usa os arquivos para gerar o material criptográfico para cada org no diretório "organizações".
 
@@ -133,4 +134,5 @@ cd ..
 cd blockchain
 ./network.sh down
 ```
+
 

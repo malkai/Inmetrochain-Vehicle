@@ -3,12 +3,11 @@ package main
 import (
 	"fmt"
 	"strconv"
-	"time"
 
 	"github.com/hyperledger/fabric-gateway/pkg/client"
 )
 
-func Createevent(contract *client.Contract, Datai time.Time, Fsupi float64, Dff float64, Iduser1 string, Iduser2 string) uint64 {
+func Createevent(contract *client.Contract, Fsupi float64, Dff float64, Iduser1 string, Iduser2 string) uint64 {
 	s1 := strconv.FormatFloat(Fsupi, 'f', 2, 64)
 	s3 := strconv.FormatFloat(Dff, 'f', 2, 64)
 
