@@ -61,11 +61,11 @@ func KalmanFilter(capacidade float64, medições []float64) float64 {
 
 	var media = mediavector(medições)
 
-	Gerro := errovector(medições, media) // erro global
+	Gerro := errovector(medições, media) // desvio global
 
 	auxe := []float64{}
 	auxe = append(auxe, medições[0])
-	Lerro := errovector(auxe, media) // erro local
+	Lerro := errovector(auxe, media) // desvio local
 
 	var estima float64
 	leiturasPercentuaispos := []float64{}
@@ -144,6 +144,7 @@ func Timeliness(valuevalids []string) (float64, error) {
 			if err != nil {
 				return 0.0, fmt.Errorf("\n Erro checar data2. %v", err)
 			}
+
 			result := datet2.Sub(datet1)
 
 			if vectortime < k {
@@ -168,3 +169,11 @@ func Credibility(scoren1 float64, timelesstotal float64, fuelcheck float64, fuel
 	var conf = scoren1*m + (timelesstotal+helpc)/2*(1-m)
 	return conf
 }
+
+//testar o filtro de kalman
+
+//melhorar frequenci
+
+//tratar os eventos com as informações do posto
+
+//simular os dados

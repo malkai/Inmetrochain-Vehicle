@@ -97,6 +97,11 @@ services:
     networks:
       - test
 
+
+    #depends_on:
+    #  - inmetrodb0
+
+    
   peer0.org2.example.com:
     container_name: peer0.org2.example.com
     image: hyperledger/fabric-peer:latest
@@ -135,6 +140,7 @@ services:
       - 9445:9445
     networks:
       - test
+    
 
   cli:
     container_name: cli

@@ -22,14 +22,15 @@ func (s *SmartContract) Createevent(ctx contractapi.TransactionContextInterface,
 	}
 	if exist {
 		//return fmt.Errorf("\n Erro ao criar evento 2. %v", err)
-		return s.Closeevent(ctx, Iduser1, Iduser2, 0.0)
+		err = s.Closeevent(ctx, Iduser1, Iduser2, 0.0)
 	}
 
 	var fsump, _ = strconv.ParseFloat(Fsupi, 64)
 	var dffr, _ = strconv.ParseFloat(Dff, 64)
 
 	event := Event{
-		Id:        Iduser1 + Iduser2 + aux.AsTime().Format(layout),
+		DocType:   "event",
+		Id:        "Event" + Iduser1 + Iduser2,
 		Datai:     aux.AsTime().Format(layout),
 		Dataiataf: "",
 		Fsupi:     fsump,
@@ -39,16 +40,17 @@ func (s *SmartContract) Createevent(ctx contractapi.TransactionContextInterface,
 		Iduser1:   Iduser1,
 		Iduser2:   Iduser2,
 	}
+
 	eventJSON, err := json.Marshal(event)
 	if err != nil {
 		return err
 	}
-	return ctx.GetStub().PutState("event", eventJSON)
+	return ctx.GetStub().PutState(event.Id, eventJSON)
 }
 
 func (s *SmartContract) Eventexist(ctx contractapi.TransactionContextInterface, id string, id2 string) (bool, error) {
 
-	aux, err := GetEventOpen(ctx, id, id2)
+	aux, err := s.GetEventOpen(ctx, id, id2)
 	if err != nil {
 		return false, fmt.Errorf("Erro ao retornar evento em aberto: %v", err)
 	}
@@ -59,7 +61,7 @@ func (s *SmartContract) Eventexist(ctx contractapi.TransactionContextInterface, 
 
 func (s *SmartContract) Closeevent(ctx contractapi.TransactionContextInterface, id string, id2 string, sum float64) error {
 
-	event, err := GetEventOpen(ctx, id, id2)
+	event, err := s.GetEventOpen(ctx, id, id2)
 	if err != nil {
 		return fmt.Errorf("Erro ao recuperar evento: %v", err)
 	}
@@ -129,21 +131,21 @@ func (s *SmartContract) Closeevent(ctx contractapi.TransactionContextInterface, 
 	}
 	//return fmt.Errorf("\n Erro ao criar evento 2. %v %s", err, temp[0].DataR)
 
-	s.Updatuser(ctx, "user"+id, ntimeless/ntotal, eventjson.Dff, fuelsum, valuevalids)
+	eventjson.Id = eventjson.Id + eventjson.Dataiataf
 	eventjson.Fsupi = eventjson.Fsupi + sum
 	eventjson.Fsupfd = eventjson.Fsupi - fuelsum
 	eventJSON, err := json.Marshal(eventjson)
 	if err != nil {
 		return err
 	}
-
-	return ctx.GetStub().PutState("event", eventJSON)
+	err = s.Updatuser(ctx, "user"+id, ntimeless/ntotal, eventjson.Dff, fuelsum, valuevalids)
+	return ctx.GetStub().PutState(eventjson.Id+eventjson.Dataiataf, eventJSON)
 
 }
 
 func (s *SmartContract) updatevent(ctx contractapi.TransactionContextInterface, id string, id2 string, minus float64) error {
 
-	event, err := GetEventOpen(ctx, id, id2)
+	event, err := s.GetEventOpen(ctx, id, id2)
 
 	if err != nil {
 		return fmt.Errorf("erro ao atualizar evento: %v", err)
@@ -165,7 +167,7 @@ func (s *SmartContract) updatevent(ctx contractapi.TransactionContextInterface, 
 		return err
 	}
 
-	return ctx.GetStub().PutState(id, eventJS)
+	return ctx.GetStub().PutState(eventjson.Id, eventJS)
 
 }
 
@@ -173,7 +175,7 @@ func (s *SmartContract) updatevent(ctx contractapi.TransactionContextInterface, 
 func (s *SmartContract) GetAllevents(ctx contractapi.TransactionContextInterface, id string) ([]*Event, error) {
 	// range query with empty string for startKey and endKey does an
 	// open-ended query of all assets in the chaincode namespace.
-	resultsIterator, err := ctx.GetStub().GetStateByRange(id, "")
+	resultsIterator, err := ctx.GetStub().GetStateByRange("E", "f")
 	if err != nil {
 		return nil, err
 	}
@@ -200,29 +202,31 @@ func (s *SmartContract) GetAllevents(ctx contractapi.TransactionContextInterface
 	return events, nil
 }
 
-func GetEventOpen(ctx contractapi.TransactionContextInterface, id string, id2 string) ([]*Event, error) {
+func (s *SmartContract) GetEventOpen(ctx contractapi.TransactionContextInterface, id string, id2 string) ([]*Event, error) {
 
-	queryString := fmt.Sprintf(`{"selector":{"docType":"event","Vstatus":"true","Iduser1":"%s","Iduser2":"%s" }}`, id, id2)
+	//queryString := fmt.Sprintf(`{"selector":{"docType":"event","vstatus":"false","iduser1":"%s","iduser2":"%s" }}`, id, id2)
+	queryString := fmt.Sprintf(`{"selector":{"docType":"event","vstatus":false,"iduser1":"%s","iduser2":"%s" }}`, id, id2)
+	//arrayteststring := [3]string["true", ]
 	resultsIterator, err := ctx.GetStub().GetQueryResult(queryString)
 	if err != nil {
 		return nil, err
 	}
 	defer resultsIterator.Close()
 
-	var assets []*Event
+	var eventobjs []*Event
+
 	for resultsIterator.HasNext() {
 		queryResult, err := resultsIterator.Next()
 		if err != nil {
 			return nil, err
 		}
-		var asset Event
-		err = json.Unmarshal(queryResult.Value, &asset)
+		var eventobj Event
+		err = json.Unmarshal(queryResult.Value, &eventobj)
 		if err != nil {
 			return nil, err
 		}
-		assets = append(assets, &asset)
+		eventobjs = append(eventobjs, &eventobj)
 	}
-
-	return assets, nil
+	return eventobjs, nil
 
 }

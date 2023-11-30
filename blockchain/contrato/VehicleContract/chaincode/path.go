@@ -87,6 +87,7 @@ func (s *SmartContract) CreatPath(ctx contractapi.TransactionContextInterface, d
 	layout := "2006-01-02 15:04:05"
 
 	path := Path{
+		DocType:     "path",
 		EventID:     id + aux.AsTime().Format(layout),
 		DataVehicle: tuples,
 		Distance:    dist,
@@ -104,7 +105,7 @@ func (s *SmartContract) CreatPath(ctx contractapi.TransactionContextInterface, d
 	}
 	s.updatevent(ctx, id, id2, fuel)
 
-	return ctx.GetStub().PutState("path", patJSON)
+	return ctx.GetStub().PutState("path"+path.EventID, patJSON)
 
 }
 

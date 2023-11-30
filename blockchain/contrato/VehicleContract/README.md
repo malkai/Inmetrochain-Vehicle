@@ -7,3 +7,7 @@
 go run monetiza.go 
 
 peer chaincode invoke "${TARGET_TLS_OPTIONS[@]}" -C mychannel -n vehicle -c '{"function":"Closeevent","Args":["event1"]}'
+
+./network.sh down
+
+

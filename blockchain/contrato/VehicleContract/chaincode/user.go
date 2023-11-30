@@ -24,6 +24,7 @@ func (s *SmartContract) Createuser(ctx contractapi.TransactionContextInterface, 
 	}
 
 	user := User{
+		DocType:    "user",
 		Id:         "user" + id,
 		Name:       name,
 		Criptmoeda: 0.0,
@@ -35,7 +36,7 @@ func (s *SmartContract) Createuser(ctx contractapi.TransactionContextInterface, 
 		return err
 	}
 
-	return ctx.GetStub().PutState("user", userJSON)
+	return ctx.GetStub().PutState(user.Id, userJSON)
 }
 
 func (s *SmartContract) Userget(ctx contractapi.TransactionContextInterface, id string) (User, error) {
@@ -88,8 +89,8 @@ func (s *SmartContract) Updatuser(ctx contractapi.TransactionContextInterface, i
 	if err != nil {
 		return err
 	}
-
-	return ctx.GetStub().PutState(id, userJSON)
+	err = ctx.GetStub().PutState(id, userJSON)
+	return nil
 
 }
 
@@ -97,7 +98,7 @@ func (s *SmartContract) Updatuser(ctx contractapi.TransactionContextInterface, i
 func (s *SmartContract) GetAlluser(ctx contractapi.TransactionContextInterface, id string) ([]*User, error) {
 	// range query with empty string for startKey and endKey does an
 	// open-ended query of all assets in the chaincode namespace.
-	resultsIterator, err := ctx.GetStub().GetStateByRange(id, "")
+	resultsIterator, err := ctx.GetStub().GetStateByRange("u", "v")
 	if err != nil {
 		return nil, err
 	}

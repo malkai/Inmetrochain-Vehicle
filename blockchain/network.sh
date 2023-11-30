@@ -408,7 +408,7 @@ CC_VERSION="1.0"
 # Chaincode definition sequence
 CC_SEQUENCE=1
 # default database
-DATABASE="leveldb"
+DATABASE="couchdb"
 
 # Get docker sock path from environment variable
 SOCK="${DOCKER_HOST:-/var/run/docker.sock}"

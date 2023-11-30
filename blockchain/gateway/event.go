@@ -52,7 +52,10 @@ func GetAllevents(contract *client.Contract, id string) {
 	if err != nil {
 		panic(fmt.Errorf("failed to evaluate transaction: %w", err))
 	}
-	result := formatJSON(evaluateResult)
-
-	fmt.Printf("*** Result:%s\n", result)
+	if evaluateResult != nil {
+		result := formatJSON(evaluateResult)
+		fmt.Printf("*** Result:%s\n", result)
+	} else {
+		fmt.Printf("*** Erro não encontrou nada\n")
+	}
 }
