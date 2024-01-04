@@ -28,6 +28,7 @@ func Distanceeucle(latlongA, latlongB string) (float64, error) {
 
 	distancia := 0.0
 	res1 := strings.Split(latlongA, "/")
+
 	latitudeA, err := strconv.ParseFloat(res1[0], 64)
 	if err != nil {
 		return 0.0, fmt.Errorf("\n Erro checar LatA. %v", err)
@@ -36,28 +37,34 @@ func Distanceeucle(latlongA, latlongB string) (float64, error) {
 	if err != nil {
 		return 0.0, fmt.Errorf("\n Erro checar LonA. %v", err)
 	}
+
+	//return 0.0, fmt.Errorf("\n %f %f ", latitudeA, longitudeA)
+
 	res1 = strings.Split(latlongB, "/")
-	latitudeB, _ := strconv.ParseFloat(res1[0], 64)
+	latitudeB, err := strconv.ParseFloat(res1[0], 64)
 	if err != nil {
 		return 0.0, fmt.Errorf("\n Erro checar LatB. %v", err)
 	}
-	longitudeB, _ := strconv.ParseFloat(res1[1], 64)
+	longitudeB, err := strconv.ParseFloat(res1[1], 64)
 	if err != nil {
 		return 0.0, fmt.Errorf("\n Erro checar LonB. %v", err)
 	}
 	//distancia = latitudeA + longitudeA + latitudeB + longitudeB
+	//return 0.0, fmt.Errorf("\n %f %f ", latitudeB, longitudeB)
 
 	a := CoordenadasCartesianas(latitudeA, longitudeA)
 	b := CoordenadasCartesianas(latitudeB, longitudeB)
+	//return 0.0, fmt.Errorf("\n %f %f ", latitudeB, longitudeB)
 
 	x1, y1, z1 := a[0], a[1], a[2]
 	x2, y2, z2 := b[0], b[1], b[2]
 	distancia = math.Sqrt(math.Pow(x2-x1, 2) + math.Pow(y2-y1, 2) + math.Pow(z2-z1, 2)) //calculando a distancia euclidiana entre os pontos A e B
-
+	//return 0.0, fmt.Errorf("\n %f %f %f", distancia, a, b)
 	return distancia, nil
+
 }
 
-func KalmanFilter(capacidade float64, medições []float64) float64 {
+func KalmanFilter(capacidade float64, medições []float64) (float64, error) {
 
 	var media = mediavector(medições)
 
@@ -71,7 +78,7 @@ func KalmanFilter(capacidade float64, medições []float64) float64 {
 	leiturasPercentuaispos := []float64{}
 
 	for _, leitura := range medições {
-		var k = math.Pow(Lerro, 2)/math.Pow(Lerro, 2) + math.Pow(Gerro, 2)
+		var k = math.Pow(Lerro, 2) / (math.Pow(Lerro, 2) + math.Pow(Gerro, 2))
 		estima = media + k*(leitura-media)
 
 		Lerro = (1 - k) * Lerro
@@ -80,9 +87,7 @@ func KalmanFilter(capacidade float64, medições []float64) float64 {
 	}
 
 	resultadotanque := ((medições[0] - estima) * capacidade) / 100
-
-	return resultadotanque
-
+	return resultadotanque, nil
 }
 
 func mediavector(a []float64) float64 {
@@ -96,16 +101,17 @@ func mediavector(a []float64) float64 {
 
 }
 
-func errovector(a []float64, m float64) float64 {
-	var aux float64
+// https://physics.stackexchange.com/questions/704367/how-to-quantify-the-uncertainty-of-the-time-series-average
+func errovector(a []float64, media float64) float64 {
+	var aux float64 = 0
 	errovec := []float64{}
 	for _, leitura := range a {
-		errovec = append(errovec, leitura-m)
+		errovec = append(errovec, math.Pow(leitura-media, 2))
 	}
 	for _, leitura := range errovec {
 		aux = +leitura
 	}
-	aux = aux / float64(len(a))
+	aux = aux / float64(len(a)-2)
 	return aux
 }
 
@@ -128,14 +134,15 @@ func totaltime(s1, s2 string) (float64, error) {
 	return float64(result.Seconds()), nil
 }
 
-func Timeliness(valuevalids []string) (float64, error) {
-	var k = 5.0
+func Timeliness(valuevalids []string, k float64) (float64, error) {
+
 	var vectortime = 0.0
 	var vectortotal = 0.0
 
 	for i := range valuevalids {
 		if i < len(valuevalids)-1 {
 			layout := "2006-01-02 15:04:05"
+
 			datet1, err := time.Parse(layout, valuevalids[i])
 			if err != nil {
 				return 0.0, fmt.Errorf("\n Erro checar data1. %v", err)
@@ -150,23 +157,27 @@ func Timeliness(valuevalids []string) (float64, error) {
 			if vectortime < k {
 				vectortime = vectortime + float64(result.Seconds())
 			}
+			if result < 0 {
+				return 0.0, fmt.Errorf("\n Erro  %+v %s %s", valuevalids, datet1.String(), datet2.String())
+			}
 			vectortotal = vectortotal + float64(result.Seconds())
 
 		}
 
 	}
+
 	var prop = vectortime / vectortotal
 	var f_k = (prop / k) / math.Log((prop / k))
 	res_2 := math.Exp(1)
 	var timeless = math.Pow(res_2, f_k) + 1
 
 	return timeless, nil
+
 }
 
-func Credibility(scoren1 float64, timelesstotal float64, fuelcheck float64, fuelsum float64, valuevalids []string) float64 {
-	helpc := fuelcheck / fuelsum //completness
+func Credibility(scoren1 float64, timelesstotal float64, completness float64, valuevalids []string) float64 {
 	m := 0.9
-	var conf = scoren1*m + (timelesstotal+helpc)/2*(1-m)
+	var conf = scoren1*m + (timelesstotal+completness)/2*(1-m)
 	return conf
 }
 

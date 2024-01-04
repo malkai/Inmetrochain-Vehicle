@@ -13,7 +13,7 @@ type Tuple struct {
 	Comb float64 `json:"Comb"`
 }
 
-func CreatePath(contract *client.Contract, tuples []Tuple, id string) uint64 {
+func CreatePath(contract *client.Contract, tuples []Tuple, id string, id2 string) uint64 {
 
 	//test := Path{DataVehicle: tuples}
 
@@ -21,7 +21,7 @@ func CreatePath(contract *client.Contract, tuples []Tuple, id string) uint64 {
 	if err != nil {
 		panic(err)
 	}
-	_, commit, err := contract.SubmitAsync("CreatPath", client.WithArguments(string(t), id))
+	_, commit, err := contract.SubmitAsync("CreatPath", client.WithArguments(string(t), id, id2))
 
 	/*
 		var ue []byte

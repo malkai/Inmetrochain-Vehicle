@@ -45,6 +45,50 @@ func updatevent(contract *client.Contract, id string, minus float64) {
 }
 
 // Evaluate a transaction to query ledger state.
+func GetStatusEvent(contract *client.Contract, id, id2 string) bool {
+	fmt.Println("\n--> Evaluate Transaction: GetStatusEvent")
+
+	evaluateResult, err := contract.EvaluateTransaction("GetIfEventOpen", "Event"+id, id2)
+	if err != nil {
+		panic(fmt.Errorf("failed to evaluate transaction: %w", err))
+	}
+	if evaluateResult != nil {
+		result := formatJSON(evaluateResult)
+		fmt.Printf("*** Result:%s\n", result)
+		boolValue, err := strconv.ParseBool(result)
+		if err != nil {
+			fmt.Printf("*** Erro a converter\n")
+		}
+		return boolValue
+	} else {
+		fmt.Printf("*** Não encotrou o usevento %s\n", id)
+		return false
+
+	}
+
+}
+
+// Evaluate a transaction to query ledger state.
+func GetopenEvent(contract *client.Contract, id, id2 string) bool {
+	fmt.Println("\n--> Evaluate Transaction: GetAllAssets, function returns all the current assets on the ledger")
+
+	evaluateResult, err := contract.EvaluateTransaction("GetEventOpen", id, id2)
+	if err != nil {
+		panic(fmt.Errorf("failed to evaluate transaction: %w", err))
+	}
+	if evaluateResult != nil {
+		result := formatJSON(evaluateResult)
+		fmt.Printf("*** Result:%s\n", result)
+		return true
+	} else {
+
+		fmt.Printf("*** Erro não encontrou nada\n")
+		return false
+	}
+
+}
+
+// Evaluate a transaction to query ledger state.
 func GetAllevents(contract *client.Contract, id string) {
 	fmt.Println("\n--> Evaluate Transaction: GetAllAssets, function returns all the current assets on the ledger")
 

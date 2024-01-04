@@ -1,0 +1,8009 @@
+json.Delim: [
+
+--> Evaluate Transaction: checkuserexist
+*** Result:true
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+tam 831 Caminho diferente path1  1 pathwatch  0
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 2027 Caminho diferente path1  10 pathwatch  1
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 715 Caminho diferente path1  11 pathwatch  10
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 711 Caminho diferente path1  12 pathwatch  11
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 709 Caminho diferente path1  13 pathwatch  12
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 711 Caminho diferente path1  14 pathwatch  13
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 709 Caminho diferente path1  15 pathwatch  14
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  15 pathwatch  15
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  15 pathwatch  15
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 4901 Caminho diferente path1  16 pathwatch  15
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+_0_1_0 831
+_0_13_0 709
+_0_14_0 711
+_0_15_2 5001
+_0_15_1 5001
+_0_16_0 4901
+_0_10_0 2027
+_0_11_0 715
+_0_12_0 711
+_0_15_0 709
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 713 Caminho diferente path1  17 pathwatch  16
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 712 Caminho diferente path1  18 pathwatch  17
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 716 Caminho diferente path1  19 pathwatch  18
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 711 Caminho diferente path1  2 pathwatch  19
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 645 Caminho diferente path1  20 pathwatch  2
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 712 Caminho diferente path1  21 pathwatch  20
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 901 Caminho diferente path1  22 pathwatch  21
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  22 pathwatch  22
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 3321 Caminho diferente path1  23 pathwatch  22
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 825 Caminho diferente path1  24 pathwatch  23
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+_0_22_1 5001
+_0_23_0 3321
+_0_24_0 825
+_0_17_0 713
+_0_19_0 716
+_0_20_0 645
+_0_21_0 712
+_0_22_0 901
+_0_18_0 712
+_0_2_0 711
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 619 Caminho diferente path1  25 pathwatch  24
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  25 pathwatch  25
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  25 pathwatch  25
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 1241 Caminho diferente path1  3 pathwatch  25
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 483 Caminho diferente path1  4 pathwatch  3
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 3729 Caminho diferente path1  5 pathwatch  4
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  5 pathwatch  5
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 1312 Caminho diferente path1  6 pathwatch  5
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 2408 Caminho diferente path1  7 pathwatch  6
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 510 Caminho diferente path1  8 pathwatch  7
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+_0_6_0 1312
+_0_25_0 619
+_0_25_1 5001
+_0_25_2 5001
+_0_3_0 1241
+_0_5_0 3729
+_0_4_0 483
+_0_5_1 5001
+_0_7_0 2408
+_0_8_0 510
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  8 pathwatch  8
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  8 pathwatch  8
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  8 pathwatch  8
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 4309 Caminho diferente path1  9 pathwatch  8
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+--> Evaluate Transaction: checkuserexist
+*** Result:false
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+tam 836 Caminho diferente path1  1 pathwatch  0
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 721 Caminho diferente path1  10 pathwatch  1
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 713 Caminho diferente path1  11 pathwatch  10
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 713 Caminho diferente path1  12 pathwatch  11
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 711 Caminho diferente path1  13 pathwatch  12
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+_0_8_3 5001
+_100_10_0 721
+_100_11_0 713
+_100_12_0 713
+_0_8_1 5001
+_0_8_2 5001
+_0_9_0 4309
+_100_0_0 711
+_100_1_0 836
+_100_13_0 711
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  13 pathwatch  13
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 1599 Caminho diferente path1  14 pathwatch  13
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 575 Caminho diferente path1  15 pathwatch  14
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 540 Caminho diferente path1  16 pathwatch  15
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 679 Caminho diferente path1  17 pathwatch  16
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  17 pathwatch  17
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  17 pathwatch  17
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  17 pathwatch  17
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  17 pathwatch  17
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 952 Caminho diferente path1  2 pathwatch  17
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+_100_13_1 5001
+_100_15_0 575
+_100_16_0 540
+_100_17_1 5001
+_100_17_3 5001
+_100_17_4 5001
+_100_14_0 1599
+_100_17_0 679
+_100_17_2 5001
+_100_2_0 952
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 856 Caminho diferente path1  3 pathwatch  2
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 627 Caminho diferente path1  4 pathwatch  3
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 518 Caminho diferente path1  5 pathwatch  4
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  5 pathwatch  5
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 3754 Caminho diferente path1  6 pathwatch  5
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  6 pathwatch  6
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  6 pathwatch  6
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  6 pathwatch  6
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  6 pathwatch  6
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  6 pathwatch  6
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+_100_5_1 5001
+_100_6_0 3754
+_100_6_2 5001
+_100_6_4 5001
+_100_6_5 5001
+_100_3_0 856
+_100_5_0 518
+_100_6_1 5001
+_100_6_3 5001
+_100_4_0 627
+tam 5001 Caminho diferente path1  6 pathwatch  6
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 4543 Caminho diferente path1  7 pathwatch  6
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 716 Caminho diferente path1  8 pathwatch  7
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 712 Caminho diferente path1  9 pathwatch  8
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+--> Evaluate Transaction: checkuserexist
+*** Result:false
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+tam 745 Caminho diferente path1  1 pathwatch  0
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 716 Caminho diferente path1  10 pathwatch  1
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  10 pathwatch  10
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  10 pathwatch  10
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  10 pathwatch  10
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+_101_0_0 712
+_101_1_0 745
+_101_10_2 5001
+_100_7_0 4543
+_100_9_0 712
+_101_10_0 716
+_101_10_1 5001
+_101_10_3 5001
+_100_6_6 5001
+_100_8_0 716
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  10 pathwatch  10
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  10 pathwatch  10
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 21 Caminho diferente path1  11 pathwatch  10
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 3649 Caminho diferente path1  12 pathwatch  11
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 988 Caminho diferente path1  13 pathwatch  12
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 3403 Caminho diferente path1  14 pathwatch  13
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 537 Caminho diferente path1  15 pathwatch  14
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 4431 Caminho diferente path1  16 pathwatch  15
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 753 Caminho diferente path1  17 pathwatch  16
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  17 pathwatch  17
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+_101_10_5 5001
+_101_11_0 21
+_101_16_0 4431
+_101_17_0 753
+_101_17_1 5001
+_101_10_4 5001
+_101_13_0 988
+_101_14_0 3403
+_101_15_0 537
+_101_12_0 3649
+tam 5001 Caminho diferente path1  17 pathwatch  17
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 1488 Caminho diferente path1  2 pathwatch  17
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  2 pathwatch  2
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  2 pathwatch  2
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  2 pathwatch  2
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  2 pathwatch  2
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 713 Caminho diferente path1  3 pathwatch  2
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 714 Caminho diferente path1  4 pathwatch  3
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 711 Caminho diferente path1  5 pathwatch  4
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 715 Caminho diferente path1  6 pathwatch  5
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+_101_2_4 5001
+_101_3_0 713
+_101_17_2 5001
+_101_2_2 5001
+_101_2_3 5001
+_101_4_0 714
+_101_5_0 711
+_101_6_0 715
+_101_2_0 1488
+_101_2_1 5001
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 707 Caminho diferente path1  7 pathwatch  6
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 713 Caminho diferente path1  8 pathwatch  7
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 709 Caminho diferente path1  9 pathwatch  8
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+--> Evaluate Transaction: checkuserexist
+
+*** CreateAsset committed successfully
+*** Result:false
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+tam 904 Caminho diferente path1  1 pathwatch  0
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 1714 Caminho diferente path1  10 pathwatch  1
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 160 Caminho diferente path1  2 pathwatch  10
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 604 Caminho diferente path1  3 pathwatch  2
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 541 Caminho diferente path1  4 pathwatch  3
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 543 Caminho diferente path1  5 pathwatch  4
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+_102_3_0 604
+_102_4_0 541
+_102_5_0 543
+_101_7_0 707
+_102_10_0 1714
+_102_0_0 4823
+_102_1_0 904
+_102_2_0 160
+_101_8_0 713
+_101_9_0 709
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 1333 Caminho diferente path1  6 pathwatch  5
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 551 Caminho diferente path1  7 pathwatch  6
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  7 pathwatch  7
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  7 pathwatch  7
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  7 pathwatch  7
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  7 pathwatch  7
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  7 pathwatch  7
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  7 pathwatch  7
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  7 pathwatch  7
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  7 pathwatch  7
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+_102_6_0 1333
+_102_7_1 5001
+_102_7_7 5001
+_102_7_6 5001
+_102_7_8 5001
+_102_7_0 551
+_102_7_2 5001
+_102_7_3 5001
+_102_7_4 5001
+_102_7_5 5001
+tam 5001 Caminho diferente path1  7 pathwatch  7
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  7 pathwatch  7
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  7 pathwatch  7
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  7 pathwatch  7
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  7 pathwatch  7
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 4613 Caminho diferente path1  8 pathwatch  7
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 3122 Caminho diferente path1  9 pathwatch  8
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+
+--> Evaluate Transaction: checkuserexist
+*** Result:false
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+tam 680 Caminho diferente path1  1 pathwatch  0
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+--> Evaluate Transaction: checkuserexist
+*** Result:false
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+_104_0_0 595
+_102_7_9 5001
+_102_7_10 5001
+_102_9_0 3122
+_103_0_0 603
+_103_1_0 680
+_102_7_11 5001
+_102_7_12 5001
+_102_7_13 5001
+_102_8_0 4613
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 727 Caminho diferente path1  1 pathwatch  0
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 1040 Caminho diferente path1  2 pathwatch  1
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 852 Caminho diferente path1  3 pathwatch  2
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  3 pathwatch  3
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  3 pathwatch  3
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  3 pathwatch  3
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  3 pathwatch  3
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 3706 Caminho diferente path1  4 pathwatch  3
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  4 pathwatch  4
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 4531 Caminho diferente path1  5 pathwatch  4
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+_104_3_2 5001
+_104_4_0 3706
+_104_1_0 727
+_104_2_0 1040
+_104_3_1 5001
+_104_4_1 5001
+_104_5_0 4531
+_104_3_0 852
+_104_3_3 5001
+_104_3_4 5001
+tam 891 Caminho diferente path1  6 pathwatch  5
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  6 pathwatch  6
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  6 pathwatch  6
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  6 pathwatch  6
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  6 pathwatch  6
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  6 pathwatch  6
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  6 pathwatch  6
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  6 pathwatch  6
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  6 pathwatch  6
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+--> Evaluate Transaction: checkuserexist
+*** Result:false
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+_104_6_0 891
+_104_6_2 5001
+_104_6_4 5001
+_104_6_6 5001
+_105_0_8 4692
+_104_6_1 5001
+_104_6_3 5001
+_104_6_5 5001
+_104_6_7 5001
+_104_6_8 5001
+tam 731 Caminho diferente path1  1 pathwatch  0
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 715 Caminho diferente path1  10 pathwatch  1
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 709 Caminho diferente path1  11 pathwatch  10
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 712 Caminho diferente path1  12 pathwatch  11
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  12 pathwatch  12
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  12 pathwatch  12
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 1576 Caminho diferente path1  13 pathwatch  12
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  13 pathwatch  13
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  13 pathwatch  13
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  13 pathwatch  13
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+_105_1_0 731
+_105_12_0 712
+_105_12_1 5001
+_105_12_2 5001
+_105_13_1 5001
+_105_13_3 5001
+_105_10_0 715
+_105_11_0 709
+_105_13_0 1576
+_105_13_2 5001
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  13 pathwatch  13
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  13 pathwatch  13
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  13 pathwatch  13
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  13 pathwatch  13
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  13 pathwatch  13
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 4393 Caminho diferente path1  2 pathwatch  13
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 3921 Caminho diferente path1  3 pathwatch  2
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  3 pathwatch  3
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 1641 Caminho diferente path1  4 pathwatch  3
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 3385 Caminho diferente path1  5 pathwatch  4
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+_105_2_0 4393
+_105_3_0 3921
+_105_3_1 5001
+_105_4_0 1641
+_105_5_0 3385
+_105_13_7 5001
+_105_13_5 5001
+_105_13_6 5001
+_105_13_8 5001
+_105_13_4 5001
+tam 5001 Caminho diferente path1  5 pathwatch  5
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 2228 Caminho diferente path1  6 pathwatch  5
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 711 Caminho diferente path1  7 pathwatch  6
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 714 Caminho diferente path1  8 pathwatch  7
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 714 Caminho diferente path1  9 pathwatch  8
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+--> Evaluate Transaction: checkuserexist
+*** Result:false
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+tam 740 Caminho diferente path1  1 pathwatch  0
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  1 pathwatch  1
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 2472 Caminho diferente path1  2 pathwatch  1
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  2 pathwatch  2
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+_105_9_0 714
+_106_2_1 5001
+_105_5_1 5001
+_105_6_0 2228
+_106_0_0 712
+_106_1_0 740
+_106_1_1 5001
+_106_2_0 2472
+_105_7_0 711
+_105_8_0 714
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  2 pathwatch  2
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 643 Caminho diferente path1  3 pathwatch  2
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 568 Caminho diferente path1  4 pathwatch  3
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 687 Caminho diferente path1  5 pathwatch  4
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  5 pathwatch  5
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  5 pathwatch  5
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  5 pathwatch  5
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  5 pathwatch  5
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  5 pathwatch  5
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  5 pathwatch  5
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+_106_4_0 568
+_106_5_2 5001
+_106_5_3 5001
+_106_5_4 5001
+_106_5_5 5001
+_106_5_6 5001
+_106_2_2 5001
+_106_3_0 643
+_106_5_0 687
+_106_5_1 5001
+tam 5001 Caminho diferente path1  5 pathwatch  5
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  5 pathwatch  5
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  5 pathwatch  5
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  5 pathwatch  5
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  5 pathwatch  5
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  5 pathwatch  5
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+--> Evaluate Transaction: checkuserexist
+*** Result:false
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+tam 5001 Caminho diferente path1  0 pathwatch  0
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  0 pathwatch  0
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  0 pathwatch  0
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+_107_0_3 5001
+_106_5_7 5001
+_106_5_9 5001
+_106_5_10 5001
+_106_5_11 5001
+_106_5_12 5001
+_107_0_1 5001
+_107_0_2 5001
+_106_5_8 5001
+_107_0_12 3469
+tam 5001 Caminho diferente path1  0 pathwatch  0
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  0 pathwatch  0
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  0 pathwatch  0
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  0 pathwatch  0
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  0 pathwatch  0
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  0 pathwatch  0
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  0 pathwatch  0
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  0 pathwatch  0
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  0 pathwatch  0
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  0 pathwatch  0
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+_107_0_5 5001
+_107_0_6 5001
+_107_0_8 5001
+_107_0_9 5001
+_107_0_10 5001
+_107_0_11 5001
+_107_0_4 5001
+_107_0_7 5001
+_107_0_12 5001
+_107_0_13 5001
+tam 5001 Caminho diferente path1  0 pathwatch  0
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 2482 Caminho diferente path1  1 pathwatch  0
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  1 pathwatch  1
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+
+--> Evaluate Transaction: checkuserexist
+*** Result:false
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+tam 604 Caminho diferente path1  1 pathwatch  0
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  1 pathwatch  1
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 35 Caminho diferente path1  10 pathwatch  1
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  10 pathwatch  10
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  10 pathwatch  10
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  10 pathwatch  10
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+_107_1_0 2482
+_108_1_0 604
+_108_1_1 5001
+_108_10_3 5001
+_107_0_14 5001
+_107_1_1 5001
+_108_0_1 228
+_108_10_0 35
+_108_10_1 5001
+_108_10_2 5001
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 2614 Caminho diferente path1  2 pathwatch  10
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 414 Caminho diferente path1  3 pathwatch  2
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  3 pathwatch  3
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  3 pathwatch  3
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  3 pathwatch  3
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  3 pathwatch  3
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  3 pathwatch  3
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  3 pathwatch  3
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  3 pathwatch  3
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  3 pathwatch  3
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+_108_3_5 5001
+_108_3_6 5001
+_108_3_7 5001
+_108_3_8 5001
+_108_2_0 2614
+_108_3_2 5001
+_108_3_3 5001
+_108_3_4 5001
+_108_3_0 414
+_108_3_1 5001
+tam 5001 Caminho diferente path1  3 pathwatch  3
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  3 pathwatch  3
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 4481 Caminho diferente path1  4 pathwatch  3
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 716 Caminho diferente path1  5 pathwatch  4
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 715 Caminho diferente path1  6 pathwatch  5
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 711 Caminho diferente path1  7 pathwatch  6
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 711 Caminho diferente path1  8 pathwatch  7
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 711 Caminho diferente path1  9 pathwatch  8
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+--> Evaluate Transaction: checkuserexist
+*** Result:false
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+tam 1093 Caminho diferente path1  1 pathwatch  0
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+_108_3_10 5001
+_108_4_0 4481
+_108_6_0 715
+_108_9_0 711
+_108_3_9 5001
+_108_7_0 711
+_108_8_0 711
+_109_0_0 711
+_109_1_0 1093
+_108_5_0 716
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 743 Caminho diferente path1  10 pathwatch  1
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 503 Caminho diferente path1  11 pathwatch  10
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  11 pathwatch  11
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  11 pathwatch  11
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  11 pathwatch  11
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 3987 Caminho diferente path1  12 pathwatch  11
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 824 Caminho diferente path1  13 pathwatch  12
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  13 pathwatch  13
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  13 pathwatch  13
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  13 pathwatch  13
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+_109_10_0 743
+_109_11_1 5001
+_109_11_2 5001
+_109_13_0 824
+_109_13_2 5001
+_109_11_0 503
+_109_11_3 5001
+_109_12_0 3987
+_109_13_1 5001
+_109_13_3 5001
+tam 723 Caminho diferente path1  14 pathwatch  13
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  14 pathwatch  14
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 455 Caminho diferente path1  2 pathwatch  14
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 1113 Caminho diferente path1  3 pathwatch  2
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  3 pathwatch  3
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  3 pathwatch  3
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  3 pathwatch  3
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  3 pathwatch  3
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  3 pathwatch  3
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 2583 Caminho diferente path1  4 pathwatch  3
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+_109_3_5 5001
+_109_2_0 455
+_109_3_0 1113
+_109_3_1 5001
+_109_3_2 5001
+_109_3_3 5001
+_109_14_0 723
+_109_14_1 5001
+_109_3_4 5001
+_109_4_0 2583
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 714 Caminho diferente path1  5 pathwatch  4
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 713 Caminho diferente path1  6 pathwatch  5
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 713 Caminho diferente path1  7 pathwatch  6
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 713 Caminho diferente path1  8 pathwatch  7
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 710 Caminho diferente path1  9 pathwatch  8
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  9 pathwatch  9
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+--> Evaluate Transaction: checkuserexist
+*** Result:false
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+tam 855 Caminho diferente path1  1 pathwatch  0
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  1 pathwatch  1
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  1 pathwatch  1
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+_109_8_0 713
+_109_9_0 710
+_109_9_1 5001
+_10_1_0 855
+_10_1_1 5001
+_109_6_0 713
+_109_7_0 713
+_10_1_2 5001
+_109_5_0 714
+_10_0_1 97
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  1 pathwatch  1
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 2963 Caminho diferente path1  10 pathwatch  1
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 414 Caminho diferente path1  11 pathwatch  10
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 565 Caminho diferente path1  12 pathwatch  11
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 2919 Caminho diferente path1  13 pathwatch  12
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 639 Caminho diferente path1  14 pathwatch  13
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  14 pathwatch  14
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  14 pathwatch  14
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  14 pathwatch  14
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 1903 Caminho diferente path1  15 pathwatch  14
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+_10_10_0 2963
+_10_11_0 414
+_10_12_0 565
+_10_13_0 2919
+_10_14_2 5001
+_10_15_0 1903
+_10_1_3 5001
+_10_14_1 5001
+_10_14_3 5001
+_10_14_0 639
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 715 Caminho diferente path1  16 pathwatch  15
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 713 Caminho diferente path1  17 pathwatch  16
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 714 Caminho diferente path1  18 pathwatch  17
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 712 Caminho diferente path1  19 pathwatch  18
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 710 Caminho diferente path1  2 pathwatch  19
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 714 Caminho diferente path1  20 pathwatch  2
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 710 Caminho diferente path1  21 pathwatch  20
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 3426 Caminho diferente path1  22 pathwatch  21
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 1234 Caminho diferente path1  23 pathwatch  22
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 436 Caminho diferente path1  24 pathwatch  23
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+_10_20_0 714
+_10_22_0 3426
+_10_16_0 715
+_10_2_0 710
+_10_19_0 712
+_10_21_0 710
+_10_23_0 1234
+_10_24_0 436
+_10_17_0 713
+_10_18_0 714
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  24 pathwatch  24
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  24 pathwatch  24
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  24 pathwatch  24
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 2678 Caminho diferente path1  3 pathwatch  24
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 711 Caminho diferente path1  4 pathwatch  3
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 714 Caminho diferente path1  5 pathwatch  4
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 712 Caminho diferente path1  6 pathwatch  5
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 711 Caminho diferente path1  7 pathwatch  6
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 709 Caminho diferente path1  8 pathwatch  7
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 2935 Caminho diferente path1  9 pathwatch  8
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+_10_4_0 711
+_10_5_0 714
+_10_6_0 712
+_10_8_0 709
+_10_24_1 5001
+_10_24_3 5001
+_10_3_0 2678
+_10_24_2 5001
+_10_7_0 711
+_10_9_0 2935
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  9 pathwatch  9
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+--> Evaluate Transaction: checkuserexist
+*** Result:false
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+tam 494 Caminho diferente path1  1 pathwatch  0
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  1 pathwatch  1
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  1 pathwatch  1
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  1 pathwatch  1
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  1 pathwatch  1
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 3236 Caminho diferente path1  10 pathwatch  1
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  10 pathwatch  10
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 1446 Caminho diferente path1  11 pathwatch  10
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+_110_1_3 5001
+_110_10_1 5001
+_110_11_0 1446
+_10_9_1 5001
+_110_0_1 498
+_110_1_0 494
+_110_1_1 5001
+_110_1_2 5001
+_110_1_4 5001
+_110_10_0 3236
+tam 5001 Caminho diferente path1  11 pathwatch  11
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  11 pathwatch  11
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 69 Caminho diferente path1  12 pathwatch  11
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 580 Caminho diferente path1  13 pathwatch  12
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 1210 Caminho diferente path1  14 pathwatch  13
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 1674 Caminho diferente path1  15 pathwatch  14
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  15 pathwatch  15
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 2049 Caminho diferente path1  2 pathwatch  15
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 712 Caminho diferente path1  3 pathwatch  2
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 712 Caminho diferente path1  4 pathwatch  3
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+_110_15_0 1674
+_110_3_0 712
+_110_4_0 712
+_110_14_0 1210
+_110_15_1 5001
+_110_2_0 2049
+_110_11_1 5001
+_110_11_2 5001
+_110_12_0 69
+_110_13_0 580
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 712 Caminho diferente path1  5 pathwatch  4
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 712 Caminho diferente path1  6 pathwatch  5
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 709 Caminho diferente path1  7 pathwatch  6
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 711 Caminho diferente path1  8 pathwatch  7
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  8 pathwatch  8
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 2799 Caminho diferente path1  9 pathwatch  8
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  9 pathwatch  9
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  9 pathwatch  9
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  9 pathwatch  9
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+--> Evaluate Transaction: checkuserexist
+*** Result:false
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+_110_9_1 5001
+_110_6_0 712
+_110_7_0 709
+_110_8_1 5001
+_110_9_2 5001
+_110_9_3 5001
+_111_0_3 3975
+_110_5_0 712
+_110_8_0 711
+_110_9_0 2799
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 788 Caminho diferente path1  1 pathwatch  0
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 849 Caminho diferente path1  10 pathwatch  1
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 700 Caminho diferente path1  11 pathwatch  10
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  11 pathwatch  11
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 4908 Caminho diferente path1  12 pathwatch  11
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 714 Caminho diferente path1  13 pathwatch  12
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 713 Caminho diferente path1  14 pathwatch  13
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 712 Caminho diferente path1  15 pathwatch  14
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 712 Caminho diferente path1  16 pathwatch  15
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 710 Caminho diferente path1  17 pathwatch  16
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+_111_14_0 713
+_111_17_0 710
+_111_15_0 712
+_111_16_0 712
+_111_1_0 788
+_111_10_0 849
+_111_11_0 700
+_111_11_1 5001
+_111_12_0 4908
+_111_13_0 714
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  17 pathwatch  17
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 2685 Caminho diferente path1  18 pathwatch  17
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 801 Caminho diferente path1  19 pathwatch  18
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  19 pathwatch  19
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  19 pathwatch  19
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  19 pathwatch  19
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  19 pathwatch  19
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  19 pathwatch  19
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 4137 Caminho diferente path1  2 pathwatch  19
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 2256 Caminho diferente path1  20 pathwatch  2
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+_111_19_4 5001
+_111_18_0 2685
+_111_19_0 801
+_111_19_2 5001
+_111_19_5 5001
+_111_2_0 4137
+_111_20_0 2256
+_111_17_1 5001
+_111_19_1 5001
+_111_19_3 5001
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  20 pathwatch  20
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 3035 Caminho diferente path1  21 pathwatch  20
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 681 Caminho diferente path1  22 pathwatch  21
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 217 Caminho diferente path1  3 pathwatch  22
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  3 pathwatch  3
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 2737 Caminho diferente path1  4 pathwatch  3
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 611 Caminho diferente path1  5 pathwatch  4
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 1008 Caminho diferente path1  6 pathwatch  5
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 2667 Caminho diferente path1  7 pathwatch  6
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 665 Caminho diferente path1  8 pathwatch  7
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+_111_22_0 681
+_111_3_1 5001
+_111_20_1 5001
+_111_21_0 3035
+_111_5_0 611
+_111_6_0 1008
+_111_7_0 2667
+_111_8_0 665
+_111_3_0 217
+_111_4_0 2737
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 3296 Caminho diferente path1  9 pathwatch  8
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+--> Evaluate Transaction: checkuserexist
+
+*** CreateAsset committed successfully
+*** Result:false
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+tam 1086 Caminho diferente path1  1 pathwatch  0
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 558 Caminho diferente path1  10 pathwatch  1
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  10 pathwatch  10
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  10 pathwatch  10
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  10 pathwatch  10
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  10 pathwatch  10
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  10 pathwatch  10
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  10 pathwatch  10
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+_112_10_2 5001
+_112_10_4 5001
+_112_10_6 5001
+_111_9_0 3296
+_112_10_0 558
+_112_10_1 5001
+_112_10_3 5001
+_112_10_5 5001
+_112_0_0 2091
+_112_1_0 1086
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  10 pathwatch  10
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 1344 Caminho diferente path1  11 pathwatch  10
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 3218 Caminho diferente path1  2 pathwatch  11
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 770 Caminho diferente path1  3 pathwatch  2
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  3 pathwatch  3
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  3 pathwatch  3
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  3 pathwatch  3
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  3 pathwatch  3
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  3 pathwatch  3
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  3 pathwatch  3
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+_112_10_7 5001
+_112_3_3 5001
+_112_3_5 5001
+_112_3_4 5001
+_112_3_6 5001
+_112_11_0 1344
+_112_2_0 3218
+_112_3_0 770
+_112_3_1 5001
+_112_3_2 5001
+tam 5001 Caminho diferente path1  3 pathwatch  3
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 1030 Caminho diferente path1  4 pathwatch  3
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 717 Caminho diferente path1  5 pathwatch  4
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 710 Caminho diferente path1  6 pathwatch  5
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 712 Caminho diferente path1  7 pathwatch  6
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 711 Caminho diferente path1  8 pathwatch  7
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 713 Caminho diferente path1  9 pathwatch  8
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+--> Evaluate Transaction: checkuserexist
+*** Result:false
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+tam 715 Caminho diferente path1  1 pathwatch  0
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 659 Caminho diferente path1  2 pathwatch  1
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+_113_2_0 659
+_112_3_7 5001
+_112_4_0 1030
+_112_6_0 710
+_112_7_0 712
+_112_8_0 711
+_113_0_0 709
+_112_5_0 717
+_112_9_0 713
+_113_1_0 715
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  2 pathwatch  2
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  2 pathwatch  2
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  2 pathwatch  2
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  2 pathwatch  2
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  2 pathwatch  2
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  2 pathwatch  2
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  2 pathwatch  2
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  2 pathwatch  2
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 4438 Caminho diferente path1  3 pathwatch  2
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  3 pathwatch  3
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+_113_2_2 5001
+_113_2_7 5001
+_113_3_1 5001
+_113_2_1 5001
+_113_2_4 5001
+_113_2_5 5001
+_113_2_6 5001
+_113_2_8 5001
+_113_3_0 4438
+_113_2_3 5001
+tam 2982 Caminho diferente path1  4 pathwatch  3
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  4 pathwatch  4
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  4 pathwatch  4
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  4 pathwatch  4
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  4 pathwatch  4
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  4 pathwatch  4
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+--> Evaluate Transaction: checkuserexist
+*** Result:false
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+tam 550 Caminho diferente path1  1 pathwatch  0
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 706 Caminho diferente path1  10 pathwatch  1
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 689 Caminho diferente path1  11 pathwatch  10
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+_113_4_0 2982
+_113_4_1 5001
+_113_4_2 5001
+_114_10_0 706
+_114_11_0 689
+_113_4_3 5001
+_113_4_4 5001
+_113_4_5 5001
+_114_0_5 2068
+_114_1_0 550
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 1215 Caminho diferente path1  12 pathwatch  11
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  12 pathwatch  12
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 1607 Caminho diferente path1  13 pathwatch  12
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 713 Caminho diferente path1  14 pathwatch  13
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 716 Caminho diferente path1  15 pathwatch  14
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 710 Caminho diferente path1  16 pathwatch  15
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 715 Caminho diferente path1  17 pathwatch  16
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 709 Caminho diferente path1  18 pathwatch  17
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 148 Caminho diferente path1  2 pathwatch  18
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  2 pathwatch  2
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+_114_12_0 1215
+_114_13_0 1607
+_114_14_0 713
+_114_16_0 710
+_114_2_1 5001
+_114_12_1 5001
+_114_15_0 716
+_114_17_0 715
+_114_18_0 709
+_114_2_0 148
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  2 pathwatch  2
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  2 pathwatch  2
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  2 pathwatch  2
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  2 pathwatch  2
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  2 pathwatch  2
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 3400 Caminho diferente path1  3 pathwatch  2
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 2416 Caminho diferente path1  4 pathwatch  3
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 730 Caminho diferente path1  5 pathwatch  4
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  5 pathwatch  5
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 2343 Caminho diferente path1  6 pathwatch  5
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+_114_2_2 5001
+_114_2_3 5001
+_114_2_4 5001
+_114_3_0 3400
+_114_4_0 2416
+_114_5_1 5001
+_114_6_0 2343
+_114_2_5 5001
+_114_2_6 5001
+_114_5_0 730
+tam 5001 Caminho diferente path1  6 pathwatch  6
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  6 pathwatch  6
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 527 Caminho diferente path1  7 pathwatch  6
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 572 Caminho diferente path1  8 pathwatch  7
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 591 Caminho diferente path1  9 pathwatch  8
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+--> Evaluate Transaction: checkuserexist
+*** Result:false
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+tam 1159 Caminho diferente path1  1 pathwatch  0
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 1073 Caminho diferente path1  2 pathwatch  1
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  2 pathwatch  2
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  2 pathwatch  2
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+_115_2_0 1073
+_114_6_2 5001
+_114_7_0 527
+_114_9_0 591
+_115_0_0 587
+_115_1_0 1159
+_115_2_1 5001
+_115_2_2 5001
+_114_6_1 5001
+_114_8_0 572
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  2 pathwatch  2
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  2 pathwatch  2
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  2 pathwatch  2
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  2 pathwatch  2
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 1283 Caminho diferente path1  3 pathwatch  2
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 713 Caminho diferente path1  4 pathwatch  3
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 715 Caminho diferente path1  5 pathwatch  4
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 712 Caminho diferente path1  6 pathwatch  5
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 711 Caminho diferente path1  7 pathwatch  6
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  7 pathwatch  7
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+_115_2_4 5001
+_115_3_0 1283
+_115_5_0 715
+_115_6_0 712
+_115_7_0 711
+_115_2_3 5001
+_115_2_5 5001
+_115_2_6 5001
+_115_4_0 713
+_115_7_1 5001
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  7 pathwatch  7
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  7 pathwatch  7
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  7 pathwatch  7
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  7 pathwatch  7
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  7 pathwatch  7
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  7 pathwatch  7
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  7 pathwatch  7
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+--> Evaluate Transaction: checkuserexist
+*** Result:false
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+tam 803 Caminho diferente path1  1 pathwatch  0
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 506 Caminho diferente path1  10 pathwatch  1
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+_115_7_3 5001
+_115_7_5 5001
+_116_0_8 4206
+_116_1_0 803
+_116_10_0 506
+_115_7_2 5001
+_115_7_4 5001
+_115_7_6 5001
+_115_7_7 5001
+_115_7_8 5001
+tam 925 Caminho diferente path1  11 pathwatch  10
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  11 pathwatch  11
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  11 pathwatch  11
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  11 pathwatch  11
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  11 pathwatch  11
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  11 pathwatch  11
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 2629 Caminho diferente path1  12 pathwatch  11
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 716 Caminho diferente path1  13 pathwatch  12
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 713 Caminho diferente path1  14 pathwatch  13
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 712 Caminho diferente path1  15 pathwatch  14
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+_116_11_0 925
+_116_11_1 5001
+_116_11_3 5001
+_116_11_4 5001
+_116_11_5 5001
+_116_13_0 716
+_116_15_0 712
+_116_11_2 5001
+_116_12_0 2629
+_116_14_0 713
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 709 Caminho diferente path1  16 pathwatch  15
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 714 Caminho diferente path1  17 pathwatch  16
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 2286 Caminho diferente path1  18 pathwatch  17
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 717 Caminho diferente path1  19 pathwatch  18
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 714 Caminho diferente path1  2 pathwatch  19
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  2 pathwatch  2
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  2 pathwatch  2
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  2 pathwatch  2
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  2 pathwatch  2
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 1050 Caminho diferente path1  20 pathwatch  2
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+_116_2_0 714
+_116_2_3 5001
+_116_2_4 5001
+_116_20_0 1050
+_116_16_0 709
+_116_17_0 714
+_116_18_0 2286
+_116_19_0 717
+_116_2_1 5001
+_116_2_2 5001
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 709 Caminho diferente path1  21 pathwatch  20
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 714 Caminho diferente path1  22 pathwatch  21
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 711 Caminho diferente path1  23 pathwatch  22
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 1688 Caminho diferente path1  24 pathwatch  23
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 479 Caminho diferente path1  25 pathwatch  24
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 732 Caminho diferente path1  26 pathwatch  25
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  26 pathwatch  26
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 508 Caminho diferente path1  3 pathwatch  26
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  3 pathwatch  3
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 2015 Caminho diferente path1  4 pathwatch  3
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+_116_22_0 714
+_116_24_0 1688
+_116_26_0 732
+_116_3_0 508
+_116_3_1 5001
+_116_4_0 2015
+_116_21_0 709
+_116_23_0 711
+_116_25_0 479
+_116_26_1 5001
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 714 Caminho diferente path1  5 pathwatch  4
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 712 Caminho diferente path1  6 pathwatch  5
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 711 Caminho diferente path1  7 pathwatch  6
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 714 Caminho diferente path1  8 pathwatch  7
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 710 Caminho diferente path1  9 pathwatch  8
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+--> Evaluate Transaction: checkuserexist
+*** Result:false
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+tam 748 Caminho diferente path1  1 pathwatch  0
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 717 Caminho diferente path1  2 pathwatch  1
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 3574 Caminho diferente path1  3 pathwatch  2
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 649 Caminho diferente path1  4 pathwatch  3
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+_116_9_0 710
+_117_2_0 717
+_117_4_0 649
+_117_0_0 1839
+_117_1_0 748
+_117_3_0 3574
+_116_5_0 714
+_116_6_0 712
+_116_7_0 711
+_116_8_0 714
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  4 pathwatch  4
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  4 pathwatch  4
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  4 pathwatch  4
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  4 pathwatch  4
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  4 pathwatch  4
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  4 pathwatch  4
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  4 pathwatch  4
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  4 pathwatch  4
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  4 pathwatch  4
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  4 pathwatch  4
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+_117_4_1 5001
+_117_4_4 5001
+_117_4_7 5001
+_117_4_8 5001
+_117_4_9 5001
+_117_4_10 5001
+_117_4_2 5001
+_117_4_3 5001
+_117_4_5 5001
+_117_4_6 5001
+tam 5001 Caminho diferente path1  4 pathwatch  4
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  4 pathwatch  4
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  4 pathwatch  4
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  4 pathwatch  4
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  4 pathwatch  4
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+
+--> Evaluate Transaction: checkuserexist
+*** Result:false
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+tam 2979 Caminho diferente path1  1 pathwatch  0
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  1 pathwatch  1
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 3546 Caminho diferente path1  10 pathwatch  1
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 713 Caminho diferente path1  11 pathwatch  10
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+_118_10_0 3546
+_117_4_13 5001
+_118_0_15 942
+_118_1_0 2979
+_118_1_1 5001
+_118_11_0 713
+_117_4_11 5001
+_117_4_12 5001
+_117_4_14 5001
+_117_4_15 5001
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 708 Caminho diferente path1  12 pathwatch  11
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 712 Caminho diferente path1  13 pathwatch  12
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 710 Caminho diferente path1  14 pathwatch  13
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 710 Caminho diferente path1  15 pathwatch  14
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 709 Caminho diferente path1  16 pathwatch  15
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  16 pathwatch  16
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  16 pathwatch  16
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 2523 Caminho diferente path1  17 pathwatch  16
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 716 Caminho diferente path1  18 pathwatch  17
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 715 Caminho diferente path1  19 pathwatch  18
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+_118_12_0 708
+_118_16_1 5001
+_118_18_0 716
+_118_19_0 715
+_118_13_0 712
+_118_14_0 710
+_118_15_0 710
+_118_16_0 709
+_118_16_2 5001
+_118_17_0 2523
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 709 Caminho diferente path1  2 pathwatch  19
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  2 pathwatch  2
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 1422 Caminho diferente path1  20 pathwatch  2
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 712 Caminho diferente path1  21 pathwatch  20
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 715 Caminho diferente path1  22 pathwatch  21
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  22 pathwatch  22
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 1466 Caminho diferente path1  23 pathwatch  22
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 819 Caminho diferente path1  24 pathwatch  23
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  24 pathwatch  24
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 3224 Caminho diferente path1  3 pathwatch  24
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+_118_2_1 5001
+_118_21_0 712
+_118_22_0 715
+_118_24_1 5001
+_118_3_0 3224
+_118_2_0 709
+_118_20_0 1422
+_118_22_1 5001
+_118_23_0 1466
+_118_24_0 819
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  3 pathwatch  3
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 2600 Caminho diferente path1  4 pathwatch  3
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 594 Caminho diferente path1  5 pathwatch  4
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 575 Caminho diferente path1  6 pathwatch  5
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 548 Caminho diferente path1  7 pathwatch  6
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 3103 Caminho diferente path1  8 pathwatch  7
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 508 Caminho diferente path1  9 pathwatch  8
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  9 pathwatch  9
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  9 pathwatch  9
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+--> Evaluate Transaction: checkuserexist
+*** Result:false
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+_118_3_1 5001
+_118_5_0 594
+_118_9_0 508
+_118_9_1 5001
+_118_9_2 5001
+_118_4_0 2600
+_118_6_0 575
+_118_7_0 548
+_118_8_0 3103
+_119_0_2 3837
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 917 Caminho diferente path1  1 pathwatch  0
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 530 Caminho diferente path1  10 pathwatch  1
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  10 pathwatch  10
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 2110 Caminho diferente path1  11 pathwatch  10
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  11 pathwatch  11
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  11 pathwatch  11
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  11 pathwatch  11
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  11 pathwatch  11
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 2968 Caminho diferente path1  12 pathwatch  11
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 2452 Caminho diferente path1  13 pathwatch  12
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+_119_11_3 5001
+_119_11_4 5001
+_119_13_0 2452
+_119_11_2 5001
+_119_10_0 530
+_119_10_1 5001
+_119_11_0 2110
+_119_11_1 5001
+_119_12_0 2968
+_119_1_0 917
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 521 Caminho diferente path1  14 pathwatch  13
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  14 pathwatch  14
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  14 pathwatch  14
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  14 pathwatch  14
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 1313 Caminho diferente path1  15 pathwatch  14
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 1377 Caminho diferente path1  2 pathwatch  15
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 808 Caminho diferente path1  3 pathwatch  2
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 556 Caminho diferente path1  4 pathwatch  3
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  4 pathwatch  4
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  4 pathwatch  4
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+_119_14_0 521
+_119_14_1 5001
+_119_14_2 5001
+_119_15_0 1313
+_119_2_0 1377
+_119_3_0 808
+_119_4_2 5001
+_119_14_3 5001
+_119_4_0 556
+_119_4_1 5001
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  4 pathwatch  4
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  4 pathwatch  4
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 3300 Caminho diferente path1  5 pathwatch  4
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 716 Caminho diferente path1  6 pathwatch  5
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 714 Caminho diferente path1  7 pathwatch  6
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 712 Caminho diferente path1  8 pathwatch  7
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 711 Caminho diferente path1  9 pathwatch  8
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+--> Evaluate Transaction: checkuserexist
+*** Result:false
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+tam 821 Caminho diferente path1  1 pathwatch  0
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 983 Caminho diferente path1  10 pathwatch  1
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+_119_6_0 716
+_119_7_0 714
+_119_8_0 712
+_119_9_0 711
+_11_0_0 713
+_11_1_0 821
+_119_4_3 5001
+_119_5_0 3300
+_119_4_4 5001
+_11_10_0 983
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 957 Caminho diferente path1  11 pathwatch  10
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  11 pathwatch  11
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  11 pathwatch  11
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  11 pathwatch  11
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  11 pathwatch  11
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  11 pathwatch  11
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  11 pathwatch  11
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 63 Caminho diferente path1  12 pathwatch  11
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 3865 Caminho diferente path1  13 pathwatch  12
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 660 Caminho diferente path1  14 pathwatch  13
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+_11_11_1 5001
+_11_11_3 5001
+_11_12_0 63
+_11_11_5 5001
+_11_11_6 5001
+_11_13_0 3865
+_11_14_0 660
+_11_11_0 957
+_11_11_2 5001
+_11_11_4 5001
+tam 627 Caminho diferente path1  15 pathwatch  14
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 748 Caminho diferente path1  16 pathwatch  15
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  16 pathwatch  16
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  16 pathwatch  16
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  16 pathwatch  16
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  16 pathwatch  16
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  16 pathwatch  16
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 4108 Caminho diferente path1  2 pathwatch  16
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  2 pathwatch  2
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 2402 Caminho diferente path1  3 pathwatch  2
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+_11_16_2 5001
+_11_16_3 5001
+_11_3_0 2402
+_11_2_0 4108
+_11_2_1 5001
+_11_15_0 627
+_11_16_0 748
+_11_16_1 5001
+_11_16_4 5001
+_11_16_5 5001
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 709 Caminho diferente path1  4 pathwatch  3
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 713 Caminho diferente path1  5 pathwatch  4
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 713 Caminho diferente path1  6 pathwatch  5
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 713 Caminho diferente path1  7 pathwatch  6
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 712 Caminho diferente path1  8 pathwatch  7
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 2023 Caminho diferente path1  9 pathwatch  8
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+
+--> Evaluate Transaction: checkuserexist
+*** Result:false
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+tam 903 Caminho diferente path1  1 pathwatch  0
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 502 Caminho diferente path1  10 pathwatch  1
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  10 pathwatch  10
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+_11_7_0 713
+_11_8_0 712
+_120_1_0 903
+_120_10_1 5001
+_11_4_0 709
+_11_5_0 713
+_11_6_0 713
+_11_9_0 2023
+_120_0_0 619
+_120_10_0 502
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  10 pathwatch  10
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 222 Caminho diferente path1  11 pathwatch  10
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 1404 Caminho diferente path1  12 pathwatch  11
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 1298 Caminho diferente path1  13 pathwatch  12
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 541 Caminho diferente path1  14 pathwatch  13
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 452 Caminho diferente path1  2 pathwatch  14
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 930 Caminho diferente path1  3 pathwatch  2
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  3 pathwatch  3
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 4247 Caminho diferente path1  4 pathwatch  3
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  4 pathwatch  4
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+_120_3_1 5001
+_120_4_0 4247
+_120_4_1 5001
+_120_10_2 5001
+_120_11_0 222
+_120_13_0 1298
+_120_3_0 930
+_120_12_0 1404
+_120_14_0 541
+_120_2_0 452
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 1744 Caminho diferente path1  5 pathwatch  4
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  5 pathwatch  5
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 1328 Caminho diferente path1  6 pathwatch  5
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 678 Caminho diferente path1  7 pathwatch  6
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 2393 Caminho diferente path1  8 pathwatch  7
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 4275 Caminho diferente path1  9 pathwatch  8
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  9 pathwatch  9
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  9 pathwatch  9
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  9 pathwatch  9
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  9 pathwatch  9
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+_120_5_0 1744
+_120_5_1 5001
+_120_9_0 4275
+_120_9_1 5001
+_120_9_3 5001
+_120_6_0 1328
+_120_7_0 678
+_120_8_0 2393
+_120_9_2 5001
+_120_9_4 5001
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  9 pathwatch  9
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  9 pathwatch  9
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  9 pathwatch  9
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+
+--> Evaluate Transaction: checkuserexist
+*** Result:false
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+tam 1380 Caminho diferente path1  1 pathwatch  0
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  1 pathwatch  1
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 1367 Caminho diferente path1  10 pathwatch  1
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 2169 Caminho diferente path1  11 pathwatch  10
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 998 Caminho diferente path1  12 pathwatch  11
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  12 pathwatch  12
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+_121_12_0 998
+_120_9_6 5001
+_121_0_7 1344
+_121_1_0 1380
+_121_10_0 1367
+_121_11_0 2169
+_121_12_1 5001
+_120_9_5 5001
+_120_9_7 5001
+_121_1_1 5001
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  12 pathwatch  12
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  12 pathwatch  12
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  12 pathwatch  12
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 122 Caminho diferente path1  2 pathwatch  12
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  2 pathwatch  2
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  2 pathwatch  2
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  2 pathwatch  2
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  2 pathwatch  2
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  2 pathwatch  2
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  2 pathwatch  2
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+_121_2_2 5001
+_121_2_5 5001
+_121_2_6 5001
+_121_12_2 5001
+_121_12_4 5001
+_121_2_1 5001
+_121_2_4 5001
+_121_12_3 5001
+_121_2_0 122
+_121_2_3 5001
+tam 5001 Caminho diferente path1  2 pathwatch  2
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 2759 Caminho diferente path1  3 pathwatch  2
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 713 Caminho diferente path1  4 pathwatch  3
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 711 Caminho diferente path1  5 pathwatch  4
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 712 Caminho diferente path1  6 pathwatch  5
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 716 Caminho diferente path1  7 pathwatch  6
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 711 Caminho diferente path1  8 pathwatch  7
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 709 Caminho diferente path1  9 pathwatch  8
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  9 pathwatch  9
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+--> Evaluate Transaction: checkuserexist
+*** Result:false
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+_121_8_0 711
+_121_9_1 5001
+_121_2_7 5001
+_121_4_0 713
+_121_5_0 711
+_121_6_0 712
+_121_7_0 716
+_121_9_0 709
+_122_0_1 2394
+_121_3_0 2759
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 668 Caminho diferente path1  1 pathwatch  0
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 517 Caminho diferente path1  10 pathwatch  1
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 712 Caminho diferente path1  11 pathwatch  10
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  11 pathwatch  11
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 4131 Caminho diferente path1  12 pathwatch  11
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 588 Caminho diferente path1  13 pathwatch  12
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  13 pathwatch  13
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  13 pathwatch  13
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  13 pathwatch  13
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  13 pathwatch  13
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+_122_12_0 4131
+_122_13_1 5001
+_122_13_2 5001
+_122_13_4 5001
+_122_1_0 668
+_122_10_0 517
+_122_11_0 712
+_122_11_1 5001
+_122_13_0 588
+_122_13_3 5001
+tam 5001 Caminho diferente path1  13 pathwatch  13
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 3143 Caminho diferente path1  14 pathwatch  13
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 711 Caminho diferente path1  15 pathwatch  14
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 711 Caminho diferente path1  16 pathwatch  15
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 714 Caminho diferente path1  17 pathwatch  16
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 709 Caminho diferente path1  18 pathwatch  17
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 711 Caminho diferente path1  19 pathwatch  18
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  19 pathwatch  19
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  19 pathwatch  19
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  19 pathwatch  19
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+_122_13_5 5001
+_122_14_0 3143
+_122_16_0 711
+_122_17_0 714
+_122_18_0 709
+_122_19_0 711
+_122_15_0 711
+_122_19_1 5001
+_122_19_2 5001
+_122_19_3 5001
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 1012 Caminho diferente path1  2 pathwatch  19
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 719 Caminho diferente path1  3 pathwatch  2
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 555 Caminho diferente path1  4 pathwatch  3
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 585 Caminho diferente path1  5 pathwatch  4
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  5 pathwatch  5
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  5 pathwatch  5
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  5 pathwatch  5
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 1598 Caminho diferente path1  6 pathwatch  5
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 714 Caminho diferente path1  7 pathwatch  6
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 712 Caminho diferente path1  8 pathwatch  7
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+_122_5_3 5001
+_122_7_0 714
+_122_4_0 555
+_122_5_0 585
+_122_5_1 5001
+_122_5_2 5001
+_122_6_0 1598
+_122_8_0 712
+_122_2_0 1012
+_122_3_0 719
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 711 Caminho diferente path1  9 pathwatch  8
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+--> Evaluate Transaction: checkuserexist
+*** Result:false
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+tam 1275 Caminho diferente path1  1 pathwatch  0
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 720 Caminho diferente path1  10 pathwatch  1
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 712 Caminho diferente path1  11 pathwatch  10
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 709 Caminho diferente path1  12 pathwatch  11
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 4574 Caminho diferente path1  13 pathwatch  12
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 4653 Caminho diferente path1  2 pathwatch  13
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  2 pathwatch  2
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  2 pathwatch  2
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+_123_2_2 5001
+_123_0_0 712
+_123_10_0 720
+_123_12_0 709
+_123_13_0 4574
+_123_2_0 4653
+_122_9_0 711
+_123_1_0 1275
+_123_11_0 712
+_123_2_1 5001
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  2 pathwatch  2
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 1646 Caminho diferente path1  3 pathwatch  2
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  3 pathwatch  3
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  3 pathwatch  3
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 3869 Caminho diferente path1  4 pathwatch  3
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 1646 Caminho diferente path1  5 pathwatch  4
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 2198 Caminho diferente path1  6 pathwatch  5
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  6 pathwatch  6
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  6 pathwatch  6
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  6 pathwatch  6
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+_123_2_3 5001
+_123_3_2 5001
+_123_5_0 1646
+_123_6_0 2198
+_123_6_2 5001
+_123_6_3 5001
+_123_3_0 1646
+_123_3_1 5001
+_123_4_0 3869
+_123_6_1 5001
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  6 pathwatch  6
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  6 pathwatch  6
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  6 pathwatch  6
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 2523 Caminho diferente path1  7 pathwatch  6
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 714 Caminho diferente path1  8 pathwatch  7
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 710 Caminho diferente path1  9 pathwatch  8
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+--> Evaluate Transaction: checkuserexist
+*** Result:false
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+tam 843 Caminho diferente path1  1 pathwatch  0
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 775 Caminho diferente path1  10 pathwatch  1
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 1036 Caminho diferente path1  11 pathwatch  10
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+_123_8_0 714
+_123_9_0 710
+_124_0_0 712
+_124_1_0 843
+_124_10_0 775
+_123_6_5 5001
+_123_6_6 5001
+_123_7_0 2523
+_123_6_4 5001
+_124_11_0 1036
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 2531 Caminho diferente path1  12 pathwatch  11
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  12 pathwatch  12
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 3695 Caminho diferente path1  13 pathwatch  12
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 515 Caminho diferente path1  14 pathwatch  13
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 566 Caminho diferente path1  15 pathwatch  14
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  15 pathwatch  15
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  15 pathwatch  15
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  15 pathwatch  15
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  15 pathwatch  15
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  15 pathwatch  15
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+_124_15_2 5001
+_124_15_4 5001
+_124_13_0 3695
+_124_14_0 515
+_124_15_0 566
+_124_15_1 5001
+_124_15_3 5001
+_124_15_5 5001
+_124_12_0 2531
+_124_12_1 5001
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  15 pathwatch  15
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  15 pathwatch  15
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  15 pathwatch  15
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 1272 Caminho diferente path1  2 pathwatch  15
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 1276 Caminho diferente path1  3 pathwatch  2
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 4450 Caminho diferente path1  4 pathwatch  3
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  4 pathwatch  4
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 3493 Caminho diferente path1  5 pathwatch  4
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 701 Caminho diferente path1  6 pathwatch  5
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  6 pathwatch  6
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+_124_6_0 701
+_124_6_1 5001
+_124_2_0 1272
+_124_4_0 4450
+_124_5_0 3493
+_124_3_0 1276
+_124_4_1 5001
+_124_15_6 5001
+_124_15_7 5001
+_124_15_8 5001
+tam 1951 Caminho diferente path1  7 pathwatch  6
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 528 Caminho diferente path1  8 pathwatch  7
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 710 Caminho diferente path1  9 pathwatch  8
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+--> Evaluate Transaction: checkuserexist
+
+*** CreateAsset committed successfully
+*** Result:false
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+tam 749 Caminho diferente path1  1 pathwatch  0
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  1 pathwatch  1
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  1 pathwatch  1
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  1 pathwatch  1
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  1 pathwatch  1
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 4452 Caminho diferente path1  10 pathwatch  1
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+_125_1_2 5001
+_125_1_3 5001
+_124_7_0 1951
+_124_9_0 710
+_125_1_0 749
+_125_1_1 5001
+_124_8_0 528
+_125_0_0 2275
+_125_1_4 5001
+_125_10_0 4452
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 634 Caminho diferente path1  11 pathwatch  10
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  11 pathwatch  11
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  11 pathwatch  11
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  11 pathwatch  11
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  11 pathwatch  11
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 843 Caminho diferente path1  2 pathwatch  11
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  2 pathwatch  2
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  2 pathwatch  2
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 1026 Caminho diferente path1  3 pathwatch  2
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  3 pathwatch  3
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+_125_11_1 5001
+_125_11_3 5001
+_125_2_1 5001
+_125_2_2 5001
+_125_3_0 1026
+_125_11_0 634
+_125_11_4 5001
+_125_2_0 843
+_125_3_1 5001
+_125_11_2 5001
+tam 5001 Caminho diferente path1  3 pathwatch  3
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  3 pathwatch  3
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 26 Caminho diferente path1  4 pathwatch  3
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 712 Caminho diferente path1  5 pathwatch  4
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 712 Caminho diferente path1  6 pathwatch  5
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 717 Caminho diferente path1  7 pathwatch  6
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 713 Caminho diferente path1  8 pathwatch  7
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 711 Caminho diferente path1  9 pathwatch  8
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+--> Evaluate Transaction: checkuserexist
+*** Result:false
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+tam 971 Caminho diferente path1  1 pathwatch  0
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+_125_7_0 717
+_125_3_3 5001
+_125_4_0 26
+_125_5_0 712
+_125_6_0 712
+_125_8_0 713
+_125_9_0 711
+_126_0_0 4957
+_126_1_0 971
+_125_3_2 5001
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 754 Caminho diferente path1  10 pathwatch  1
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 713 Caminho diferente path1  11 pathwatch  10
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 709 Caminho diferente path1  12 pathwatch  11
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 712 Caminho diferente path1  13 pathwatch  12
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 2604 Caminho diferente path1  14 pathwatch  13
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  14 pathwatch  14
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  14 pathwatch  14
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 3588 Caminho diferente path1  15 pathwatch  14
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 717 Caminho diferente path1  16 pathwatch  15
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 711 Caminho diferente path1  17 pathwatch  16
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+_126_11_0 713
+_126_12_0 709
+_126_14_0 2604
+_126_15_0 3588
+_126_10_0 754
+_126_13_0 712
+_126_14_1 5001
+_126_14_2 5001
+_126_16_0 717
+_126_17_0 711
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 711 Caminho diferente path1  18 pathwatch  17
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 714 Caminho diferente path1  19 pathwatch  18
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 709 Caminho diferente path1  2 pathwatch  19
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 893 Caminho diferente path1  20 pathwatch  2
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 1188 Caminho diferente path1  21 pathwatch  20
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  21 pathwatch  21
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 3618 Caminho diferente path1  3 pathwatch  21
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  3 pathwatch  3
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 118 Caminho diferente path1  4 pathwatch  3
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 653 Caminho diferente path1  5 pathwatch  4
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+_126_19_0 714
+_126_2_0 709
+_126_20_0 893
+_126_21_1 5001
+_126_5_0 653
+_126_18_0 711
+_126_3_0 3618
+_126_3_1 5001
+_126_4_0 118
+_126_21_0 1188
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 613 Caminho diferente path1  6 pathwatch  5
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  6 pathwatch  6
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  6 pathwatch  6
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  6 pathwatch  6
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  6 pathwatch  6
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  6 pathwatch  6
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  6 pathwatch  6
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  6 pathwatch  6
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 4460 Caminho diferente path1  7 pathwatch  6
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 715 Caminho diferente path1  8 pathwatch  7
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+_126_6_0 613
+_126_6_4 5001
+_126_6_5 5001
+_126_8_0 715
+_126_6_7 5001
+_126_7_0 4460
+_126_6_1 5001
+_126_6_2 5001
+_126_6_3 5001
+_126_6_6 5001
+tam 708 Caminho diferente path1  9 pathwatch  8
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+--> Evaluate Transaction: checkuserexist
+*** Result:false
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+tam 5001 Caminho diferente path1  0 pathwatch  0
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 3129 Caminho diferente path1  1 pathwatch  0
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 715 Caminho diferente path1  10 pathwatch  1
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 545 Caminho diferente path1  11 pathwatch  10
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 2039 Caminho diferente path1  12 pathwatch  11
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 868 Caminho diferente path1  13 pathwatch  12
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  13 pathwatch  13
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  13 pathwatch  13
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+_126_9_0 708
+_127_0_0 714
+_127_1_0 3129
+_127_10_0 715
+_127_11_0 545
+_127_12_0 2039
+_127_13_2 5001
+_127_0_1 5001
+_127_13_0 868
+_127_13_1 5001
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  13 pathwatch  13
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  13 pathwatch  13
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  13 pathwatch  13
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  13 pathwatch  13
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  13 pathwatch  13
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  13 pathwatch  13
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  13 pathwatch  13
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  13 pathwatch  13
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 4229 Caminho diferente path1  2 pathwatch  13
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 712 Caminho diferente path1  3 pathwatch  2
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+_127_13_4 5001
+_127_13_5 5001
+_127_13_6 5001
+_127_13_7 5001
+_127_13_8 5001
+_127_13_10 5001
+_127_2_0 4229
+_127_13_3 5001
+_127_3_0 712
+_127_13_9 5001
+tam 714 Caminho diferente path1  4 pathwatch  3
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 710 Caminho diferente path1  5 pathwatch  4
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 711 Caminho diferente path1  6 pathwatch  5
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  6 pathwatch  6
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  6 pathwatch  6
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 93 Caminho diferente path1  7 pathwatch  6
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 609 Caminho diferente path1  8 pathwatch  7
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 590 Caminho diferente path1  9 pathwatch  8
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+--> Evaluate Transaction: checkuserexist
+*** Result:false
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+tam 591 Caminho diferente path1  1 pathwatch  0
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+_127_4_0 714
+_127_5_0 710
+_127_6_1 5001
+_127_6_2 5001
+_127_8_0 609
+_127_9_0 590
+_127_6_0 711
+_127_7_0 93
+_128_0_0 835
+_128_1_0 591
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 618 Caminho diferente path1  10 pathwatch  1
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 718 Caminho diferente path1  11 pathwatch  10
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 710 Caminho diferente path1  12 pathwatch  11
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 714 Caminho diferente path1  13 pathwatch  12
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 712 Caminho diferente path1  14 pathwatch  13
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 711 Caminho diferente path1  15 pathwatch  14
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 710 Caminho diferente path1  16 pathwatch  15
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  16 pathwatch  16
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 2000 Caminho diferente path1  17 pathwatch  16
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  17 pathwatch  17
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+_128_17_0 2000
+_128_17_1 5001
+_128_12_0 710
+_128_14_0 712
+_128_15_0 711
+_128_16_1 5001
+_128_10_0 618
+_128_11_0 718
+_128_13_0 714
+_128_16_0 710
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  17 pathwatch  17
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  17 pathwatch  17
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  17 pathwatch  17
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  17 pathwatch  17
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 4421 Caminho diferente path1  18 pathwatch  17
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  18 pathwatch  18
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 3008 Caminho diferente path1  19 pathwatch  18
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  19 pathwatch  19
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 647 Caminho diferente path1  2 pathwatch  19
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 635 Caminho diferente path1  20 pathwatch  2
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+_128_17_2 5001
+_128_17_3 5001
+_128_18_0 4421
+_128_18_1 5001
+_128_19_0 3008
+_128_19_1 5001
+_128_2_0 647
+_128_17_4 5001
+_128_17_5 5001
+_128_20_0 635
+tam 2228 Caminho diferente path1  3 pathwatch  20
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  3 pathwatch  3
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 1200 Caminho diferente path1  4 pathwatch  3
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 716 Caminho diferente path1  5 pathwatch  4
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 715 Caminho diferente path1  6 pathwatch  5
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 714 Caminho diferente path1  7 pathwatch  6
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 709 Caminho diferente path1  8 pathwatch  7
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 712 Caminho diferente path1  9 pathwatch  8
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  9 pathwatch  9
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  9 pathwatch  9
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+_128_9_1 5001
+_128_3_0 2228
+_128_4_0 1200
+_128_7_0 714
+_128_8_0 709
+_128_9_2 5001
+_128_3_1 5001
+_128_5_0 716
+_128_6_0 715
+_128_9_0 712
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+--> Evaluate Transaction: checkuserexist
+*** Result:false
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+tam 610 Caminho diferente path1  1 pathwatch  0
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 1106 Caminho diferente path1  10 pathwatch  1
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 713 Caminho diferente path1  11 pathwatch  10
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 709 Caminho diferente path1  12 pathwatch  11
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  12 pathwatch  12
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 1825 Caminho diferente path1  2 pathwatch  12
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 506 Caminho diferente path1  3 pathwatch  2
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 795 Caminho diferente path1  4 pathwatch  3
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 552 Caminho diferente path1  5 pathwatch  4
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+_129_4_0 795
+_129_12_0 709
+_129_1_0 610
+_129_10_0 1106
+_129_11_0 713
+_129_12_1 5001
+_129_2_0 1825
+_129_3_0 506
+_129_5_0 552
+_129_0_2 1410
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 3009 Caminho diferente path1  6 pathwatch  5
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  6 pathwatch  6
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  6 pathwatch  6
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  6 pathwatch  6
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  6 pathwatch  6
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  6 pathwatch  6
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  6 pathwatch  6
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  6 pathwatch  6
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  6 pathwatch  6
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  6 pathwatch  6
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+_129_6_0 3009
+_129_6_1 5001
+_129_6_2 5001
+_129_6_6 5001
+_129_6_7 5001
+_129_6_3 5001
+_129_6_4 5001
+_129_6_5 5001
+_129_6_8 5001
+_129_6_9 5001
+tam 5001 Caminho diferente path1  6 pathwatch  6
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  6 pathwatch  6
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  6 pathwatch  6
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 4107 Caminho diferente path1  7 pathwatch  6
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 713 Caminho diferente path1  8 pathwatch  7
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 713 Caminho diferente path1  9 pathwatch  8
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+--> Evaluate Transaction: checkuserexist
+*** Result:false
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+tam 544 Caminho diferente path1  1 pathwatch  0
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 751 Caminho diferente path1  10 pathwatch  1
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 713 Caminho diferente path1  11 pathwatch  10
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+_12_0_0 711
+_129_6_10 5001
+_129_6_11 5001
+_129_6_12 5001
+_129_7_0 4107
+_129_8_0 713
+_129_9_0 713
+_12_1_0 544
+_12_10_0 751
+_12_11_0 713
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 709 Caminho diferente path1  12 pathwatch  11
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 714 Caminho diferente path1  13 pathwatch  12
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 710 Caminho diferente path1  14 pathwatch  13
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  14 pathwatch  14
+
+--> Evaluate Transaction: GetStatusEvent
+
+*** CreateAsset committed successfully
+*** Result:true
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+
+*** CreateAsset committed successfully
+tam 1046 Caminho diferente path1  15 pathwatch  14
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 1 Caminho diferente path1  2 pathwatch  15
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 784 Caminho diferente path1  3 pathwatch  2
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 560 Caminho diferente path1  4 pathwatch  3
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  4 pathwatch  4
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+tam 5001 Caminho diferente path1  4 pathwatch  4
+
+--> Evaluate Transaction: GetStatusEvent
+*** Result:true
+
+*** CreateAsset committed successfully
+_12_14_0 710
+_12_2_0 1
+_12_3_0 784
+_12_4_0 560
+_12_4_1 5001
+_12_12_0 709
+_12_13_0 714
+_12_14_1 5001
+_12_15_0 1046
+_12_4_2 5001
+panic: failed to submit transaction: rpc error: code = Aborted desc = failed to endorse transaction, see attached details for more info
+
+goroutine 646 [running]:
+main.CreatePath(0xc0008fe360?, {0xc000500ea0?, 0xa43960?, 0x1?}, {0xc0008fe360, 0x0}, {0x986223, 0x4})
+	/home/malkai/Documentos/Inmetrochain-Vehicle/blockchain/gateway/path.go:39 +0x448
+main.dadosbrutos(...)
+	/home/malkai/Documentos/Inmetrochain-Vehicle/blockchain/gateway/main.go:567
+main.inserigoroutine(0x0?, {0xc000500ea0?, 0x0?, 0x0?}, {0xc0008fe360, 0x7})
+	/home/malkai/Documentos/Inmetrochain-Vehicle/blockchain/gateway/main.go:90 +0xb7
+created by main.openhugejson in goroutine 1
+	/home/malkai/Documentos/Inmetrochain-Vehicle/blockchain/gateway/main.go:270 +0x133c
+exit status 2

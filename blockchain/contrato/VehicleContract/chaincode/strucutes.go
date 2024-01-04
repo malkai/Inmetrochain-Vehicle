@@ -32,6 +32,9 @@ type Event struct {
 	Fsupf     float64 `json:"fsupf"`   //combustivel final
 	Fsupfd    float64 `json:"fsupfd"`  //i+constant k times
 	Dff       float64 `json:"dff"`
+	Compl     float64 `json:"compl"` //identificação do usuario 2
+	Freq      float64 `json:"freq"`  //data inicial
+	Confi     float64 `json:"Confi"` //data final do acordo
 }
 
 type Tuple struct {

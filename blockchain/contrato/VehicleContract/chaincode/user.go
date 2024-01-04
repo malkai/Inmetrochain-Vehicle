@@ -12,7 +12,7 @@ import (
 func (s *SmartContract) Createuser(ctx contractapi.TransactionContextInterface, id string, name string, tanq string) error {
 	exists, err := s.Userexist(ctx, "user"+id)
 	if err != nil {
-		return err
+		return fmt.Errorf("\n Erro checar se o usuario existe. %v", err)
 	}
 	if exists {
 		return fmt.Errorf("O usuario %s já existe", id)
@@ -33,7 +33,7 @@ func (s *SmartContract) Createuser(ctx contractapi.TransactionContextInterface, 
 	}
 	userJSON, err := json.Marshal(user)
 	if err != nil {
-		return err
+		return fmt.Errorf("\n Erro ao criar usuario. %v", err)
 	}
 
 	return ctx.GetStub().PutState(user.Id, userJSON)
@@ -43,13 +43,16 @@ func (s *SmartContract) Userget(ctx contractapi.TransactionContextInterface, id 
 	var users User
 	user, err := ctx.GetStub().GetState(id)
 	if err != nil {
-		return users, fmt.Errorf("failed to read from world state: %v", err)
+		return users, fmt.Errorf("Erro em acessar a informação na blockchain: %v", err)
 	}
-	err = json.Unmarshal(user, &users)
-	if err != nil {
-		return users, fmt.Errorf("failed to read from world state: %v", err)
-	}
+	if user != nil {
+		err = json.Unmarshal(user, &users)
+		if err != nil {
+			return users, fmt.Errorf("Falha na leitura do usuario : %v %s", err, users.Id)
+		}
 
+		return users, nil
+	}
 	return users, nil
 
 }
@@ -67,30 +70,30 @@ func (s *SmartContract) Userexist(ctx contractapi.TransactionContextInterface, i
 
 //s.Updatuser(ctx, "user"+id, 1*score, ntimeless/ntotal, eventjson.Dff, fuelsum, valuevalids )
 
-func (s *SmartContract) Updatuser(ctx contractapi.TransactionContextInterface, id string, timeless, eventdff, fuelsum float64, vaulevalids []string) error {
+func (s *SmartContract) Updatuser(ctx contractapi.TransactionContextInterface, id string, timeless, completness float64, vaulevalids []string) (float64, error) {
 
 	user, err := ctx.GetStub().GetState(id)
 	if err != nil {
-		return fmt.Errorf("failed to read from world state: %v", err)
+		return 0, fmt.Errorf("Erro ao acessar a blockchain para atualizar: %v", err)
 	}
 
 	var users User
 	err = json.Unmarshal(user, &users)
 	if err != nil {
-		return err
+		return 0, fmt.Errorf("Erro ao acessar o usuario para atualizar: %v", err)
 	}
 
-	score := Credibility(users.Score, timeless, eventdff, fuelsum, vaulevalids)
+	score := Credibility(users.Score, timeless, completness, vaulevalids)
 
 	users.Criptmoeda = users.Criptmoeda + 1*score
 	users.Score = users.Score + score
 
 	userJSON, err := json.Marshal(users)
 	if err != nil {
-		return err
+		return 0, fmt.Errorf("\n Erro ao compactar json para atualiazar o usuario. %v", err)
 	}
 	err = ctx.GetStub().PutState(id, userJSON)
-	return nil
+	return score, nil
 
 }
 

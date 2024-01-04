@@ -3,6 +3,7 @@ package chaincode
 import (
 	"encoding/json"
 	"fmt"
+	"math"
 
 	"github.com/hyperledger/fabric-contract-api-go/contractapi"
 )
@@ -34,7 +35,7 @@ func (s *SmartContract) CreatPath(ctx contractapi.TransactionContextInterface, d
 	if err != nil {
 		return fmt.Errorf("\n Erro checar evento. %v", err)
 	}
-	if !h {
+	if h == true {
 		return fmt.Errorf("\n Caminho não esta conectado a nenhum evento %v", err)
 	}
 
@@ -49,10 +50,10 @@ func (s *SmartContract) CreatPath(ctx contractapi.TransactionContextInterface, d
 
 			dist1, err := Distanceeucle(tuples[i].Pos, tuples[i+1].Pos)
 			if err != nil {
-				return fmt.Errorf("\n Erro checar Distancia. %v", err)
+				return fmt.Errorf("\n Erro checar Distancia. %v %s %s ", err, tuples[i].Pos, tuples[i+1].Pos)
 			}
 
-			dist = +dist1
+			dist = dist + dist1
 
 			time1, err := totaltime(tuples[i].T, tuples[i+1].T)
 			if err != nil {
@@ -67,21 +68,31 @@ func (s *SmartContract) CreatPath(ctx contractapi.TransactionContextInterface, d
 
 	}
 
-	timeles, err := Timeliness(time2)
+	timeles, err := Timeliness(time2, 5)
 	if err != nil {
 		return fmt.Errorf("\n Error na metrica timeless. %v", err)
 	}
+	fmt.Println(timeles)
 
 	user, err := s.Userget(ctx, "user"+id)
 	if err != nil {
-		return fmt.Errorf("\n Error na metrica timeless. %v", err)
+		return fmt.Errorf("\n Error ao recuperar user %v %s", err, "user"+id)
 	}
 
-	fuel = KalmanFilter(user.Tanque, fuel_vector)
+	fuel, err = KalmanFilter(user.Tanque, fuel_vector)
+	if err != nil {
+		return fmt.Errorf("\n Error ao aplicar filtro de kalman %v", err)
+	}
+	fmt.Println(fuel)
 
 	aux, err := ctx.GetStub().GetTxTimestamp()
 	if err != nil {
 		return fmt.Errorf("\n Erro checar data. %v", err)
+	}
+	fmt.Println(aux)
+	//layout := "2006-01-02 15:04:05"
+	if math.IsNaN(fuel) {
+		return fmt.Errorf("\n Checando: %f", fuel)
 	}
 
 	layout := "2006-01-02 15:04:05"
@@ -101,7 +112,7 @@ func (s *SmartContract) CreatPath(ctx contractapi.TransactionContextInterface, d
 
 	patJSON, err := json.Marshal(path)
 	if err != nil {
-		return err
+		return fmt.Errorf("\n Erro ao comparctar data. %v %+v", err, path)
 	}
 	s.updatevent(ctx, id, id2, fuel)
 
