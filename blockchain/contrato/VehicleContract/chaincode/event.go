@@ -80,7 +80,7 @@ func (s *SmartContract) Closeevent(ctx contractapi.TransactionContextInterface, 
 
 	eventjson.Dataiataf = aux.AsTime().Format(layout)
 	eventjson.Vstatus = false
-	temp, err := s.GetallPath(ctx, "Path"+id)
+	temp, err := s.GetPathhOpen(ctx, id)
 	if err != nil {
 		return err
 	}
@@ -131,13 +131,20 @@ func (s *SmartContract) Closeevent(ctx contractapi.TransactionContextInterface, 
 
 		}
 	}
-	//return fmt.Errorf("\n Erro ao criar evento 2. %v %s", err, temp[0].DataR)
+
+	//Atualiza confiança do usuario
 	conf, err := s.Updatuser(ctx, "user"+id, ntimeless/ntotal, eventjson.Dff/fuelsum, valuevalids)
 	if err != nil {
 		return fmt.Errorf("erro ao atualizar user: %v", err)
 	}
+
 	eventjson.Id = eventjson.Id + eventjson.Dataiataf
-	eventjson.Fsupi = eventjson.Fsupi + sum
+	if eventjson.Fsupi+sum <= eventjson.Dff {
+		eventjson.Fsupi = eventjson.Fsupi + sum
+	} else {
+		eventjson.Fsupi = eventjson.Dff
+	}
+
 	eventjson.Fsupfd = eventjson.Fsupi - fuelsum
 	eventjson.Compl = eventjson.Dff / fuelsum
 	eventjson.Freq = ntimeless / ntotal

@@ -1,0 +1,521 @@
+/*
+	content, err := os.Open("vehicles_data2.json")
+	if err != nil {
+		log.Fatal("Error when opening file: ", err)
+	}
+
+	byteValueJSON, _ := io.ReadAll(content)
+
+	ts := []datavehicle{}
+	err = json.Unmarshal(byteValueJSON, &ts)
+	if err != nil {
+		log.Fatal(err)
+	}
+*/
+
+//{{9_3  {[{{-22.802550583789813 -43.202926866082976}  } {{0 0} 2023-12-18 14:49:57.775409 } {{0 0}  98.966920%}]}}}
+
+//GetAllPath(contract, "Path")
+//GetAlluser(contract, "user")
+//GetAllevents(contract, "Event")
+
+// Create gRPC client connection, which should be shared by all gateway connections to this endpoint.
+
+//GetAllevents(contract, "event")
+
+//Createevent(contract, 93.00, 5.0, "1", "3")
+
+//GetAllevents(contract, "event1")
+
+//Createuser(contract, "1", "Malkai1", "80")
+//GetAlluser(contract, "user")
+//GetAllevents(contract, "Event")
+
+/*
+	var t []Tuple
+	layout := "2006-01-02 15:04:05"
+	time2 := time.Now()
+
+	var t1 = Tuple{T: time2.Format(layout), Pos: "1/2", Comb: 93.00}
+	t = append(t, t1)
+	time2 = time2.Add(10 * time.Second)
+	//fmt.Println(time2.Format(layout))
+	t1 = Tuple{T: time2.Format(layout), Pos: "2/3", Comb: 92.00}
+	t = append(t, t1)
+	time2 = time2.Add(10 * time.Second)
+	//fmt.Println(time2.Format(layout))
+	t1 = Tuple{T: time2.Format(layout), Pos: "4/5", Comb: 91.00}
+	t = append(t, t1)
+	time2 = time2.Add(10 * time.Second)
+	//fmt.Println(time2.Format(layout))
+	t1 = Tuple{T: time2.Format(layout), Pos: "5/6", Comb: 90.00}
+	t = append(t, t1)
+
+	CreatePath(contract, t, "1")
+*/
+//GetAllPath(contract, "Path")
+//GetAlluser(contract, "user")
+//GetAllevents(contract, "Event")
+
+//initLedger(contract)
+
+// Context used for event listening
+//ctx, cancel := context.WithCancel(context.Background())
+//defer cancel()
+
+// Listen for events emitted by subsequent transactions
+//startChaincodeEventListening(ctx, network)
+/*
+	Datai := time.Now()
+	Dataiataf := time.Now()
+	Fsupi := 50.00
+	Fsupf := 20.00
+	Dff := 10
+	Vstatus := false
+	Iduser1 := "1"
+	Iduser2 := "2"
+*/
+//Createevent(contract, time.Now(), 50.00, 10.0, "1", "2")
+//GetAllevents(contract, "event1")
+
+//updatevent("event1", 1.0)
+//updatevent("event1", 1.0)
+//updatevent("event1", 1.0)
+//updatevent("event1", 1.0)
+//updatevent("event1", 1.0)
+//updatevent("event1", 1.0)
+//updatevent("event1", 1.0)
+//updatevent("event1", 1.0)
+
+//initLedger(contract)
+//getAllAssets(contract)
+
+//replayChaincodeEvents(ctx, network, firstBlockNumber)
+
+//GetAlluser(contract, "user")
+//Createuser(contract, "0", "0", "80")
+//checkuserexist(contract, "0")
+//Getuser(contract, "0")
+//fmt.Println(checkuserexist(contract, "0"))
+
+//fmt.Println()
+
+//fmt.Println()
+//fmt.Println(array)
+//fmt.Println("Sucesso")
+
+///	byteValueJSON, _ := io.ReadAll(content)
+
+//ts := []datavehicle{}
+/*
+	err = json.Unmarshal(byteValueJSON, &ts)
+	if err != nil {
+		log.Fatal(err)
+	}
+*/
+
+
+func memUsage(m1, m2 *runtime.MemStats) {
+	fmt.Println("Alloc:", m2.Alloc-m1.Alloc,
+		"TotalAlloc:", m2.TotalAlloc-m1.TotalAlloc,
+		"HeapAlloc:", m2.HeapAlloc-m1.HeapAlloc)
+}
+
+
+func openhugejson(contract *client.Contract) {
+
+	content, err := os.Open("vehicles_data2.json")
+	if err != nil {
+		log.Fatal("Error when opening file: ", err)
+	}
+	defer content.Close()
+	i := 0
+
+	dec := json.NewDecoder(content)
+
+	// reacontentd open bracket
+	t, err := dec.Token()
+	if err != nil {
+		log.Fatal(err)
+	}
+	fmt.Printf("%T: %v\n", t, t)
+	//idposto := "9999"
+	j := 0
+	o := 0
+	soma_part_trajeto := 0
+	helpid := 0
+	helppath := 0
+	layout := "2006-01-02 15:04:05"
+	//var tt []Tuple
+	//var sizedata uintptr
+	trajetos_num := 0
+	m := make(map[int]Tuple)
+	m2 := make(map[string][]Tuple)
+	m3 := make(map[int]int)
+	var oo []Tuple
+	// while the array contains values
+	for dec.More() {
+		var h datavehicle
+		// decode an array value (Message)
+		err := dec.Decode(&h)
+		if err != nil {
+			log.Fatal(err)
+		}
+		//fmt.Println(h.Uservehicle.Id)
+
+		//inseri tuplas
+		if i == 0 {
+			helpid = h.Uservehicle.Id
+			//helppath = h.Uservehicle.Path
+			//print(checkuserexist(contract, h.Uservehicle.Id))
+			/*
+				if checkuserexist(contract, h.Uservehicle.Id) == false {
+					Createuser(contract, h.Uservehicle.Id, h.Uservehicle.Id, "40")
+				}
+
+				// checar se há um evento aberto se não tiver abrir um
+
+				s, _ := strconv.ParseFloat(h.Uservehicle.Tuple.Combustivel, 64)
+				if GetStatusEvent(contract, h.Uservehicle.Id, idposto) == false {
+					Createevent(contract, s, 10.0, h.Uservehicle.Id, idposto)
+				}
+			*/
+
+			//sizedata = unsafe.Sizeof(m) + unsafe.Sizeof(make([]Tuple, int(j)))
+		}
+
+		i++
+
+		//res1 = strings.Split(h.Uservehicle.Vehicle_data.Tuple[2].Combustivel, "%")
+		//s, err := strconv.ParseFloat(res1[0], 64)
+		if err != nil {
+			fmt.Printf("Erro na leitura d combustivel: %v", err)
+		}
+		lat := fmt.Sprintf("%f", h.Uservehicle.Pos.Lat)
+
+		long := fmt.Sprintf("%f", h.Uservehicle.Pos.Long)
+
+		date, error := time.Parse(layout, h.Uservehicle.Time)
+		if error != nil {
+			fmt.Println(error)
+		}
+		if o >= 10 || dec.More() == false {
+			//fmt.Println(o, m2)
+
+			//fmt.Println(m3)
+
+			/*
+				for lo, url := range m2 {
+					fmt.Println(lo, len(url))
+					go inserigoroutine(contract, url, lo)
+
+				}
+			*/
+			//time.Sleep(2 * time.Second)
+
+			o = 0
+
+			for k := range m2 {
+				delete(m2, k)
+			}
+			for k := range m3 {
+				delete(m3, k)
+			}
+			// && j <= 5000
+		} else if h.Uservehicle.Id == helpid && h.Uservehicle.Path == helppath {
+
+			res1 := strings.Split(h.Uservehicle.Combustivel, "%")
+
+			s, _ := strconv.ParseFloat(res1[0], 64)
+			if s < 0 {
+				s = s * -1
+			}
+			m[j] = Tuple{T: date.Format(layout), Pos: lat + "/" + long, Comb: s}
+			j++
+			//|| j > 5000
+		} else if h.Uservehicle.Id == helpid && (h.Uservehicle.Path != helppath) {
+			trajetos_num++
+
+			//print(j)
+
+			if h.Uservehicle.Path == helppath {
+
+				soma_part_trajeto++
+			} else {
+				trajetos_num++
+				soma_part_trajeto = 0
+			}
+
+			fmt.Println("id", h.Uservehicle.Id, "tam", j, "Caminho diferente path1 ", h.Uservehicle.Path, "pathwatch ", helppath)
+			//fmt.Println(len(m))
+			helppath = h.Uservehicle.Path
+
+			for _, kk := range m {
+				//fmt.Println(k)
+				oo = append(oo, kk)
+			}
+
+			t := strconv.Itoa(soma_part_trajeto)
+
+			m2auxint := strconv.Itoa(h.Uservehicle.Id)
+
+			m2auxint2 := strconv.Itoa(h.Uservehicle.Path)
+
+			m2["_"+m2auxint+"_"+m2auxint2+"_"+t] = oo
+
+			m3[o] = h.Uservehicle.Id
+
+			for k := range m {
+				delete(m, k)
+			}
+			res1 := strings.Split(h.Uservehicle.Combustivel, "%")
+			s, _ := strconv.ParseFloat(res1[0], 64)
+
+			if s < 0 {
+				s = s * -1
+			}
+			/*
+				if GetStatusEvent(contract, h.Uservehicle.Id, idposto) == true {
+					Createevent(contract, s, 10.0, h.Uservehicle.Id, idposto)
+				}
+			*/
+
+			oo = nil
+			j = 0
+			m[j] = Tuple{T: date.Format(layout), Pos: lat + "/" + long, Comb: s}
+			j++
+			o++
+
+		} else if h.Uservehicle.Id != helpid {
+
+			//checar se id existe
+			//fmt.Println("ID diferente id1", h.Uservehicle.Id, "id2", helpid)
+			//t := strconv.Itoa(soma_part_trajeto)
+
+			res1 := strings.Split(h.Uservehicle.Combustivel, "%")
+			s, _ := strconv.ParseFloat(res1[0], 64)
+
+			if s < 0 {
+				s = s * -1
+			}
+			/*
+				if checkuserexist(contract, h.Uservehicle.Id) == false {
+					Createuser(contract, h.Uservehicle.Id, h.Uservehicle.Id, "40")
+				}
+
+				if GetStatusEvent(contract, h.Uservehicle.Id, idposto) == false {
+					Createevent(contract, s, 10.0, h.Uservehicle.Id, idposto)
+				}
+			*/
+
+			helpid = h.Uservehicle.Id
+			helppath = h.Uservehicle.Path
+			//tt = nil
+			j = 0
+
+			for _, kk := range m {
+				//fmt.Println(k)
+				oo = append(oo, kk)
+			}
+			t := strconv.Itoa(soma_part_trajeto)
+			m2auxint := strconv.Itoa(h.Uservehicle.Id)
+
+			m2auxint2 := strconv.Itoa(h.Uservehicle.Path)
+
+			m2["_"+m2auxint+"_"+m2auxint2+"_"+t] = oo
+
+			m3[o] = h.Uservehicle.Id
+			oo = nil
+			soma_part_trajeto = 0
+			for k := range m {
+				delete(m, k)
+			}
+
+			m[j] = Tuple{T: date.Format(layout), Pos: lat + "/" + long, Comb: s}
+			j++
+			o++
+
+		}
+
+	}
+	fmt.Println("Numero de trajetos", trajetos_num)
+	t, err = dec.Token()
+	if err != nil {
+		log.Fatal(err)
+	}
+	fmt.Printf("%T: %v\n", t, t)
+}
+
+
+//CreatePath(contract, tuples, name, postoid)
+		/*
+			b, err := os.ReadFile("datavehicle/" + name + "/" + a)
+			if err != nil {
+				fmt.Println("Error:", err)
+				return
+			}
+		*/
+
+		//[^a-zA-Z\":\n*,{}]+
+
+		//var res1 = reg.FindString(string(b))
+		//fmt.Print(string(b))
+
+		//res1 := strings.Split(string(b), ",")
+		//fmt.Println(res1[0], res1[1], res1[2], res1[3], res1[4], res1[5])
+		//reg := regexp.MustCompile("[^\n0-9.-]+")
+		//id := reg.Split(string(b), 11)
+		//fmt.Println(id[1])
+		//id := strings.Split(res1[0], "\"")
+		//fmt.Print(id)
+
+
+
+func selectionSort(array []Tuple, size int) []Tuple {
+
+	layout := "2006-01-02 15:04:05"
+	for ind := 0; ind <= size; ind++ {
+		min_index := ind
+
+		for j := ind + 1; j <= size; j++ {
+			// select the minimum element in every iteration
+			datet1, err := time.Parse(layout, array[ind].T)
+			if err != nil {
+				fmt.Println("Erro")
+			}
+			datet2, err := time.Parse(layout, array[j].T)
+			if err != nil {
+				fmt.Println("Erro")
+			}
+			if datet2.Compare(datet1) == -1 {
+
+				min_index = j
+				v := array[ind]
+				array[ind] = array[min_index]
+				array[min_index] = v
+
+			}
+
+		}
+
+	}
+
+	return array
+}
+
+func inserigoroutine(contract *client.Contract, aaa []Tuple, id string) {
+
+	aaa = selectionSort(aaa, len(aaa)-1)
+	//idposto := "9999"
+	//fmt.Println(tt)
+	layout := "2006-01-02 15:04:05"
+	acc := 0.0
+	if aaa != nil {
+		//fmt.Println(tt)
+		//res1 := strings.Split(id, "_")
+		//t := strconv.Itoa(res1[0])
+		//dadosbrutos(contract, aaa, res1[0], idposto)
+		fmt.Println(len(aaa))
+		for help := range aaa {
+			if aaa[help] != aaa[len(aaa)-1] {
+				date, _ := time.Parse(layout, aaa[help].T)
+				date2, _ := time.Parse(layout, aaa[help+1].T)
+				acc = acc + float64(date2.Sub(date).Seconds())
+			}
+		}
+		fmt.Println(acc)
+		fmt.Println(acc / 3600)
+
+	}
+
+	//idposto := "9999"
+
+	//fmt.Println("tuple", aaa)
+	//fmt.Println("id", id)
+
+	//	fmt.Println(len(aaa))
+
+	/*
+		if len(aaa) > 1 {
+			//fmt.Println(m)
+			for k := range aaa {
+				//fmt.Println(k)
+				tt = append(tt, aaa[k])
+			}
+
+			tt = selectionSort(tt, len(tt)-1)
+			//fmt.Println(tt)
+			if tt != nil {
+				//fmt.Println(tt)
+				t := strconv.Itoa(id)
+				dadosbrutos(contract, tt, t, idposto)
+			}
+		}
+	*/
+	/*
+		helppath = h.Uservehicle.Path
+		res1 = strings.Split(h.Uservehicle.Vehicle_data.Tuple[2].Combustivel, "%")
+
+		s, _ := strconv.ParseFloat(res1[0], 64)
+
+		if s < 0 {
+			s = s * -1
+		}
+
+		if GetStatusEvent(contract, h.Uservehicle.Id, idposto) == true {
+			Createevent(contract, s, 10.0, h.Uservehicle.Id, idposto)
+		}
+
+		if j > 1 {
+			//fmt.Println(m)
+			for k := range m {
+				//fmt.Println(k)
+				tt = append(tt, m[k])
+			}
+
+			tt = selectionSort(tt, len(tt)-1)
+			//fmt.Println(tt)
+			if tt != nil {
+				//fmt.Println(tt)
+				dadosbrutos(contract, tt, h.Uservehicle.Id, idposto)
+			}
+		}
+		j = 0
+		tt = nil
+		for k := range m {
+			delete(m, k)
+		}
+		m[j] = Tuple{T: date.Format(layout), Pos: lat + "/" + long, Comb: s}
+		j++
+	*/
+
+	/*
+		s, _ := strconv.ParseFloat(res1[0], 64)
+
+					if checkuserexist(contract, h.Uservehicle.Id) == true {
+						Createuser(contract, h.Uservehicle.Id, h.Uservehicle.Id, "40")
+					}
+
+					if s < 0 {
+						s = s * -1
+					}
+					if GetStatusEvent(contract, h.Uservehicle.Id, idposto) == false {
+						Createevent(contract, s, 10.0, h.Uservehicle.Id, idposto)
+					}
+
+					if j > 1 {
+
+						for k := range m {
+							//fmt.Println(k)
+							tt = append(tt, m[k])
+						}
+
+						tt = selectionSort(tt, len(tt)-1)
+
+						if tt != nil {
+							//fmt.Println(tt)
+							dadosbrutos(contract, tt, h.Uservehicle.Id, idposto)
+						}
+					}
+	*/
+}

@@ -80,6 +80,9 @@ func KalmanFilter(capacidade float64, medições []float64) (float64, error) {
 	for _, leitura := range medições {
 		var k = math.Pow(Lerro, 2) / (math.Pow(Lerro, 2) + math.Pow(Gerro, 2))
 		estima = media + k*(leitura-media)
+		if estima > 100 {
+			estima = 100
+		}
 
 		Lerro = (1 - k) * Lerro
 		leiturasPercentuaispos = append(leiturasPercentuaispos, estima)

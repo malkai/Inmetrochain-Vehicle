@@ -86,7 +86,13 @@ func (s *SmartContract) Updatuser(ctx contractapi.TransactionContextInterface, i
 	score := Credibility(users.Score, timeless, completness, vaulevalids)
 
 	users.Criptmoeda = users.Criptmoeda + 1*score
-	users.Score = users.Score + score
+	if users.Score+score <= 1 {
+		users.Score = users.Score + score
+	} else if users.Score+score <= 0 {
+		users.Score = 0
+	} else if users.Score+score > 1 {
+		users.Score = 1
+	}
 
 	userJSON, err := json.Marshal(users)
 	if err != nil {
@@ -126,4 +132,64 @@ func (s *SmartContract) GetAlluser(ctx contractapi.TransactionContextInterface, 
 	}
 
 	return users, nil
+}
+
+// GetAllAssets returns all assets found in world state
+func (s *SmartContract) StatisticsUser(ctx contractapi.TransactionContextInterface, id string) (string, error) {
+	// range query with empty string for startKey and endKey does an
+	// open-ended query of all assets in the chaincode namespace.
+
+	/*
+		a, err := s.Userget(ctx, id)
+		if err != nil {
+			return "", err
+		}
+
+		event, err := s.GetEventOpen(ctx, id, "9999")
+		if err != nil {
+			return "", err
+		}
+
+		//media
+
+		//moda
+
+		//mediana
+
+		//Percentis
+
+		path, err := s.GetPathhOpen(ctx, "Path"+id)
+		if err != nil {
+			return "", err
+		}
+
+	*/
+
+	/*
+		resultsIterator, err := ctx.GetStub().GetStateByRange("u", "v")
+		if err != nil {
+			return "", err
+		}
+		defer resultsIterator.Close()
+
+		var users []*User
+		for resultsIterator.HasNext() {
+			queryResponse, err := resultsIterator.Next()
+			if err != nil {
+				return "", err
+			}
+
+			var user User
+			err = json.Unmarshal(queryResponse.Value, &user)
+			if err != nil {
+				return "", err
+			}
+			if user.Id != "" {
+				users = append(users, &user)
+			}
+
+		}
+	*/
+
+	return "", nil
 }

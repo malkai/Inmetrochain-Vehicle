@@ -26,7 +26,7 @@ func Createevent(contract *client.Contract, Fsupi float64, Dff float64, Iduser1 
 		panic(fmt.Errorf("failed to commit transaction with status code %v", status.Code))
 	}
 
-	fmt.Println("\n*** CreateAsset committed successfully")
+	fmt.Println("Create Event successfully", Iduser1)
 
 	return status.BlockNumber
 
@@ -54,14 +54,10 @@ func GetStatusEvent(contract *client.Contract, id, id2 string) bool {
 	}
 	if evaluateResult != nil {
 		result := formatJSON(evaluateResult)
-		fmt.Printf("*** Result:%s\n", result)
-		boolValue, err := strconv.ParseBool(result)
-		if err != nil {
-			fmt.Printf("*** Erro a converter\n")
-		}
+		fmt.Printf("*** Result:%s", result)
+		boolValue, _ := strconv.ParseBool(result)
 		return boolValue
 	} else {
-		fmt.Printf("*** Não encotrou o usevento %s\n", id)
 		return false
 
 	}
@@ -79,10 +75,9 @@ func GetopenEvent(contract *client.Contract, id, id2 string) bool {
 	if evaluateResult != nil {
 		result := formatJSON(evaluateResult)
 		fmt.Printf("*** Result:%s\n", result)
-		return true
+		boolValue, _ := strconv.ParseBool(result)
+		return boolValue
 	} else {
-
-		fmt.Printf("*** Erro não encontrou nada\n")
 		return false
 	}
 

@@ -31,10 +31,10 @@ type Event struct {
 	Fsupi     float64 `json:"fsupi"`   //combustivel inicial
 	Fsupf     float64 `json:"fsupf"`   //combustivel final
 	Fsupfd    float64 `json:"fsupfd"`  //i+constant k times
-	Dff       float64 `json:"dff"`
-	Compl     float64 `json:"compl"` //identificação do usuario 2
-	Freq      float64 `json:"freq"`  //data inicial
-	Confi     float64 `json:"Confi"` //data final do acordo
+	Dff       float64 `json:"dff"`     //quantidade de combustivel acordado
+	Compl     float64 `json:"compl"`   //identificação do usuario 2
+	Freq      float64 `json:"freq"`    //data inicial
+	Confi     float64 `json:"Confi"`   //data final do acordo
 }
 
 type Tuple struct {
@@ -45,11 +45,12 @@ type Tuple struct {
 
 type Path struct {
 	DocType     string  `json:"docType"` //docType is used to distinguish the various types of objects in state database
-	EventID     string  `json:"EventID"`
+	PathID      string  `json:"EventID"`
 	DataVehicle []Tuple `json:"DataVehicle,omitempty" metadata:"DataVehicle,optional"`
 	Distance    float64 `json:"dist"`
 	Fuel        float64 `json:"fuel"`
 	Totaltime   float64 `json:"time"`
 	Timeless    float64 `json:"Timeless"`
 	DataR       string  `json:"dataR"`
+	Iduser      string  `json:"iduser"` //identificação do usuario
 }

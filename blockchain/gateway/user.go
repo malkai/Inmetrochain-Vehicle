@@ -24,7 +24,7 @@ func Createuser(contract *client.Contract, Iduser1 string, name string, tanque s
 		panic(fmt.Errorf("failed to commit transaction with status code %v", status.Code))
 	}
 
-	fmt.Println("\n*** CreateAsset committed successfully")
+	fmt.Println("CreateAsset committed successfully")
 
 	return status.BlockNumber
 
@@ -45,7 +45,7 @@ func (s *SmartContract) Userexist(ctx contractapi.TransactionContextInterface, i
 */
 
 func checkuserexist(contract *client.Contract, id string) bool {
-	fmt.Println("\n--> Evaluate Transaction: checkuserexist")
+	fmt.Print(" checkuserexist ", id, " ")
 
 	evaluateResult, err := contract.EvaluateTransaction("Userexist", "user"+id)
 	if err != nil {
@@ -54,21 +54,18 @@ func checkuserexist(contract *client.Contract, id string) bool {
 
 	if evaluateResult != nil {
 		result := formatJSON(evaluateResult)
-		fmt.Printf("*** Result:%s\n", result)
-		boolValue, err := strconv.ParseBool(result)
-		if err != nil {
-			fmt.Printf("*** Erro a converter\n")
-		}
+		boolValue, _ := strconv.ParseBool(result)
+		fmt.Println(boolValue)
 		return boolValue
 	} else {
-		fmt.Printf("*** Não encotrou o usuario %s\n", id)
+		fmt.Println(false)
 		return false
 
 	}
 }
 
 func Getuser(contract *client.Contract, id string) {
-	fmt.Println("\n--> Evaluate Transaction: GetAllAssets, function returns all the current assets on the ledger")
+	fmt.Println("\n--> Evaluate Transaction: GetUser, function returns all the current assets on the ledger")
 
 	evaluateResult, err := contract.EvaluateTransaction("Userget", "user"+id)
 	if err != nil {
@@ -77,10 +74,10 @@ func Getuser(contract *client.Contract, id string) {
 
 	if evaluateResult != nil {
 		result := formatJSON(evaluateResult)
-		fmt.Printf("*** Result:%s\n", result)
+		fmt.Printf("Resultado:%s\n", result)
 
 	} else {
-		fmt.Printf("*** Erro não encontrou nada\n")
+		fmt.Printf("Erro não encontrou nada\n")
 	}
 }
 
@@ -94,8 +91,8 @@ func GetAlluser(contract *client.Contract, id string) {
 
 	if evaluateResult != nil {
 		result := formatJSON(evaluateResult)
-		fmt.Printf("*** Result:%s\n", result)
+		fmt.Printf("*** Result:%s", result)
 	} else {
-		fmt.Printf("*** Erro não encontrou nada\n")
+		fmt.Printf("*** Erro não encontrou nada")
 	}
 }

@@ -15,25 +15,11 @@ type Tuple struct {
 
 func CreatePath(contract *client.Contract, tuples []Tuple, id string, id2 string) uint64 {
 
-	//test := Path{DataVehicle: tuples}
-
 	t, err := json.Marshal(tuples)
 	if err != nil {
 		panic(err)
 	}
 	_, commit, err := contract.SubmitAsync("CreatPath", client.WithArguments(string(t), id, id2))
-
-	/*
-		var ue []byte
-		if len(ex) == 0 {
-			fmt.Println("Error: Empty JSON input")
-		} else {
-			err = json.Unmarshal(ex, &ue)
-			if err != nil {
-				panic(err)
-			}
-		}
-	*/
 
 	if err != nil {
 		panic(fmt.Errorf("failed to submit transaction: %w", err))
@@ -49,7 +35,7 @@ func CreatePath(contract *client.Contract, tuples []Tuple, id string, id2 string
 		panic(fmt.Errorf("failed to commit transaction with status code %v", status.Code))
 	}
 
-	fmt.Println("\n*** CreateAsset committed successfully")
+	fmt.Println("Create Path committed successfully", id, len(tuples))
 
 	return status.BlockNumber
 

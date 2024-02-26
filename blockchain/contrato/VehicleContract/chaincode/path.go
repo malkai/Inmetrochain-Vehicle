@@ -45,6 +45,7 @@ func (s *SmartContract) CreatPath(ctx contractapi.TransactionContextInterface, d
 	time := 0.0
 	var time2 []string
 	i := 0
+
 	for i = range tuples {
 		if i < len(tuples)-1 {
 
@@ -68,7 +69,7 @@ func (s *SmartContract) CreatPath(ctx contractapi.TransactionContextInterface, d
 
 	}
 
-	timeles, err := Timeliness(time2, 5)
+	timeles, err := Timeliness(time2, 1)
 	if err != nil {
 		return fmt.Errorf("\n Error na metrica timeless. %v", err)
 	}
@@ -78,12 +79,15 @@ func (s *SmartContract) CreatPath(ctx contractapi.TransactionContextInterface, d
 	if err != nil {
 		return fmt.Errorf("\n Error ao recuperar user %v %s", err, "user"+id)
 	}
+	/*
 
-	fuel, err = KalmanFilter(user.Tanque, fuel_vector)
-	if err != nil {
-		return fmt.Errorf("\n Error ao aplicar filtro de kalman %v", err)
-	}
-	fmt.Println(fuel)
+		fuel, err = KalmanFilter(user.Tanque, fuel_vector)
+		if err != nil {
+			return fmt.Errorf("\n Error ao aplicar filtro de kalman %v", err)
+		}
+		fmt.Println(fuel)
+	*/
+	fuel = (fuel_vector[0] - fuel_vector[len(fuel_vector)-1]) * user.Tanque / 100
 
 	aux, err := ctx.GetStub().GetTxTimestamp()
 	if err != nil {
@@ -99,13 +103,14 @@ func (s *SmartContract) CreatPath(ctx contractapi.TransactionContextInterface, d
 
 	path := Path{
 		DocType:     "path",
-		EventID:     id + aux.AsTime().Format(layout),
+		PathID:      id + aux.AsTime().Format(layout),
 		DataVehicle: tuples,
 		Distance:    dist,
 		Fuel:        fuel,
 		Totaltime:   time,
 		Timeless:    timeles,
 		DataR:       aux.AsTime().Format(layout),
+		Iduser:      id,
 	}
 
 	//return fmt.Errorf("\n Sucesso  %v %f", err, fuel)
@@ -116,7 +121,7 @@ func (s *SmartContract) CreatPath(ctx contractapi.TransactionContextInterface, d
 	}
 	s.updatevent(ctx, id, id2, fuel)
 
-	return ctx.GetStub().PutState("path"+path.EventID, patJSON)
+	return ctx.GetStub().PutState("path"+path.PathID, patJSON)
 
 }
 
@@ -153,7 +158,7 @@ func (s *SmartContract) GetallPath(ctx contractapi.TransactionContextInterface, 
 			return nil, fmt.Errorf("Path erro2: %v", err)
 		}
 
-		if path.EventID != " " {
+		if path.PathID != " " {
 			paths = append(paths, &path)
 		}
 
@@ -161,97 +166,31 @@ func (s *SmartContract) GetallPath(ctx contractapi.TransactionContextInterface, 
 	return paths, nil
 }
 
-/*
-	if exist {
-		dist := 0.0
-		fuel := 0.0
-		var fuel_vector []float64
-		time := 0.0
-		var time2 []string
-		//tt, err := ctx.GetStub().GetTxTimestamp()
+func (s *SmartContract) GetPathhOpen(ctx contractapi.TransactionContextInterface, id string) ([]*Path, error) {
 
-		for i := range tuples {
-			if len(tuples) > i {
-
-				dist = +Distanceeucle(tuples[i].Pos, tuples[i+1].Pos)
-				time = +totaltime(tuples[i].T, tuples[i+1].T)
-				time2 = append(time2, tuples[i].T)
-				fuel_vector = append(fuel_vector, tuples[i].Comb)
-
-			}
-
-		}
-		var timeles = Timeliness(time2)
-		aux, err := ctx.GetStub().GetTxTimestamp()
-		fuel = KalmanFilter(80.0, fuel_vector)
-		path := Path{
-			DataVehicle: tuples,
-			EventID:     "Path" + id + aux.AsTime().UTC().GoString(),
-			Distance:    dist,
-			Fuel:        fuel,
-			Totaltime:   time,
-			Timeless:    timeles,
-			DataR:       aux.AsTime().UTC().GoString(),
-		}
-
-		s.updatevent(ctx, "Event"+id, path.Fuel)
-		assetJSON, err := json.Marshal(path)
-		if err != nil {
-			return err
-		}
-		return ctx.GetStub().PutState("Path"+id, assetJSON)
-
-	}
-	return fmt.Errorf("\n Caminho não esta conectado a nenhum evento %v", err)
-*/
-
-/*
-
-
- */
-//return fmt.Errorf("\n Sucesso %v %d %f %f", err, len(tuples)-1, dist, time)
-/*
-	if len(tuples) > i {
-
-		dist1, err := s.Distanceeucle(ctx, tuples[i].Pos, tuples[i+1].Pos)
-		if err != nil {
-			return fmt.Errorf("\n Erro checar Distancia. %v", err)
-		}
-		dist = +dist1
-
-		//time = +totaltime(tuples[i].T, tuples[i+1].T)
-		//time2 = append(time2, tuples[i].T)
-		//fuel_vector = append(fuel_vector, tuples[i].Comb)
-
-	}
-*/
-
-//}
-//return fmt.Errorf("\n Sucesso %v %f", err, dist)
-//var timeles = Timeliness(time2)
-//fuel = KalmanFilter(80.0, fuel_vector)
-/*
-	aux, err := ctx.GetStub().GetTxTimestamp()
+	//queryString := fmt.Sprintf(`{"selector":{"docType":"event","vstatus":"false","iduser1":"%s","iduser2":"%s" }}`, id, id2)
+	queryString := fmt.Sprintf(`{"selector":{"docType":"path","Iduser":"%s"}}`, id)
+	//arrayteststring := [3]string["true", ]
+	resultsIterator, err := ctx.GetStub().GetQueryResult(queryString)
 	if err != nil {
-		return fmt.Errorf("\n Erro checar data. %v", err)
+		return nil, err
 	}
+	defer resultsIterator.Close()
 
-	path := Path{
-		EventID:     "event" + id + aux.AsTime().UTC().GoString(),
-		DataVehicle: tuples,
-		Distance:    dist,
-		Fuel:        fuel,
-		Totaltime:   time,
-		Timeless:    10,
-		DataR:       aux.AsTime().UTC().GoString(),
+	var pathbjs []*Path
+
+	for resultsIterator.HasNext() {
+		queryResult, err := resultsIterator.Next()
+		if err != nil {
+			return nil, err
+		}
+		var pathobj Path
+		err = json.Unmarshal(queryResult.Value, &pathobj)
+		if err != nil {
+			return nil, err
+		}
+		pathbjs = append(pathbjs, &pathobj)
 	}
+	return pathbjs, nil
 
-	s.updatevent(ctx, "event"+id, 1)
-
-	assetJSON, err := json.Marshal(path)
-	if err != nil {
-		return err
-	}
-
-	return ctx.GetStub().PutState("path"+id+aux.AsTime().UTC().GoString(), assetJSON)
-*/
+}

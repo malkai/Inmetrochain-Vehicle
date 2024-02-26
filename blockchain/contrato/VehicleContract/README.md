@@ -12,3 +12,4 @@ peer chaincode invoke "${TARGET_TLS_OPTIONS[@]}" -C mychannel -n vehicle -c '{"f
 
 
 
+
