@@ -10,7 +10,7 @@ sudo apt-get install git curl docker-compose -y
 sudo systemctl start docker
 
 
-# Add your user to the Docker group.
+# Add your user to the Dockcder group.
 sudo groupadd docker
 sudo usermod -aG docker $USER
 newgrp docker

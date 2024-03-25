@@ -46,11 +46,13 @@ type Tuple struct {
 type Path struct {
 	DocType     string  `json:"docType"` //docType is used to distinguish the various types of objects in state database
 	PathID      string  `json:"EventID"`
-	DataVehicle []Tuple `json:"DataVehicle,omitempty" metadata:"DataVehicle,optional"`
+	DataVehicle string  `json:"DataVehicle"` //`json:"DataVehicle,omitempty" metadata:"DataVehicle,optional"`
 	Distance    float64 `json:"dist"`
 	Fuel        float64 `json:"fuel"`
 	Totaltime   float64 `json:"time"`
 	Timeless    float64 `json:"Timeless"`
 	DataR       string  `json:"dataR"`
+	DataEvent   string  `json:"dataEvent"`
+	K           float64 `json:"k"`
 	Iduser      string  `json:"iduser"` //identificação do usuario
 }

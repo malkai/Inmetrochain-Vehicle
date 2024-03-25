@@ -12,7 +12,7 @@ const R = 6371 //raio da Terra em km
 
 func CoordenadasCartesianas(latitude, longitude float64) []float64 {
 	theta := latitude * (math.Pi / 180.0) //teta
-	phi := latitude * (math.Pi / 180.0)   //fi
+	phi := longitude * (math.Pi / 180.0)  //fi
 
 	x := R * math.Cos(theta) * math.Cos(phi)
 	y := R * math.Cos(theta) * math.Sin(phi)
@@ -76,20 +76,29 @@ func KalmanFilter(capacidade float64, medições []float64) (float64, error) {
 
 	var estima float64
 	leiturasPercentuaispos := []float64{}
+	k := (math.Ceil(math.Pow(Lerro, 2)*100000) / 100000) / (math.Ceil(math.Pow(Lerro, 2)*100000)/100000 + math.Ceil(math.Pow(Gerro, 2)*100000)/100000)
 
 	for _, leitura := range medições {
-		var k = math.Pow(Lerro, 2) / (math.Pow(Lerro, 2) + math.Pow(Gerro, 2))
-		estima = media + k*(leitura-media)
+		estima = media + k*((math.Ceil(leitura*100000)/100000)-(math.Ceil(media*100000)/100000))
 		if estima > 100 {
 			estima = 100
+		} else if estima < 0 {
+			estima = 0
 		}
 
-		Lerro = (1 - k) * Lerro
+		Lerro = (1.0 - k) * (math.Ceil(Lerro*100000) / 100000)
+		media = estima
+		k = (math.Ceil(Lerro*100000) / 100000) / (math.Ceil(Lerro*100000)/100000 + math.Ceil(math.Pow(Gerro, 2)*100000)/100000)
+
 		leiturasPercentuaispos = append(leiturasPercentuaispos, estima)
 
 	}
 
 	resultadotanque := ((medições[0] - estima) * capacidade) / 100
+
+	if math.IsNaN(resultadotanque) {
+		return 0.0, fmt.Errorf("\n erro NaN value conf")
+	}
 	return resultadotanque, nil
 }
 
@@ -99,7 +108,7 @@ func mediavector(a []float64) float64 {
 		media = media + leitura
 	}
 
-	media = media / float64(len(a))
+	media = media / float64(len(a)-1)
 	return media
 
 }
@@ -114,7 +123,14 @@ func errovector(a []float64, media float64) float64 {
 	for _, leitura := range errovec {
 		aux = +leitura
 	}
-	aux = aux / float64(len(a)-2)
+	if len(a) == 1 {
+		aux = aux / float64(len(a))
+	} else {
+
+		aux = aux / float64(len(a)-1)
+
+	}
+
 	return aux
 }
 
@@ -163,6 +179,7 @@ func Timeliness(valuevalids []string, k float64) (float64, error) {
 			if result < 0 {
 				return 0.0, fmt.Errorf("\n Erro  %+v %s %s", valuevalids, datet1.String(), datet2.String())
 			}
+
 			vectortotal = vectortotal + float64(result.Seconds())
 
 		}
@@ -174,14 +191,22 @@ func Timeliness(valuevalids []string, k float64) (float64, error) {
 	res_2 := math.Exp(1)
 	var timeless = math.Pow(res_2, f_k) + 1
 
+	if math.IsNaN(timeless) {
+		return 0.0, fmt.Errorf("\n erro NaN value timeless")
+	}
+
 	return timeless, nil
 
 }
 
-func Credibility(scoren1 float64, timelesstotal float64, completness float64, valuevalids []string) float64 {
+func Credibility(scoren1 float64, timelesstotal float64, completness float64, valuevalids []string) (float64, error) {
 	m := 0.9
 	var conf = scoren1*m + (timelesstotal+completness)/2*(1-m)
-	return conf
+
+	if math.IsNaN(conf) {
+		return 0.0, fmt.Errorf("\n Erro Credibility value conf %f, %f, %f", timelesstotal, completness, scoren1)
+	}
+	return conf, nil
 }
 
 //testar o filtro de kalman

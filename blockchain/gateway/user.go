@@ -24,7 +24,7 @@ func Createuser(contract *client.Contract, Iduser1 string, name string, tanque s
 		panic(fmt.Errorf("failed to commit transaction with status code %v", status.Code))
 	}
 
-	fmt.Println("CreateAsset committed successfully")
+	fmt.Println("Creat User committed successfully")
 
 	return status.BlockNumber
 
@@ -78,6 +78,22 @@ func Getuser(contract *client.Contract, id string) {
 
 	} else {
 		fmt.Printf("Erro não encontrou nada\n")
+	}
+}
+
+func GetUser(contract *client.Contract, id string) {
+	fmt.Println("\n--> Evaluate Transaction: GetAllAssets, function returns all the current assets on the ledger")
+
+	evaluateResult, err := contract.EvaluateTransaction("Userget", id)
+	if err != nil {
+		panic(fmt.Errorf("failed to evaluate transaction: %w", err))
+	}
+
+	if evaluateResult != nil {
+		result := formatJSON(evaluateResult)
+		fmt.Printf("*** Result:%s", result)
+	} else {
+		fmt.Printf("*** Erro não encontrou nada")
 	}
 }
 

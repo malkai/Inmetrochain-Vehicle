@@ -249,11 +249,11 @@ func KalmanFilter(capacidade float64, medições []float64) ([]float64, error) {
 
 	var media = mediavector(medições)
 
-	fmt.Println(media)
+	//fmt.Println(media)
 
 	Gerro := errovector(medições, math.Round(media*10000)/10000) // desvio global
 
-	fmt.Println(Gerro)
+	//fmt.Println(Gerro)
 
 	auxe := []float64{}
 	auxe = append(auxe, medições[0])
@@ -265,32 +265,52 @@ func KalmanFilter(capacidade float64, medições []float64) ([]float64, error) {
 
 	var estima float64
 	leiturasPercentuaispos := []float64{}
+	k := (math.Ceil(math.Pow(Lerro, 2)*100000) / 100000) / (math.Ceil(math.Pow(Lerro, 2)*100000)/100000 + math.Ceil(math.Pow(Gerro, 2)*100000)/100000)
 
 	for _, leitura := range medições {
-		//k := (math.Ceil(math.Pow(Lerro, 2)*100000) / 1000000) / (math.Ceil(math.Pow(Lerro, 2)*1000000)/1000000 + math.Ceil(math.Pow(Gerro, 2)*1000000)/1000000)
-		k := (math.Round(Lerro*1000) / 1000) / ((math.Round(Lerro*1000) / 1000) + math.Round(Gerro*1000)/1000)
-
-		estima = media + k*((math.Round(leitura*1000)/1000)-(math.Round(media*1000)/1000))
+		estima = media + k*((math.Ceil(leitura*100000)/100000)-(math.Ceil(media*100000)/100000))
 		if estima > 100 {
 			estima = 100
 		} else if estima < 0 {
 			estima = 0
 		}
-		//fmt.Println(leitura, estima)
-		Lerro = (1.0 - k) * (math.Round(Lerro*1000) / 1000)
 
+		Lerro = (1.0 - k) * (math.Ceil(Lerro*100000) / 100000)
 		media = estima
+		k = (math.Ceil(Lerro*100000) / 100000) / (math.Ceil(Lerro*100000)/100000 + math.Ceil(math.Pow(Gerro, 2)*100000)/100000)
 
-		//fmt.Println(1-k, k)
-		//fmt.Println("Kalman gain", k, "estima", estima, "erro local", Lerro, "erro glbal", Gerro)
-		leiturasPercentuaispos = append(leiturasPercentuaispos, math.Round(estima*1000)/1000)
+		leiturasPercentuaispos = append(leiturasPercentuaispos, estima)
 
 	}
 
-	//fmt.Println(leiturasPercentuaispos[0], leiturasPercentuaispos[len(leiturasPercentuaispos)-1], len(leiturasPercentuaispos))
-
 	//resultadotanque := ((medições[0] - estima) * capacidade) / 100
 	return leiturasPercentuaispos, nil
+}
+
+func ruido(simudata []Tuple) []Tuple {
+
+	noise := []float64{}
+	interpolationdata := []float64{}
+
+	for _, data := range simudata {
+
+		noise = append(noise, data.Comb)
+
+	}
+
+	//fmt.Println(noise)
+	if len(noise) > 0 {
+		interpolationdata = interpolation(noise)
+	}
+	//fmt.Println(interpolationdata)
+
+	for i := range simudata {
+
+		simudata[i].Comb = interpolationdata[i]
+
+	}
+
+	return simudata
 }
 
 // https://physics.stackexchange.com/questions/704367/how-to-quantify-the-uncertainty-of-the-time-series-average
@@ -309,7 +329,7 @@ func errovector(a []float64, media float64) float64 {
 
 func CoordenadasCartesianas(latitude, longitude float64) []float64 {
 	theta := latitude * (math.Pi / 180.0) //teta
-	phi := latitude * (math.Pi / 180.0)   //fi
+	phi := longitude * (math.Pi / 180.0)  //fi
 
 	x := R * math.Cos(theta) * math.Cos(phi)
 	y := R * math.Cos(theta) * math.Sin(phi)
