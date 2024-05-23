@@ -3,67 +3,68 @@ package main
 import (
 	"bytes"
 	"compress/gzip"
-	"encoding/gob"
+	"encoding/json"
 	"fmt"
-	"io/ioutil"
 	"log"
 )
 
-type Path struct {
-	DocType     string  `json:"docType"` //docType is used to distinguish the various types of objects in state database
-	PathID      string  `json:"EventID"`
-	DataVehicle string  `json:"DataVehicle"` //`json:"DataVehicle,omitempty" metadata:"DataVehicle,optional"`
-	Distance    float64 `json:"dist"`
-	Fuel        float64 `json:"fuel"`
-	Totaltime   float64 `json:"time"`
-	Timeless    float64 `json:"Timeless"`
-	DataR       string  `json:"dataR"`
-	DataEvent   string  `json:"dataEvent"`
-	K           float64 `json:"k"`
-	Iduser      string  `json:"iduser"` //identificação do usuario
+//conjunto de codigos para fazer a compressão e descompressão dos dados.
+
+func Compress(p []Tuple) string {
+
+	tu, err := json.Marshal(p)
+	if err != nil {
+		fmt.Println("error:", err)
+	}
+	var buf bytes.Buffer
+	/*
+
+		enc := gob.NewEncoder(&buf)
+		err = enc.Encode(p)
+		if err != nil {
+			log.Fatal(err)
+		}
+	*/
+	buf = bytes.Buffer{}
+	gz := gzip.NewWriter(&buf)
+	err = json.NewEncoder(gz).Encode(tu)
+	if err != nil {
+		fmt.Println("error:", err)
+	}
+	gz.Close()
+
+	aa, err := json.Marshal(buf.Bytes())
+	if err != nil {
+		fmt.Println("error:", err)
+	}
+
+	return (string(aa))
+
 }
 
-func EncodeToBytes(p interface{}) []byte {
-
-	buf := bytes.Buffer{}
-	enc := gob.NewEncoder(&buf)
-	err := enc.Encode(p)
+func Decompress(s string) []Tuple {
+	aa := []byte(s)
+	zipbuf := []byte{}
+	rty := []Tuple{}
+	err := json.Unmarshal(aa, &zipbuf)
+	if err != nil {
+		fmt.Println("error:", err)
+	}
+	rdr, err := gzip.NewReader(bytes.NewReader(zipbuf))
 	if err != nil {
 		log.Fatal(err)
 	}
-	fmt.Println("uncompressed size (bytes): ", len(buf.Bytes()))
-	return buf.Bytes()
-}
 
-func Compress(s []byte) []byte {
-
-	zipbuf := bytes.Buffer{}
-	zipped := gzip.NewWriter(&zipbuf)
-	zipped.Write(s)
-	zipped.Close()
-	fmt.Println("compressed size (bytes): ", len(zipbuf.Bytes()))
-	return zipbuf.Bytes()
-}
-
-func Decompress(s []byte) []byte {
-
-	rdr, _ := gzip.NewReader(bytes.NewReader(s))
-	data, err := ioutil.ReadAll(rdr)
+	err = json.NewDecoder(rdr).Decode(&zipbuf)
 	if err != nil {
-		log.Fatal(err)
+		fmt.Println("error:", err)
 	}
+
 	rdr.Close()
-	fmt.Println("uncompressed size (bytes): ", len(data))
-	return data
-}
-
-func DecodeToTuple(s []byte) []Tuple {
-
-	p := []Tuple{}
-	dec := gob.NewDecoder(bytes.NewReader(s))
-	err := dec.Decode(&p)
+	err = json.Unmarshal(zipbuf, &rty)
 	if err != nil {
-		log.Fatal(err)
+		fmt.Println("error:", err)
 	}
-	return p
+
+	return rty
 }

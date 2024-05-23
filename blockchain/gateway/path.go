@@ -3,20 +3,38 @@ package main
 import (
 	"fmt"
 	"strconv"
+	"strings"
 
 	"github.com/hyperledger/fabric-gateway/pkg/client"
 )
 
-type Tuple struct {
-	T    string  `json:"T"`
-	Pos  string  `json:"Pos"` // long + lat
-	Comb float64 `json:"Comb"`
+func stripCtlFromUTF8(str string) string {
+	return strings.Map(func(r rune) rune {
+		if r >= 32 && r != 127 {
+			return r
+		}
+		return -1
+	}, str)
 }
 
-func CreatePath(contract *client.Contract, tuples []byte, id string, id2 string, k float64) uint64 {
+func CreatePath(contract *client.Contract, tuples []Tuple, id string, id2 string, k float64) uint64 {
 
 	s := strconv.FormatFloat(k, 'f', -1, 64)
-	_, commit, err := contract.SubmitAsync("CreatPath", client.WithArguments(string(tuples), id, id2, s))
+
+	//fmt.Println(uii)
+
+	/*
+		dst := &bytes.Buffer{}
+		if err := json.Compact(dst, []byte(tu)); err != nil {
+			panic(err)
+		}
+	*/
+
+	aa := Compress(tuples)
+
+	//fmt.Println(buf.String())
+
+	_, commit, err := contract.SubmitAsync("CreatPath", client.WithArguments(string(aa), id, id2, s))
 
 	if err != nil {
 		panic(fmt.Errorf("failed to submit transaction: %w", err))
@@ -52,16 +70,23 @@ func GetAllPath(contract *client.Contract, id string) {
 }
 
 // Evaluate a transaction to query ledger state.
-func GetPathhOpen(contract *client.Contract, id string, date string) {
-	fmt.Println("\n--> Evaluate Transaction: GetAllAssets, function returns all the current assets on the ledger")
+func GetPathhOpen(contract *client.Contract, id string, date string) []byte {
+	fmt.Println("\n--> Evaluate Transaction: Get All Path, function returns all the current assets on the ledger")
 
-	evaluateResult, err := contract.EvaluateTransaction("GetPathhOpen", id, date)
+	evaluateResult, err := contract.EvaluateTransaction("GetPathhIndex", id, date)
 	if err != nil {
 		panic(fmt.Errorf("failed to evaluate transaction: %w", err))
 	}
-	result := formatJSON(evaluateResult)
 
-	fmt.Printf("*** Result:%s\n", result)
+	if evaluateResult != nil {
+		//result := formatJSON(evaluateResult)
+		//fmt.Printf("*** Result:%s\n", result)
+	} else {
+		fmt.Printf("*** Erro não encontrou nada\n")
+	}
+
+	return evaluateResult
+
 }
 
 func GetPathhAll(contract *client.Contract, id string) {

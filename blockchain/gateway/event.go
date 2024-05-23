@@ -45,20 +45,26 @@ func updatevent(contract *client.Contract, id string, minus float64) {
 }
 
 // Evaluate a transaction to query ledger state.
-func GetStatusEvent(contract *client.Contract, id, id2 string) bool {
-	fmt.Println("\n--> Evaluate Transaction: GetStatusEvent")
+func GetStatusEvent(contract *client.Contract, id, id2 string) int {
+	//fmt.Println("\n--> Evaluate Transaction: GetStatusEvent")
 
-	evaluateResult, err := contract.EvaluateTransaction("GetIfEventOpen", "Event"+id, id2)
+	evaluateResult, err := contract.EvaluateTransaction("GeteventOpensingleext", id, id2)
 	if err != nil {
 		panic(fmt.Errorf("failed to evaluate transaction: %w", err))
 	}
 	if evaluateResult != nil {
 		result := formatJSON(evaluateResult)
-		fmt.Printf("*** Result:%s", result)
-		boolValue, _ := strconv.ParseBool(result)
-		return boolValue
+		//fmt.Println("*** Result:%s", result)
+		floatvalue, _ := strconv.Atoi(result)
+		if floatvalue > 0 {
+			return floatvalue
+		} else {
+			return 0
+		}
+
 	} else {
-		return false
+		//fmt.Println("*** Result:%s", evaluateResult)
+		return 0
 
 	}
 
@@ -84,8 +90,8 @@ func GetopenEvent(contract *client.Contract, id, id2 string) bool {
 }
 
 // Evaluate a transaction to query ledger state.
-func GetAlleventsPast(contract *client.Contract, id string) {
-	fmt.Println("\n--> Evaluate Transaction: GetAllAssets, function returns all the current assets on the ledger")
+func GetAlleventsPast(contract *client.Contract, id string) string {
+	fmt.Println("\n--> Evaluate Transaction: GetAllPastEvents, function returns all the current assets on the ledger")
 
 	evaluateResult, err := contract.EvaluateTransaction("GetallEventPast", id)
 	if err != nil {
@@ -97,12 +103,14 @@ func GetAlleventsPast(contract *client.Contract, id string) {
 	} else {
 		fmt.Printf("*** Erro não encontrou nada\n")
 	}
+
+	return formatJSON(evaluateResult)
 }
 
 // Evaluate a transaction to query ledger state.
 func CloseEvent(contract *client.Contract, id string, minus string) {
-	fmt.Println("\n--> Evaluate Transaction: CloseEvent, function returns all the current assets on the ledger")
-	_, commit, err := contract.SubmitAsync("Closeevent", client.WithArguments(id, minus))
+	fmt.Println("\n--> Evaluate Transaction: CloseEvent, function returns all the current assets on the ledger ", id)
+	_, commit, err := contract.SubmitAsync("Closeeventext", client.WithArguments(id, minus))
 	if err != nil {
 		panic(fmt.Errorf("failed to submit transaction: %w", err))
 	}

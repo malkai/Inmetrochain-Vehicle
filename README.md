@@ -1,4 +1,34 @@
-O Hyperledger Fabric é uma plataforma para soluções de contabilidade distribuída sustentadas por uma arquitetura modular que oferece altos graus de confidencialidade, resiliência, flexibilidade e escalabilidade. Ele foi projetado para oferecer suporte a implementações conectáveis ​​de diferentes componentes e acomodar a complexidade e os meandros existentes em todo o ecossistema econômico.
+<h2>Introduçção</h2>
+ Este repositorio propoe uma plataforma de monetização que utiliza a tecnologia blockchain para criar um ecossistema seguro e transparente para a coleta, armazenamento e comercialização de dados de telemetria veicular. A telemetria veicular envolve a coleta de dados em tempo real sobre o desempenho e o comportamento dos veículos. Esses dados podem incluir informações sobre velocidade, consumo de combustível, localização, diagnósticos de motor, entre outros Tradicionalmente, esses dados são subutilizados, mas a plataforma permite que os proprietários de veículos monetizem essas informações valiosas. Além disso, desenvolvemos um conjunto de métodos baseados em técnicas de crowdsourcing.
+
+
+Os dados coletados consistem principalmente em informações essenciais para estimar a distância percorrida e o consumo de combustível de um veículo em um trajeto específico, com o objetivo de avaliar sua eficiência energética. Essas informações são transmitidas para a rede blockchain, onde são processadas por meio de contratos inteligentes. 
+ 
+Os contratos inteligentes, automatizados e seguros, são responsáveis por transformar os dados do veículo em ativos monetizáveis. Eles garantem que todas as transações e acordos sejam realizados de forma automática, transparente e sem a necessidade de intermediários, proporcionando aos proprietários de veículos uma nova fonte de renda e promovendo uma utilização mais eficiente dos dados de telemetria.
+
+
+<h2>A Hyperledger Fabric</h2>
+
+A plataforma Hyperledger Fabric, é uma blockchain permissionada que se destaca
+por sua estrutura de nós diferenciados em categorias distintas, que incluem clientes, nós e
+ordenadores. Os clientes desempenham um papel fundamental, agindo em nome dos usuários
+finais que solicitam transações e estabelecendo comunicação tanto com os nós quanto com os
+ordenadores. Os peers, também conhecidos como nós, têm a responsabilidade crucial de manter o
+livro-razão. Eles recebem mensagens de atualização cuidadosamente ordenadas dos ordenadores
+para validar e confirmar as novas transações registradas no livro-razão.
+
+O modelo de consenso padrão utilizado pela plataforma Hyperledger é conhecido como
+Raft. O algoritmo Raft implementa o consenso elegendo inicialmente um líder, atribuindo-
+lhe total responsabilidade total responsabilidade pelo gerenciamento dos dados replicados. A rede emprega identidades digitais com atributos adicionais que desempenham um papel
+fundamental na determinação de permissões. Esses atributos são vinculados a uma identidade
+por meio de um identificador especial e podem abranger uma ampla variedade de características
+da identidade de um participante, como a organização à qual pertence, a unidade organizacional,
+a função desempenhada ou até mesmo a identidade específica do participante. Quando se
+trata desses identificadores, são esses atributos que influenciam diretamente as permissões
+correspondentes. 
+
+
+ <h2>Guia de Instalação do Hyperledger Fabric</h2>
 
 
 Caso a plataforma não esteja instalada na maquina, existem alguns requisitos minimos necessarios para utilizar está rede
@@ -63,6 +93,10 @@ or
 
 Para mais detalhes a documentação será um otimo guia com tutoriais de como a rede funciona -  <link>https://hyperledger-fabric.readthedocs.io/en/latest/</link>
 
+
+
+ <h2>Guia de execução do Hyperledger Fabric</h2>
+
 Para iniciar a rede é necessario adentrar na pasta do projeto que contém o projeto já configurado. 
 ```
 cd blockchain
@@ -91,8 +125,6 @@ Após montar nossa rede fazemos o deploy do nosso contrato inteligente. Do ponto
 
 ```
 ./network.sh deployCC -ccn vehicle -ccp contrato/BasicCRUD -ccl go
-ou 
-./network.sh deployCC -ccn vehicle -ccp contrato/VehicleContract -ccl go
 ```
 
 Após realizar o deploy sem erros iremos na pasta que está o nosso gateway. O Fabric Gateway é um serviço, introduzido nos pares Hyperledger Fabric v2.4, que fornece uma API simplificada e mínima para enviar transações para uma rede Fabric. Os requisitos anteriormente colocados nos SDKs do cliente, como reunir endossos de transações de pares de várias organizações, são delegados ao serviço Fabric Gateway executado em um ponto para permitir o desenvolvimento simplificado de aplicativos e o envio de transações na v2.4.
@@ -135,4 +167,52 @@ cd blockchain
 ./network.sh down
 ```
 
+ <h2>Execução do experimento</h2>
 
+
+Para validar as métricas de monetização, foi gerada uma simulação de
+36 horas. Os arquivos estão disponiveis no [Link](https://drive.google.com/file/d/17bCUjP_sxY6WPvoaEXvpwyyK5zacWWSy/view?usp=sharing), 
+que contém todas as informações necessariais para a simulação.  
+
+Se você já completou o guia de instalção dos componentes e se familarizou, 
+iniciaremos com o guia de como executar a rede. Inicialmente executa-se os seguintes comandos
+
+
+```
+cd .. 
+cd blockchain
+./network.sh up createChannel -ca && ./network.sh deployCC -ccn vehicle -ccp contrato/VehicleContract -ccl go
+```
+
+
+Um dos contratempos para o condutor é a inconsistência na captura de dados veiculares,
+uma vez que depende de diversos fatores além do seu controle direto. Teoricamente, pode não
+haver nenhum problema, porém, devido a limitações tecnológicas, o condutor pode não ser
+capaz de obter informações de forma constante do OBD. Isso ocorre devido à variação na
+disponibilidade dos dispositivos para a captura, na diversidade de aplicativos disponíveis e na
+forma como foi feita a programação para a aquisição e armazenamento de dados, além das
+tecnologias presentes no veículo.
+
+Para simular o problema anterior, foi proposto que antes do envio das tuplas veiculares,
+fosse utiliza a variável baseada na métrica da frequência k. Por exemplo, caso k, seja igual a
+três, isso significa que o condutor envia somente um terço da informação, perdendo dois terços
+das informações. Esta abordagem auxilia na compreensão do comportamento das métricas para
+determinados tipos de veículos.
+
+Além disso, notamos que as informações do Sistema de Monitoramento de Consumo
+de Combustível (SUMO) são geradas e enviadas sem considerar o comportamento analisado a
+partir dos dados reais. Para abordar essa questão, desenvolvemos um algoritmo para introduzir
+ruído branco nas informações do tanque de combustível . Antes de serem enviados, os dados
+passam por um processo no qual ruído branco é inserido nas tuplas de dados.
+
+A inserção de dados na blockchain ocorre por meio do Fabric Gateway, um serviço
+incorporado aos nós do Hyperledger Fabric v2.4. Essa ferramenta oferece uma API simplificada
+e minimalista, facilitando o envio de transações para uma rede Fabric. Com esse serviço, é
+possível enviar dados veiculares de forma simultânea, otimizando o tempo de inserção das
+informações. No entanto, com o aumento do número de tuplas no trajeto e, consequentemente,
+do tempo de resposta do endorser para processar a transação, constatou-se que a rede blockchain
+não conseguia lidar com a inserção simultânea dos 150 veículos simulados. Mesmo com a
+compressão das informações, a rede ainda precisava processar esses dados para gerar uma
+pontuação para o condutor, o que limitava a capacidade de acomodação tanto no envio quanto no
+número de tuplas. Por isso, foi estabelecido um tamanho máximo de tuplas, variando entre 1000
+e 4000, e a análise de 15 veículos por vez

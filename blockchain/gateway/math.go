@@ -9,13 +9,14 @@ import (
 	"os"
 	"strconv"
 	"strings"
-)
+	"time"
 
-type vehicletruct struct {
-	T    string  `json:"T"`
-	Pos  string  `json:"Pos"` // long + lat
-	Comb float64 `json:"Comb"`
-}
+	"github.com/Konstantin8105/pow"
+	"github.com/sgreben/piecewiselinear"
+	"gonum.org/v1/gonum/mat"
+	"gonum.org/v1/gonum/stat/distuv"
+	"gonum.org/v1/plot/plotter"
+)
 
 const R = 6371 //raio da Terra em km
 
@@ -175,6 +176,54 @@ func mediavector(a []float64) float64 {
 	return media
 
 }
+func Timeliness(valuevalids []float64, k float64) float64 {
+
+	k_aux := 1 / k
+	fmt.Println(k, "k")
+
+	f := mediavector(valuevalids)
+
+	f_aux := 1 / f
+	fmt.Println(f_aux, "f_aux")
+	fmt.Println(k_aux, "k_aux")
+
+	if f_aux >= k_aux {
+		return 1.0
+	}
+	f_k := (f_aux / k_aux) / math.Log((f_aux / k_aux))
+
+	fmt.Println(f_k, "f_k")
+	res_2 := math.Exp(1)
+	fmt.Println(res_2, "f_k")
+	timeless := -math.Pow(res_2, f_k) + 1
+	fmt.Println(timeless, "timeless")
+
+	if math.IsNaN(timeless) {
+		return 0.0
+	}
+
+	return timeless
+
+}
+
+func totaltime(s1, s2 string) float64 {
+	layout := "2006-01-02 15:04:05"
+
+	datet1, err := time.Parse(layout, s1)
+	if err != nil {
+
+		return 0.0
+	}
+	datet2, err := time.Parse(layout, s2)
+	if err != nil {
+
+		return 0.0
+	}
+
+	result := datet2.Sub(datet1)
+
+	return float64(result.Seconds())
+}
 
 func DesvioPadrão(a []float64, media float64) float64 {
 	var aux float64 = 0
@@ -193,10 +242,6 @@ func interpolation(datalist []float64) []float64 {
 	medialen := mediavector(datalist)
 	desvpa := DesvioPadrão(datalist, medialen)
 	amplitude := 0.95 * desvpa
-
-	//fmt.Println("Desvio padrao", desvpa, amplitude, datalist[0])
-
-	//fmt.Println("Calculo", medialen, desvpa, amplitude, len(datalist))
 
 	m := 0.95
 
@@ -287,6 +332,80 @@ func KalmanFilter(capacidade float64, medições []float64) ([]float64, error) {
 	return leiturasPercentuaispos, nil
 }
 
+func regress(datalist []float64) []float64 {
+
+	p := 0.7
+	o := 1.0
+
+	v := distuv.Normal{Mu: 0, Sigma: o * math.Sqrt(1-(p*p))}
+
+	e := []float64{0}
+
+	rtt := []float64{}
+
+	rtt2 := []float64{}
+
+	copy(rtt, datalist)
+
+	for i := 1; i <= len(datalist)-1; i++ {
+
+		e = append(e, p*e[i-1]+v.Rand())
+
+	}
+
+	for i := 0; i <= len(datalist)-1; i++ {
+
+		if datalist[i]+e[i] > 100 {
+
+			rtt2 = append(rtt2, 100.0)
+		} else if datalist[i]+e[i] < 0 {
+
+			rtt2 = append(rtt2, 0.0)
+		} else {
+			//rtt[i] = rtt[i] + rtt[i]*e[i]
+			rtt2 = append(rtt2, datalist[i]+e[i])
+		}
+
+	}
+	/*
+		tt := plot.New()
+
+		tt.Title.Text = "Plotutil example"
+		tt.X.Label.Text = "X"
+		tt.Y.Label.Text = "Y"
+
+		err := plotutil.AddLines(tt,
+			"Comruído", convertToPtl(rtt2),
+			"Semruído", convertToPtl(datalist),
+		)
+		if err != nil {
+			panic(err)
+		}
+
+		// Save the plot to a PNG file.
+		t := time.Now()
+		ER := t.Format("20060102150405")
+		if err := tt.Save(4*vg.Inch, 4*vg.Inch, "plot/"+ER+"points.png"); err != nil {
+			panic(err)
+		}
+	*/
+
+	return rtt2
+}
+
+func convertToPtl(a []float64) plotter.XYs {
+
+	pts := make(plotter.XYs, len(a))
+	for i := range a {
+		pts[i].X = float64(i)
+
+		pts[i].Y = a[i]
+	}
+
+	return pts
+
+}
+
 func ruido(simudata []Tuple) []Tuple {
 
 	noise := []float64{}
@@ -298,11 +417,51 @@ func ruido(simudata []Tuple) []Tuple {
 
 	}
 
+	fmt.Println("Normal	", noise[0]-noise[len(noise)-1])
+
 	//fmt.Println(noise)
 	if len(noise) > 0 {
-		interpolationdata = interpolation(noise)
+		interpolationdata = regress(noise)
 	}
 	//fmt.Println(interpolationdata)
+	fuel_vector := []float64{}
+	time3 := []float64{0}
+	time := 0.0
+
+	for i, ts := range simudata {
+
+		fuel_vector = append(fuel_vector, ts.Comb)
+		if i < len(simudata)-1 {
+			time1 := totaltime(simudata[i].T, simudata[i+1].T)
+
+			time = time + time1
+
+			//rtt, _ := strconv.ParseFloat(tuples[i].T, 64)
+			time3 = append(time3, time)
+		}
+
+	}
+
+	f := piecewiselinear.Function{Y: interpolationdata} // range: "hat" function
+	f.X = time3
+	rtt := [][2]float64{}
+
+	for rty := range time3 {
+		rtt1 := [2]float64{time3[rty], fuel_vector[rty]}
+		rtt = append(rtt, rtt1)
+	}
+	a, b, _, err := Linear(rtt)
+	if err != nil {
+		fmt.Println("Erro em alguma coisa")
+	}
+
+	tui := []float64{}
+	for i := range time3 {
+
+		tui = append(tui, time3[i]*a+b)
+	}
+
+	fmt.Println("Regressão", tui[0]-tui[len(tui)-1])
 
 	for i := range simudata {
 
@@ -379,4 +538,132 @@ func Distanceeucle(latlongA, latlongB string) (float64, error) {
 	//return 0.0, fmt.Errorf("\n %f %f %f", distancia, a, b)
 	return distancia, nil
 
+}
+
+func convertToString(a []float64) []string {
+	b := []string{}
+	for i := range a {
+		s := fmt.Sprintf("%f", a[i])
+
+		b = append(b, s)
+	}
+
+	return b
+
+}
+
+func Linear(data [][2]float64) (
+	a, b float64,
+	R2 float64,
+	err error,
+) {
+	if len(data) < 2 {
+		err = fmt.Errorf("not enought data for regression")
+		return
+	}
+	var x2, x1 float64
+	n := float64(len(data))
+	for i := range data {
+		x1 += data[i][0]
+		x2 += pow.E2(data[i][0])
+	}
+	A := mat.NewDense(2, 2, []float64{
+		x2, x1,
+		x1, n,
+	})
+	var b1, b2 float64
+	for i := range data {
+		b1 += data[i][0] * data[i][1]
+		b2 += data[i][1]
+	}
+	right := mat.NewDense(2, 1, []float64{b1, b2})
+	var res mat.Dense
+	if err = res.Solve(A, right); err != nil {
+		return
+	}
+	a = res.At(0, 0)
+	b = res.At(1, 0)
+
+	// the relative predictive power of a quadratic model
+	var xMean, yMean float64
+	for i := range data {
+		xMean += data[i][0]
+		yMean += data[i][1]
+	}
+	xMean = xMean / float64(len(data))
+	yMean = yMean / float64(len(data))
+
+	var SPxy, SSx float64
+	for i := range data {
+		xi, yi := data[i][0], data[i][1]
+		SPxy += (xi - xMean) * (yi - yMean)
+		SSx += pow.E2(xi - xMean)
+	}
+	bb1 := SPxy / SSx
+	bb0 := yMean - bb1*xMean
+
+	var SSE, SST float64
+	for i := range data {
+		xi, yi := data[i][0], data[i][1]
+		SSE += pow.E2((bb1*xi + bb0) - yMean)
+		SST += pow.E2(yi - yMean)
+	}
+	R2 = SSE / SST
+	return
+}
+
+// Quadratic regression model:
+//
+//	y   = a*x^2+b*x+c
+//	R^2 - the relative predictive power of a quadratic model
+func Quadratic(data [][2]float64) (
+	a, b, c float64,
+	R2 float64,
+	err error,
+) {
+	if len(data) < 3 {
+		err = fmt.Errorf("not enought data for regression")
+		return
+	}
+	var x4, x3, x2, x1 float64
+	n := float64(len(data))
+	for i := range data {
+		x1 += data[i][0]
+		x2 += pow.E2(data[i][0])
+		x3 += pow.E3(data[i][0])
+		x4 += pow.E4(data[i][0])
+	}
+	A := mat.NewDense(3, 3, []float64{
+		x4, x3, x2,
+		x3, x2, x1,
+		x2, x1, n,
+	})
+	var b1, b2, b3 float64
+	for i := range data {
+		b1 += pow.E2(data[i][0]) * data[i][1]
+		b2 += data[i][0] * data[i][1]
+		b3 += data[i][1]
+	}
+	right := mat.NewDense(3, 1, []float64{b1, b2, b3})
+	var res mat.Dense
+	if err = res.Solve(A, right); err != nil {
+		return
+	}
+	a = res.At(0, 0)
+	b = res.At(1, 0)
+	c = res.At(2, 0)
+
+	// the relative predictive power of a quadratic model
+	var SSE, SST, yMean float64
+	for i := range data {
+		yMean += data[i][1]
+	}
+	yMean = yMean / float64(len(data))
+	for i := range data {
+		xi, yi := data[i][0], data[i][1]
+		SSE += pow.E2(yi - (a*xi*xi + b*xi + c))
+		SST += pow.E2(yi - yMean)
+	}
+	R2 = 1 - SSE/SST
+	return
 }

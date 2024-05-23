@@ -3,13 +3,14 @@ package chaincode
 import (
 	"encoding/json"
 	"fmt"
+	"math"
 	"strconv"
 
 	"github.com/hyperledger/fabric-contract-api-go/contractapi"
 )
 
 // Insere um usuario na blockchain
-func (s *SmartContract) Createuser(ctx contractapi.TransactionContextInterface, id string, name string, tanq string) error {
+func (s *SmartContract) Createuser(ctx contractapi.TransactionContextInterface, id, name, tanq, tipo string) error {
 	exists, err := s.Userexist(ctx, "user"+id)
 	if err != nil {
 		return fmt.Errorf("erro checar se o usuario existe. %v", err)
@@ -24,12 +25,13 @@ func (s *SmartContract) Createuser(ctx contractapi.TransactionContextInterface, 
 	}
 
 	user := User{
-		DocType:    "user",
-		Id:         "user" + id,
-		Name:       name,
-		Criptmoeda: 0.0,
-		Score:      0.5,
-		Tanque:     tanque,
+		DocType: "user",
+		Id:      "user" + id,
+		Name:    name,
+		Coin:    0.0,
+		Score:   0.5,
+		Tank:    tanque,
+		Typee:   tipo,
 	}
 	userJSON, err := json.Marshal(user)
 	if err != nil {
@@ -70,7 +72,7 @@ func (s *SmartContract) Userexist(ctx contractapi.TransactionContextInterface, i
 
 //s.Updatuser(ctx, "user"+id, 1*score, ntimeless/ntotal, eventjson.Dff, fuelsum, valuevalids )
 
-func (s *SmartContract) Updatuser(ctx contractapi.TransactionContextInterface, id string, timeless, completness float64, vaulevalids []string) (float64, error) {
+func (s *SmartContract) Updatuser(ctx contractapi.TransactionContextInterface, id string, timeless, completness float64) (float64, error) {
 
 	user, err := s.Userget(ctx, id)
 	if err != nil {
@@ -85,19 +87,23 @@ func (s *SmartContract) Updatuser(ctx contractapi.TransactionContextInterface, i
 		}
 	*/
 
-	score, err := Credibility(user.Score, timeless, completness, vaulevalids)
-	if err != nil {
-		return 0, fmt.Errorf("erro na metrica Credibility, %v", err)
+	m := 0.9
+	score := (user.Score * m) + (((timeless + completness) / 2) * (1 - m))
+
+	if math.IsNaN(score) {
+		return 0.0, fmt.Errorf("\n Erro ao atualizar o score %f, %f, %f", timeless, completness, score)
 	}
 
-	user.Criptmoeda = user.Criptmoeda + 1*score
-	if user.Score+score <= 1 {
-		user.Score = user.Score + score
-	} else if user.Score+score <= 0 {
-		user.Score = 0
-	} else if user.Score+score > 1 {
-		user.Score = 1
+	if score > 1 {
+		score = 1
+	} else if score < 0 {
+		score = 0
+
 	}
+
+	user.Coin = user.Coin + 1*score
+
+	user.Score = score
 
 	userJSON, err := json.Marshal(user)
 	if err != nil {

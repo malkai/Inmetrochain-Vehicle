@@ -4,16 +4,21 @@ import (
 	"bytes"
 	"compress/gzip"
 	"encoding/gob"
+	"encoding/json"
 	"fmt"
-	"io"
 	"log"
 )
 
 func EncodeToBytes(p interface{}) []byte {
 
+	b, err := json.Marshal(p)
+	if err != nil {
+		fmt.Println("error:", err)
+	}
+
 	buf := bytes.Buffer{}
 	enc := gob.NewEncoder(&buf)
-	err := enc.Encode(p)
+	err = enc.Encode(b)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -30,27 +35,43 @@ func Compress(s []byte) []byte {
 	return zipbuf.Bytes()
 }
 
-func Decompress(s []byte) ([]byte, error) {
+func Decompress(s string) ([]Tuple, error) {
 
-	rdr, err := gzip.NewReader(bytes.NewReader(s))
+	aa := []byte(s)
+	zipbuf := []byte{}
+
+	err := json.Unmarshal(aa, &zipbuf)
 	if err != nil {
-		return nil, fmt.Errorf("\n Erro ao Ler. %v %s", err, s)
+		return nil, fmt.Errorf("\n Erro ao descompactar o texto JSON. %v", err)
 	}
-	data, err := io.ReadAll(rdr)
+	rdr, err := gzip.NewReader(bytes.NewReader(zipbuf))
 	if err != nil {
-		return nil, fmt.Errorf("\n Erro ao descomprimir. %v", err)
+		return nil, fmt.Errorf("\n Erro ao descompactar o byte para gzip. %v", err)
 	}
+
+	err = json.NewDecoder(rdr).Decode(&zipbuf)
+	if err != nil {
+		return nil, fmt.Errorf("\n Erro ao recuperar as tuplas. %v", err)
+	}
+
 	rdr.Close()
-	return data, nil
-}
 
-func DecodeToTuple(s []byte) ([]Tuple, error) {
+	/*
+
+		dd := []byte{}
+		dec := gob.NewDecoder(bytes.NewReader(zipbuf))
+		err = dec.Decode(&dd)
+		if err != nil {
+			return nil, fmt.Errorf("\n Erro ao utilizar gob. %v", err)
+		}
+	*/
 
 	p := []Tuple{}
-	dec := gob.NewDecoder(bytes.NewReader(s))
-	err := dec.Decode(&p)
+	err = json.Unmarshal(zipbuf, &p)
 	if err != nil {
-		return nil, fmt.Errorf("\n Erro ao decodar. %v", err)
+		return nil, fmt.Errorf("\n Erro ao atribuir info. %v", err)
+
 	}
+
 	return p, nil
 }

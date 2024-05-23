@@ -153,43 +153,22 @@ func totaltime(s1, s2 string) (float64, error) {
 	return float64(result.Seconds()), nil
 }
 
-func Timeliness(valuevalids []string, k float64) (float64, error) {
+func Timeliness(valuevalids []float64, k float64) (float64, error) {
 
-	var vectortime = 0.0
-	var vectortotal = 0.0
+	k_aux := 1 / k
 
-	for i := range valuevalids {
-		if i < len(valuevalids)-1 {
-			layout := "2006-01-02 15:04:05"
+	f := mediavector(valuevalids)
 
-			datet1, err := time.Parse(layout, valuevalids[i])
-			if err != nil {
-				return 0.0, fmt.Errorf("\n Erro checar data1. %v", err)
-			}
-			datet2, err := time.Parse(layout, valuevalids[i+1])
-			if err != nil {
-				return 0.0, fmt.Errorf("\n Erro checar data2. %v", err)
-			}
+	f_aux := 1 / f
 
-			result := datet2.Sub(datet1)
-
-			if vectortime < k {
-				vectortime = vectortime + float64(result.Seconds())
-			}
-			if result < 0 {
-				return 0.0, fmt.Errorf("\n Erro  %+v %s %s", valuevalids, datet1.String(), datet2.String())
-			}
-
-			vectortotal = vectortotal + float64(result.Seconds())
-
-		}
-
+	if f_aux >= k_aux {
+		return 1.0, nil
 	}
+	f_k := (f_aux / k_aux) / math.Log((f_aux / k_aux))
 
-	var prop = vectortime / vectortotal
-	var f_k = (prop / k) / math.Log((prop / k))
 	res_2 := math.Exp(1)
-	var timeless = math.Pow(res_2, f_k) + 1
+
+	timeless := -math.Pow(res_2, f_k) + 1
 
 	if math.IsNaN(timeless) {
 		return 0.0, fmt.Errorf("\n erro NaN value timeless")
@@ -198,21 +177,3 @@ func Timeliness(valuevalids []string, k float64) (float64, error) {
 	return timeless, nil
 
 }
-
-func Credibility(scoren1 float64, timelesstotal float64, completness float64, valuevalids []string) (float64, error) {
-	m := 0.9
-	var conf = scoren1*m + (timelesstotal+completness)/2*(1-m)
-
-	if math.IsNaN(conf) {
-		return 0.0, fmt.Errorf("\n Erro Credibility value conf %f, %f, %f", timelesstotal, completness, scoren1)
-	}
-	return conf, nil
-}
-
-//testar o filtro de kalman
-
-//melhorar frequenci
-
-//tratar os eventos com as informações do posto
-
-//simular os dados

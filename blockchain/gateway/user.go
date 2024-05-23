@@ -7,9 +7,9 @@ import (
 	"github.com/hyperledger/fabric-gateway/pkg/client"
 )
 
-func Createuser(contract *client.Contract, Iduser1 string, name string, tanque string) uint64 {
+func Createuser(contract *client.Contract, Iduser1, name, tanque, tipo string) uint64 {
 
-	_, commit, err := contract.SubmitAsync("Createuser", client.WithArguments(Iduser1, name, tanque))
+	_, commit, err := contract.SubmitAsync("Createuser", client.WithArguments(Iduser1, name, tanque, tipo))
 	if err != nil {
 		panic(fmt.Errorf("failed to submit transaction: %w", err))
 	}
@@ -55,16 +55,16 @@ func checkuserexist(contract *client.Contract, id string) bool {
 	if evaluateResult != nil {
 		result := formatJSON(evaluateResult)
 		boolValue, _ := strconv.ParseBool(result)
-		fmt.Println(boolValue)
+		//fmt.Println(boolValue)
 		return boolValue
 	} else {
-		fmt.Println(false)
+		//fmt.Println(false)
 		return false
 
 	}
 }
 
-func Getuser(contract *client.Contract, id string) {
+func Getuser(contract *client.Contract, id string) string {
 	fmt.Println("\n--> Evaluate Transaction: GetUser, function returns all the current assets on the ledger")
 
 	evaluateResult, err := contract.EvaluateTransaction("Userget", "user"+id)
@@ -79,6 +79,8 @@ func Getuser(contract *client.Contract, id string) {
 	} else {
 		fmt.Printf("Erro não encontrou nada\n")
 	}
+
+	return formatJSON(evaluateResult)
 }
 
 func GetUser(contract *client.Contract, id string) {
