@@ -1,4 +1,4 @@
-<h2>Introduçção</h2>
+<h2>Introdução</h2>
  Este repositorio propoe uma plataforma de monetização que utiliza a tecnologia blockchain para criar um ecossistema seguro e transparente para a coleta, armazenamento e comercialização de dados de telemetria veicular. A telemetria veicular envolve a coleta de dados em tempo real sobre o desempenho e o comportamento dos veículos. Esses dados podem incluir informações sobre velocidade, consumo de combustível, localização, diagnósticos de motor, entre outros Tradicionalmente, esses dados são subutilizados, mas a plataforma permite que os proprietários de veículos monetizem essas informações valiosas. Além disso, desenvolvemos um conjunto de métodos baseados em técnicas de crowdsourcing.
 
 
